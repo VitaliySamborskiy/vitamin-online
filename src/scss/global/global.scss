@@ -1,6 +1,3 @@
-@use "vars" as vars;
-@use "fonts" as fonts;
-
 *,
 *::before,
 *::after {
@@ -13,13 +10,13 @@ html {
 }
 
 body {
-    background: vars.$whitePage;
+    background: $whitePage;
 }
 
 p {
-    color: vars.$textColor;
-    font-family: fonts.$supportFonts;
-    font-weight: 400;
+    color: $textColor;
+    font-family: $supportFonts;
+    font-weight: $normal;
     font-size: 16px;
     line-height: 163%;
     letter-spacing: 0.01em;
@@ -31,23 +28,23 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: fonts.$mainFont;
+    font-family: $mainFont;
     font-size: 36px;
-    font-weight: 500;
-    color: vars.$textTitle;
+    font-weight: $medium;
+    color: $textTitle;
     letter-spacing: 0.01em;
 }
 
 a {
     font-size: 22px;
-    color: vars.$textColor;
-    font-family: fonts.$supportFonts;
-    font-weight: 500;
+    color: $textColor;
+    font-family: $supportFonts;
+    font-weight: $medium;
 }
 
 ul,
 ol {
-    color: vars.$textColor;
+    color: $textColor;
 }
 
 .wrapper {
@@ -59,4 +56,15 @@ ol {
 
 .main {
     flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1780px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include breakpoints(sm) {
+        padding: 0 12px;
+    }
 }

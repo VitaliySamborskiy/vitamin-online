@@ -1,6 +1,6 @@
-@forward "global/reset";
-@forward "global/mixin";
-@forward "global/vars";
-@forward "global/fonts";
-@forward "global/global";
-@forward "base/button";
+@import "global/reset";
+@import "global/mixin";
+@import "global/vars";
+@import "global/fonts";
+@import "global/global";
+@import "base/button";

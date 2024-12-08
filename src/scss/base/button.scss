@@ -1,8 +1,14 @@
-@use "../global/vars" as vars;
-
 .orange-button {
-    background-color: vars.$orange;
-    color: vars.$whitePage;
+    background-color: $orange;
+    color: $whitePage;
     border-radius: 100px;
-    font-weight: 700;
+    font-weight: $bold;
+    font-family: $mainFont;
+    border: 2px solid $orange;
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+        background-color: $whitePage;
+        color: $orange;
+    }
 }

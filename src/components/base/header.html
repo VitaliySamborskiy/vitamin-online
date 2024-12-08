@@ -1,34 +1,32 @@
-<header>
-    <div>
-        <a>
-            <svg>
+<header class="header__container">
+    <div class="header__content">
+        <a class="header__logo" href="#">
+            <svg class="header__logo-svg">
                 <use href="#logo"></use>
             </svg>
         </a>
-        <ul>
-            <li>
-                <a>
-                    <svg>
+        <ul class="header__items">
+            <li class="header__item">
+                <a class="header__" href="#">
+                    <svg class="header__svg">
                         <use href="#user"></use>
                     </svg>
                 </a>
             </li>
-            <li>
-                <a>
-                    <svg>
+            <li class="header__item">
+                <a class="header" href="#">
+                    <svg class="header__svg">
                         <use href="#basket"></use>
                     </svg>
                 </a>
             </li>
-            <li>
-                <a>
-                    <load
-                        src="src/components/base/button.html"
-                        class_button="orange-button"
-                        label=""
-                        button_text="Take the quiz"
-                    />
-                </a>
+            <li class="header__item">
+                <load
+                    src="src/components/base/button.html"
+                    class_button="orange-button header__button"
+                    label="Take the quiz"
+                    button_text="Take the quiz"
+                />
             </li>
         </ul>
     </div>
