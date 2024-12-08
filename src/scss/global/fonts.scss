@@ -1,0 +1,37 @@
+$mainFont: "Effra";
+$supportFonts: "Open Sans";
+
+@font-face {
+    font-display: swap;
+    font-weight: 400;
+    font-family: $mainFont;
+    src: url("/src/assets/fonts/Effra.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-weight: 500;
+    font-family: $mainFont;
+    src: url("/src/assets/fonts/Effra-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-weight: 700;
+    font-family: $mainFont;
+    src: url("/src/assets/fonts/Effra-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-weight: 400;
+    font-family: $supportFonts;
+    src: url("/src/assets/fonts/open-sans-v40-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-weight: 700;
+    font-family: $supportFonts;
+    src: url("/src/assets/fonts/open-sans-v40-latin-700.woff2") format("woff2");
+}

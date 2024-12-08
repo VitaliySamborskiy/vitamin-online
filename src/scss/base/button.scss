@@ -1,0 +1,8 @@
+@use "../global/vars" as vars;
+
+.orange-button {
+    background-color: vars.$orange;
+    color: vars.$whitePage;
+    border-radius: 100px;
+    font-weight: 700;
+}
