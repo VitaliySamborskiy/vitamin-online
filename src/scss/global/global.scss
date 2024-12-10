@@ -51,7 +51,7 @@ ol {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    //overflow: hidden;
 }
 
 .main {
@@ -64,7 +64,7 @@ ol {
     margin: 0 auto;
     padding: 0 20px;
 
-    @include breakpoints(sm) {
-        padding: 0 12px;
-    }
+    //@include breakpoints(sm) {
+    //    padding: 0 12px;
+    //}
 }
