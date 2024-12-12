@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vitamin online</title>
-      <script type="module" crossorigin src="/vitamin-online/assets/main-D87mTuZ8.js"></script>
-      <link rel="stylesheet" crossorigin href="/vitamin-online/assets/main-DRXYVvBz.css">
+      <script type="module" crossorigin src="/vitamin-online/assets/main-CvysI3Oo.js"></script>
+      <link rel="stylesheet" crossorigin href="/vitamin-online/assets/main-D24vYp72.css">
     </head>
     <body>
         <div class="wrapper">
@@ -15,22 +15,58 @@
             <button class="burger__icon" aria-label="burger menu"><span class='burger__icon-item'></span><span class='burger__icon-item'></span><span class='burger__icon-item'></span></button>
 
             <div class="burger__background">
-                <a class="burger__link" href="#">
+                <button class="burger__button burger__link-user"  aria-label="open burger menu" data-header-sub-menu="0">
                     <svg class="burger__svg">
                         <use href="#user"></use>
                     </svg>
-                </a>
+                </button>
+                <nav class="burger-sub__menu" id="0">
+                    <div class="burger-sub__header">
+                        <button class="burger-sub__header-button" aria-label="close burger menu" data-header-sub-menu="0">
+                            <svg class='burger-sub__header-svg'>
+                                <use href='#arrow'></use>
+                            </svg>
+                        </button>
+                        <h3 class="burger-sub__header-title">Profile</h3>
+                    </div>
+                    <ul class="burger-sub__list">
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Subscriptions</a>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#"
+                            >Orders</a
+                            >
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Account Overview</a>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Payment methods</a>
+                        </li>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Change Password</a>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link burger-sub__list-link-red" href="#">Sign Out</a>
+                        </li>
+                    </ul>
+                </nav>
                 <nav class="burger-sub__buttons">
-                    <button class="burger__button">
+                    <button class="burger__button"  aria-label="open burger menu" data-header-sub-menu="1">
                         <span class="burger__button-title">Shop</span>
                         <svg class="burger__button-svg">
                             <use href="#arrow"></use>
                         </svg>
                     </button>
-                    <nav class="burger-sub__menu">
+                    <nav class="burger-sub__menu" id="1">
                         <div class="burger-sub__header">
-                            <button class="burger-sub__header-button" aria-label="burger menu"> <svg class='burger-sub__header-svg'><use href='#arrow'></use></svg></button>
-
+                            <button class="burger-sub__header-button" aria-label="close burger menu" data-header-sub-menu="1">
+                                <svg class='burger-sub__header-svg'>
+                                    <use href='#arrow'></use>
+                                </svg>
+                            </button>
                             <h3 class="burger-sub__header-title">Shop</h3>
                         </div>
                         <ul class="burger-sub__list">
@@ -71,65 +107,47 @@
                                 Answer a few simple questions and automaticallyget a personalazed list
                                 of vitamins in minutes
                             </p>
-                            <button class="orange-button burger-sub__button" aria-label="Take the quiz">Take the quiz</button>
+                            <button class="button orange-button burger-sub__button" aria-label="Take the quiz">Take the quiz</button>
 
                         </div>
                     </nav>
-                    <button class="burger__button">
+                    <button class="burger__button" data-header-sub-menu="2">
                         <span class="burger__button-title">Information</span>
                         <svg class="burger__button-svg">
                             <use href="#arrow"></use>
                         </svg>
                     </button>
-                    <nav class="burger-sub__menu">
+                    <nav class="burger-sub__menu" id="2">
                         <div class="burger-sub__header">
-                            <button class="burger-sub__header-button" aria-label="burger menu"> <svg class='burger-sub__header-svg'><use href='#arrow'></use></svg></button>
-
-                            <h3 class="burger-sub__header-title">Shop</h3>
+                            <button class="burger-sub__header-button" aria-label="close burger menu" data-header-sub-menu="2">
+                                <svg class='burger-sub__header-svg'>
+                                    <use href='#arrow'></use>
+                                </svg>
+                            </button>
+                            <h3 class="burger-sub__header-title">Information</h3>
                         </div>
                         <ul class="burger-sub__list">
                             <li>
-                                <a class="burger-sub__list-link" href="#">All categories</a>
+                                <a class="burger-sub__list-link" href="#">Subscription Cycle & Billing</a>
                             </li>
                             <li>
                                 <a class="burger-sub__list-link" href="#"
-                                >Vitamins & Dietary Supplements</a
+                                >Terms & Conditions</a
                                 >
                             </li>
                             <li>
-                                <a class="burger-sub__list-link" href="#">Weight Loss</a>
+                                <a class="burger-sub__list-link" href="#">Privacy Policy</a>
                             </li>
                             <li>
-                                <a class="burger-sub__list-link" href="#">Minerals</a>
+                                <a class="burger-sub__list-link" href="#">Shipping & Delivery</a>
                             </li>
                             </li>
                             <li>
-                                <a class="burger-sub__list-link" href="#">Antioxidants</a>
-                            </li>
-                            <li>
-                                <a class="burger-sub__list-link" href="#">Probiotics</a>
-                            </li>
-                            <li>
-                                <a class="burger-sub__list-link" href="#">Pain Relief</a>
-                            </li>
-                            <li>
-                                <a class="burger-sub__list-link" href="#">Prenatal Vitamins</a>
-                            </li>
-                            <li>
-                                <a class="burger-sub__list-link burger-sub__list-link-red" href="#">Sale&#37;</a>
+                                <a class="burger-sub__list-link" href="#">Return Policy</a>
                             </li>
                         </ul>
-                        <div class="burger-sub__text-block">
-                            <h3 class="burger-sub__title">Don’t know what vitamins your body needs?</h3>
-                            <p class="burger-sub__text">
-                                Answer a few simple questions and automaticallyget a personalazed list
-                                of vitamins in minutes
-                            </p>
-                            <button class="orange-button burger-sub__button" aria-label="Take the quiz">Take the quiz</button>
-
-                        </div>
                     </nav>
-                    <a class="burger-sub__header-title burger-sub__link-quiz" href="#">Take the quiz</a>
+                    <a class="burger__button-title burger-sub__link-quiz" href="#">Take the quiz</a>
                 </nav>
                 <a class="burger__support-link" href="#">support@medstogo.com</a>
                 <p class="burger__copyright">&copy; 2020 Vitamins.com / All rights reserved</p>
@@ -156,14 +174,127 @@
                 </a>
             </li>
             <li class="header__item">
-                <button class="orange-button header__button" aria-label="Take the quiz">Take the quiz</button>
+                <button class="button orange-button header__button" aria-label="Take the quiz">Take the quiz</button>
 
             </li>
         </ul>
     </div>
 </header>
 
-            <main class="main"></main>
+            <main class="main">
+                <section class="main-section__container">
+    <div class="main-section__content">
+        <div class="main-section__text-block">
+            <div class="main-section__arc-yellow">
+                <div class="main-section__arc-white"></div>
+            </div>
+            <div class="main-section__arc-lite-red">
+                <div class="main-section__arc-white"></div>
+            </div>
+            <h3 class="main-section__title">
+                Find out what <span class="main-section__title-orange">vitamins</span> your body
+                needs right now.
+            </h3>
+            <p class="main-section__text">
+                Answer a few simple questions and automatically get a personalazed list of vitamins
+                in minutes
+            </p>
+            <div class="main-section__buttons">
+                <button class="button purple-button main-section__button" aria-label="Take the quiz">Take the quiz</button>
+
+                <a class="main-section__link" href="#"
+                    ><span class="main-section__link-text">Go to the shop</span
+                    ><svg class="main-section__link-svg">
+                        <use href="#arrow"></use></svg
+                ></a>
+            </div>
+        </div>
+        <div class="main-section__img-block">
+            <div class="main-section__circle-purple"></div>
+            <picture class="main-section__img-container">
+                <source
+                    srcset="http://localhost:1337/uploads/medium_main_lending_1_569f1e9851.webp"
+                    media="(max-width: 1440px)"
+                    width="500"
+                    height="265"
+                />
+                <source
+                    srcset="http://localhost:1337/uploads/small_main_lending_1_569f1e9851.webp"
+                    media="(max-width: 495px)"
+                    width="245"
+                    height="130"
+                />
+                <img
+                    class="main-section__img"
+                    src="http://localhost:1337/uploads/main_lending_1_569f1e9851.webp"
+                    width="825"
+                    height="459"
+                    alt="beautiful image of two jars of medicine"
+                    loading="eager"
+                />
+            </picture>
+            <div class="main-section__circle-yellow"></div>
+        </div>
+    </div>
+</section>
+
+                <section class="main-section__container">
+    <div class="main-section__content">
+        <div class="main-section__text-block">
+            <div class="main-section__arc-yellow">
+                <div class="main-section__arc-white"></div>
+            </div>
+            <div class="main-section__arc-lite-red">
+                <div class="main-section__arc-white"></div>
+            </div>
+            <h3 class="main-section__title">
+                Find out what <span class="main-section__title-orange">vitamins</span> your body
+                needs right now.
+            </h3>
+            <p class="main-section__text">
+                Answer a few simple questions and automatically get a personalazed list of vitamins
+                in minutes
+            </p>
+            <div class="main-section__buttons">
+                <button class="button purple-button main-section__button" aria-label="Take the quiz">Take the quiz</button>
+
+                <a class="main-section__link" href="#"
+                    ><span class="main-section__link-text">Go to the shop</span
+                    ><svg class="main-section__link-svg">
+                        <use href="#arrow"></use></svg
+                ></a>
+            </div>
+        </div>
+        <div class="main-section__img-block">
+            <div class="main-section__circle-purple"></div>
+            <picture class="main-section__img-container">
+                <source
+                    srcset="http://localhost:1337/uploads/medium_main_lending_1_569f1e9851.webp"
+                    media="(max-width: 1440px)"
+                    width="500"
+                    height="265"
+                />
+                <source
+                    srcset="http://localhost:1337/uploads/small_main_lending_1_569f1e9851.webp"
+                    media="(max-width: 495px)"
+                    width="245"
+                    height="130"
+                />
+                <img
+                    class="main-section__img"
+                    src="http://localhost:1337/uploads/main_lending_1_569f1e9851.webp"
+                    width="825"
+                    height="459"
+                    alt="beautiful image of two jars of medicine"
+                    loading="eager"
+                />
+            </picture>
+            <div class="main-section__circle-yellow"></div>
+        </div>
+    </div>
+</section>
+
+            </main>
             <svg style="position: absolute; width: 0; height: 0" xmlns="http://www.w3.org/2000/svg">
     <symbol id="logo" viewBox="0 0 42 50">
         <path
@@ -200,21 +331,9 @@
 
     <symbol id="arrow" viewBox="0 0 9 15">
         <path
-            opacity="0.3"
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M1.46376 -1.61251e-06L2.13767e-06 1.45671L6.07249 7.5L1.2735e-07 13.5433L1.46376 15L9 7.5L1.46376 -1.61251e-06Z"
-            fill="black"
-        />
-    </symbol>
-
-    <symbol id="arrow" viewBox="0 0 9 15">
-        <path
-            opacity="0.3"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M1.46376 -1.61251e-06L2.13767e-06 1.45671L6.07249 7.5L1.2735e-07 13.5433L1.46376 15L9 7.5L1.46376 -1.61251e-06Z"
-            fill="black"
         />
     </symbol>
 </svg>
