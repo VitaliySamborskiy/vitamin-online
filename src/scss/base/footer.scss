@@ -1,0 +1,57 @@
+.footer {
+    &__content {
+        margin-top: 350px;
+        display: flex;
+    }
+
+    &__logo {
+        width: 86px;
+        height: 99px;
+
+        &-block {
+        }
+
+        &-link {
+        }
+    }
+
+    &__copyright {
+    }
+
+    &__nav {
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &-menu {
+        }
+
+        &-title {
+            font-size: 18px;
+        }
+
+        &-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-item {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-svg {
+            height: 22px;
+            width: 22px;
+        }
+
+        &-text {
+        }
+    }
+}

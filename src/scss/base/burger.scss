@@ -2,7 +2,8 @@
     display: none;
 
     @include breakpoints(sm) {
-        display: block;
+        display: flex;
+        z-index: 1;
     }
 
     &__background {
@@ -113,7 +114,7 @@
             padding: 20px;
             width: 100%;
             height: 100vh;
-            z-index: 2;
+            z-index: 4;
             transition: left 0.5s ease-in-out;
 
             &_active {
