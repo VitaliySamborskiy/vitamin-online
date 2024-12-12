@@ -1,14 +1,30 @@
-.orange-button {
-    background-color: $orange;
-    color: $whitePage;
+.button {
     border-radius: 100px;
     font-weight: $bold;
     font-family: $mainFont;
+    transition:
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out;
+}
+
+.orange-button {
+    background-color: $orange;
+    color: $whitePage;
     border: 2px solid $orange;
-    transition: background-color 0.5s ease-in-out;
 
     &:hover {
         background-color: $whitePage;
         color: $orange;
+    }
+}
+
+.purple-button {
+    background-color: $purple;
+    color: $whitePage;
+    border: 2px solid $purple;
+
+    &:hover {
+        background-color: $whitePage;
+        color: $purple;
     }
 }
