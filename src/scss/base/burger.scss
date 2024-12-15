@@ -1,7 +1,7 @@
 .burger {
     display: none;
 
-    @include breakpoints(sm) {
+    @include breakpoints-max-width(sm) {
         display: flex;
         z-index: 1;
     }
@@ -30,7 +30,7 @@
     &__icon {
         display: none;
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(md) {
             display: flex;
             position: relative;
             flex-direction: column;
@@ -215,7 +215,7 @@
             padding: 17px 0;
             width: 100%;
 
-            @include breakpoints(xs) {
+            @include breakpoints-max-width(xs) {
                 margin-top: 19px;
             }
         }

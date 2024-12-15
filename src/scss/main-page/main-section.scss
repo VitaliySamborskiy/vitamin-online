@@ -5,18 +5,18 @@
         margin: 170px auto 0;
         width: 90%;
 
-        @include breakpoints(xl) {
+        @include breakpoints-max-width(xl) {
             margin: 140px auto 0;
         }
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             margin: 90px auto 0;
             width: 95%;
             flex-wrap: wrap;
             row-gap: 15px;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(xs) {
             margin: 45px auto 0;
             width: 100%;
         }
@@ -27,18 +27,18 @@
         width: 46%;
         padding-left: 85px;
 
-        @include breakpoints(xl) {
+        @include breakpoints-max-width(xl) {
             width: 50%;
         }
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             padding-left: 20px;
             width: 45%;
             min-width: 424px;
             margin: 0 auto;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(xs) {
             padding-left: 0;
             min-width: 0;
             max-width: 400px;
@@ -87,7 +87,12 @@
             z-index: 1;
             transition: scale 0.5s ease-in-out;
 
-            @include breakpoints(md) {
+            @include breakpoints-max-width(xl) {
+                width: 304px;
+                height: 150px;
+            }
+
+            @include breakpoints-max-width(lg) {
                 width: 172px;
                 height: 85px;
                 z-index: -1;
@@ -102,7 +107,13 @@
             background-color: $whitePage;
             z-index: 0;
 
-            @include breakpoints(md) {
+            @include breakpoints-max-width(xl) {
+                width: 186px;
+                height: 95px;
+                left: 58px;
+            }
+
+            @include breakpoints-max-width(lg) {
                 width: 108px;
                 height: 56px;
                 left: 33px;
@@ -115,38 +126,42 @@
             background: $yellow;
             animation: rotate 8s linear infinite;
 
-            @include breakpoints(md) {
+            @include breakpoints-max-width(lg) {
                 top: -53%;
                 left: 50%;
             }
 
-            @include breakpoints(sm) {
+            @include breakpoints-max-width(md) {
                 top: 87%;
                 left: 79%;
             }
 
-            @include breakpoints(xs) {
+            @include breakpoints-max-width(xs) {
                 top: 96%;
             }
         }
 
         &-lite-red {
             top: 122%;
-            left: 86%;
+            left: 84%;
             background: $redArc;
             animation: rotate 6s linear infinite;
 
-            @include breakpoints(md) {
+            @include breakpoints-max-width(xl) {
+                left: 74%;
+            }
+
+            @include breakpoints-max-width(lg) {
                 top: 102%;
                 left: 10%;
             }
 
-            @include breakpoints(sm) {
+            @include breakpoints-max-width(md) {
                 top: 109%;
                 left: -30%;
             }
 
-            @include breakpoints(xs) {
+            @include breakpoints-max-width(xs) {
                 top: 125%;
                 left: -37%;
             }
@@ -156,15 +171,15 @@
     &__title {
         font-size: 56px;
 
-        @include breakpoints(xl) {
+        @include breakpoints-max-width(xl) {
             font-size: 45px;
         }
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             font-size: 35px;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(md) {
             font-size: 24px;
             text-align: center;
         }
@@ -179,14 +194,14 @@
         width: 80%;
         font-size: 20px;
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             margin-top: 28px;
             font-size: 16px;
             width: 100%;
             line-height: 163%;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(md) {
             margin-top: 15px;
             font-size: 14px;
             text-align: center;
@@ -200,12 +215,12 @@
         align-items: center;
         justify-content: space-between;
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             margin-top: 30px;
             width: 340px;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(md) {
             width: 100%;
             margin-top: 20px;
             flex-direction: column;
@@ -218,12 +233,12 @@
         font-family: $supportFonts;
         font-size: 20px;
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             padding: 15px 30px;
             font-size: 16px;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(md) {
             padding: 12px 22px;
         }
     }
@@ -238,7 +253,7 @@
             font-family: $mainFont;
             color: $orangeLink;
 
-            @include breakpoints(sm) {
+            @include breakpoints-max-width(md) {
                 font-size: 14px;
             }
         }
@@ -248,7 +263,7 @@
             width: 10px;
             height: 15px;
 
-            @include breakpoints(sm) {
+            @include breakpoints-max-width(md) {
                 width: 10px;
                 height: 10px;
             }
@@ -259,20 +274,20 @@
         position: relative;
         width: 50%;
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             margin: 0 auto;
             min-width: 470px;
             height: 350px;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(md) {
             min-width: 0;
             width: 100%;
             max-width: 400px;
             height: 250px;
         }
 
-        @include breakpoints(xs) {
+        @include breakpoints-max-width(xs) {
             margin-top: 50px;
         }
     }
@@ -293,21 +308,21 @@
             height: 5.23px;
             background: $purple;
 
-            @include breakpoints(xl) {
+            @include breakpoints-max-width(xl) {
                 top: 44%;
                 left: 61%;
                 width: 4.2px;
                 height: 4.2px;
             }
 
-            @include breakpoints(md) {
+            @include breakpoints-max-width(lg) {
                 top: 50%;
                 left: 48%;
                 width: 2.7px;
                 height: 2.7px;
             }
 
-            @include breakpoints(sm) {
+            @include breakpoints-max-width(md) {
                 display: none;
             }
         }
@@ -319,12 +334,12 @@
             height: 0.95px;
             background: $orangeLite;
 
-            @include breakpoints(xl) {
+            @include breakpoints-max-width(xl) {
                 width: 0.65px;
                 height: 0.65px;
             }
 
-            @include breakpoints(md) {
+            @include breakpoints-max-width(lg) {
                 top: -21%;
                 left: 90%;
                 width: 0.2px;
@@ -332,14 +347,14 @@
                 border-radius: 150px;
             }
 
-            @include breakpoints(sm) {
+            @include breakpoints-max-width(md) {
                 top: 110%;
                 left: 84%;
                 width: 0.1px;
                 height: 0.1px;
             }
 
-            @include breakpoints(xs) {
+            @include breakpoints-max-width(xs) {
                 top: 92%;
                 left: 74%;
             }
@@ -353,17 +368,17 @@
         width: 115%;
         min-width: 730px;
 
-        @include breakpoints(xl) {
+        @include breakpoints-max-width(xl) {
             margin: 60px 0 0 80px;
             min-width: 605px;
         }
 
-        @include breakpoints(md) {
+        @include breakpoints-max-width(lg) {
             margin: 57px 0 0 50px;
             min-width: 540px;
         }
 
-        @include breakpoints(sm) {
+        @include breakpoints-max-width(md) {
             margin: 0;
             width: 139%;
             min-width: 0;
