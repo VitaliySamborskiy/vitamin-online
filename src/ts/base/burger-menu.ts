@@ -3,7 +3,7 @@ import { getElement, ReturningTypeDom } from "./get-element.ts";
 export function burgerMenu() {
     const button: ReturningTypeDom = getElement(".burger__icon");
     const background: ReturningTypeDom = getElement(".burger__background");
-    let clickBurgerIconStatus: boolean = false;
+    let clickBurgerIconStatus = false;
 
     if (button instanceof HTMLElement && background instanceof HTMLElement) {
         button.addEventListener("click", (): void => {

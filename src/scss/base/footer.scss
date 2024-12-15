@@ -1,7 +1,9 @@
 .footer {
     &__content {
-        margin-top: 350px;
+        margin: 352px auto 0;
         display: flex;
+        justify-content: space-between;
+        width: 80%;
     }
 
     &__logo {
@@ -16,13 +18,25 @@
     }
 
     &__copyright {
+        margin-top: 52px;
+        font-size: 12px;
+        width: 120px;
+        line-height: 1.4;
+    }
+
+    &__shop {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     &__nav {
         &-block {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 74.5%;
+            padding-right: 30px;
         }
 
         &-menu {
@@ -33,22 +47,34 @@
         }
 
         &-list {
-            margin-top: 20px;
+            margin-top: 24px;
             display: flex;
             flex-direction: column;
             gap: 16px;
+            min-width: 170px;
         }
 
         &-item {
             font-size: 14px;
             display: flex;
+            flex: 11 auto;
             align-items: center;
             gap: 10px;
+            transition: color 0.5s ease-in-out;
+
+            &:hover {
+                color: $orangeLink;
+                .footer__nav-svg {
+                    fill: $orangeLink;
+                }
+            }
         }
 
         &-svg {
+            fill: $gray;
             height: 22px;
             width: 22px;
+            transition: fill 0.5s ease-in-out;
         }
 
         &-text {

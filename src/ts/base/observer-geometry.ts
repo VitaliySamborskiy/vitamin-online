@@ -19,6 +19,8 @@ function animationScale(element: HTMLElement, duration: number, scaleTo: number)
     const startTime: number = performance.now();
     const initialScale: number = 1;
 
+    // todo: РОЗІБРАТИСЬ У ФУНКЦІЇ step
+
     function step(currentTime: number): void {
         const elapsedTime = currentTime - startTime;
         const progress: number = Math.min(elapsedTime / duration, 1);
@@ -32,6 +34,8 @@ function animationScale(element: HTMLElement, duration: number, scaleTo: number)
 
     requestAnimationFrame(step);
 }
+
+// todo: РОЗІБРАТИСЬ У ФУНКЦІЇ easeInOutQuad
 
 function easeInOutQuad(t: number): number {
     return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
