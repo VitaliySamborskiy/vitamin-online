@@ -10,15 +10,23 @@
         }
 
         @include breakpoints-max-width(lg) {
-            margin: 90px auto 0;
+            margin: 70px auto 0;
             width: 95%;
             flex-wrap: wrap;
-            row-gap: 15px;
+            row-gap: 55px;
+        }
+
+        @include breakpoints-max-width(md) {
+            margin: 45px auto 0;
+            row-gap: 25px;
+        }
+
+        @include breakpoints-max-width(sm) {
+            width: 100%;
         }
 
         @include breakpoints-max-width(xs) {
-            margin: 45px auto 0;
-            width: 100%;
+            row-gap: 65px;
         }
     }
 
@@ -32,17 +40,18 @@
         }
 
         @include breakpoints-max-width(lg) {
-            padding-left: 20px;
-            width: 45%;
-            min-width: 424px;
+            padding-left: 0;
+            width: 85%;
             margin: 0 auto;
+        }
+
+        @include breakpoints-max-width(md) {
+            width: 100%;
         }
 
         @include breakpoints-max-width(xs) {
             padding-left: 0;
             min-width: 0;
-            max-width: 400px;
-            width: 100%;
             height: 250px;
         }
     }
@@ -136,6 +145,10 @@
                 left: 79%;
             }
 
+            @include breakpoints-max-width(sm) {
+                top: 87%;
+            }
+
             @include breakpoints-max-width(xs) {
                 top: 96%;
             }
@@ -148,7 +161,7 @@
             animation: rotate 6s linear infinite;
 
             @include breakpoints-max-width(xl) {
-                left: 74%;
+                left: 80%;
             }
 
             @include breakpoints-max-width(lg) {
@@ -158,6 +171,11 @@
 
             @include breakpoints-max-width(md) {
                 top: 109%;
+                left: -30%;
+            }
+
+            @include breakpoints-max-width(sm) {
+                top: 108%;
                 left: -30%;
             }
 
@@ -275,20 +293,24 @@
         width: 50%;
 
         @include breakpoints-max-width(lg) {
+            padding-left: 120px;
             margin: 0 auto;
-            min-width: 470px;
+            width: 85%;
             height: 350px;
         }
 
         @include breakpoints-max-width(md) {
-            min-width: 0;
-            width: 100%;
-            max-width: 400px;
+            padding-left: 0;
+            width: 85%;
             height: 250px;
         }
 
+        @include breakpoints-max-width(sm) {
+            width: 100%;
+        }
+
         @include breakpoints-max-width(xs) {
-            margin-top: 50px;
+            //margin-top: 50px;
         }
     }
 
@@ -316,10 +338,10 @@
             }
 
             @include breakpoints-max-width(lg) {
-                top: 50%;
+                top: 55%;
                 left: 48%;
-                width: 2.7px;
-                height: 2.7px;
+                width: 3.7px;
+                height: 3.7px;
             }
 
             @include breakpoints-max-width(md) {
@@ -354,6 +376,11 @@
                 height: 0.1px;
             }
 
+            @include breakpoints-max-width(sm) {
+                top: 110%;
+                left: 84%;
+            }
+
             @include breakpoints-max-width(xs) {
                 top: 92%;
                 left: 74%;
@@ -374,7 +401,7 @@
         }
 
         @include breakpoints-max-width(lg) {
-            margin: 57px 0 0 50px;
+            margin: 57px 0 0 0;
             min-width: 540px;
         }
 

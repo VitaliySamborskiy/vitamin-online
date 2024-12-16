@@ -4,11 +4,41 @@
         display: flex;
         justify-content: space-between;
         width: 80%;
+        padding-bottom: 30px;
+        position: relative;
+
+        @include breakpoints-max-width(xl) {
+            width: 85%;
+        }
+
+        @include breakpoints-max-width(lg) {
+            width: 97%;
+            gap: 35px;
+        }
+
+        @include breakpoints-max-width(md) {
+            width: 100%;
+        }
+
+        @include breakpoints-max-width(sm) {
+            flex-direction: column;
+            padding-bottom: 97px;
+        }
     }
 
     &__logo {
         width: 86px;
         height: 99px;
+
+        @include breakpoints-max-width(lg) {
+            width: 56px;
+            height: 66px;
+        }
+
+        @include breakpoints-max-width(md) {
+            width: 42px;
+            height: 50px;
+        }
 
         &-block {
         }
@@ -22,6 +52,12 @@
         font-size: 12px;
         width: 120px;
         line-height: 1.4;
+
+        @include breakpoints-max-width(sm) {
+            position: absolute;
+            width: 240px;
+            top: 84%;
+        }
     }
 
     &__shop {
@@ -29,6 +65,16 @@
         display: flex;
         justify-content: space-between;
         gap: 10px;
+
+        @include breakpoints-max-width(xl) {
+            gap: 0;
+        }
+
+        @include breakpoints-max-width(lg) {
+            flex-direction: column;
+            display: block;
+            width: 100%;
+        }
     }
 
     &__nav {
@@ -37,6 +83,34 @@
             justify-content: space-between;
             width: 74.5%;
             padding-right: 30px;
+
+            @include breakpoints-max-width(xl) {
+                column-gap: 25px;
+                padding-right: 0;
+            }
+
+            @include breakpoints-max-width(lg) {
+                width: 80%;
+            }
+
+            @include breakpoints-max-width(md) {
+                flex-wrap: wrap;
+                justify-content: start;
+                column-gap: 10px;
+                row-gap: 40px;
+            }
+
+            @include breakpoints-max-width(sm) {
+                justify-content: space-between;
+                column-gap: 0;
+                width: 100%;
+                min-width: 345px;
+            }
+
+            @include breakpoints-max-width(xs) {
+                //justify-content: start;
+                min-width: 300px;
+            }
         }
 
         &-menu {
@@ -52,12 +126,30 @@
             flex-direction: column;
             gap: 16px;
             min-width: 170px;
+
+            @include breakpoints-max-width(lg) {
+                margin-top: 20px;
+                min-width: 160px;
+
+                &:nth-child(2) {
+                    margin-top: 16px;
+                }
+            }
+
+            @include breakpoints-max-width(md) {
+                min-width: 0;
+                max-width: 160px;
+            }
+
+            @include breakpoints-max-width(xs) {
+                max-width: 150px;
+            }
         }
 
         &-item {
             font-size: 14px;
             display: flex;
-            flex: 11 auto;
+            flex: 1 1 auto;
             align-items: center;
             gap: 10px;
             transition: color 0.5s ease-in-out;
