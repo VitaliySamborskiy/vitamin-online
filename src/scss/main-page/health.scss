@@ -1,0 +1,87 @@
+.health-section {
+    &__content {
+        margin-top: 272px;
+        display: flex;
+        position: relative;
+    }
+
+    &__left {
+        &-block {
+        }
+
+        &-purple-block {
+            position: absolute;
+            left: -4.6%;
+            background-color: $purple;
+            width: 952px;
+            height: 860px;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        &-circle-yellow {
+            position: absolute;
+            top: 6.5%;
+            left: 5.5%;
+            background-color: $yellow;
+            width: 139px;
+            height: 139px;
+            border-radius: 50%;
+        }
+
+        &-title {
+            width: 50%;
+            margin: 357px 0 0 172px;
+            color: $whitePage;
+            font-size: 56px;
+        }
+
+        &-svg {
+            position: absolute;
+            top: -25%;
+            width: 1762px;
+            height: 1762px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        &-img {
+            &-block {
+            }
+        }
+    }
+
+    &__right {
+        &-block {
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            gap: 127px;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 90px;
+        }
+
+        &-svg {
+            width: 103px;
+            height: 84px;
+        }
+
+        &-text {
+            color: $textTitle;
+            font-size: 30px;
+            font-family: $mainFont;
+            font-weight: $medium;
+        }
+
+        &-img {
+            &-block {
+            }
+        }
+    }
+}
