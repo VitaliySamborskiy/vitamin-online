@@ -15,7 +15,7 @@
         }
 
         @include breakpoints-max-width(sm) {
-            margin-top: 66px;
+            margin-top: 0;
         }
 
         @include breakpoints-max-width(xs) {
@@ -157,6 +157,7 @@
                 }
 
                 @include breakpoints-max-width(sm) {
+                    width: 68%;
                     top: 55%;
                     left: -6%;
                 }
@@ -245,6 +246,7 @@
 
             @include breakpoints-max-width(sm) {
                 font-size: 14px;
+                max-width: 310px;
                 width: 100%;
             }
         }
@@ -271,6 +273,12 @@
                     width: 88%;
                     top: 74%;
                     left: 19%;
+                }
+
+                @include breakpoints-max-width(xs) {
+                    top: 72%;
+                    left: 15%;
+                    width: 91%;
                 }
             }
         }

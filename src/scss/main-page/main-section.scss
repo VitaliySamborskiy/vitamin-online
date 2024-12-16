@@ -146,7 +146,7 @@
             }
 
             @include breakpoints-max-width(sm) {
-                top: 87%;
+                top: 96%;
             }
 
             @include breakpoints-max-width(xs) {
@@ -175,7 +175,7 @@
             }
 
             @include breakpoints-max-width(sm) {
-                top: 108%;
+                top: 120%;
                 left: -30%;
             }
 
@@ -306,11 +306,8 @@
         }
 
         @include breakpoints-max-width(sm) {
+            height: 316px;
             width: 100%;
-        }
-
-        @include breakpoints-max-width(xs) {
-            //margin-top: 50px;
         }
     }
 
@@ -377,7 +374,7 @@
             }
 
             @include breakpoints-max-width(sm) {
-                top: 110%;
+                top: 92%;
                 left: 84%;
             }
 
@@ -406,9 +403,15 @@
         }
 
         @include breakpoints-max-width(md) {
+            padding-top: 16px;
             margin: 0;
             width: 139%;
             min-width: 0;
+        }
+
+        @include breakpoints-max-width(sm) {
+            max-width: 560px;
+            z-index: -2;
         }
     }
 }
