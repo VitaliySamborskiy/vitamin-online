@@ -3,84 +3,275 @@
         margin-top: 272px;
         display: flex;
         position: relative;
+        justify-content: space-between;
+
+        @include breakpoints-max-width(lg) {
+            margin-top: 242px;
+        }
+
+        @include breakpoints-max-width(md) {
+            flex-direction: column;
+            padding-bottom: 300px;
+        }
+
+        @include breakpoints-max-width(sm) {
+            margin-top: 66px;
+        }
+
+        @include breakpoints-max-width(xs) {
+            margin-top: 8px;
+        }
     }
 
     &__left {
         &-block {
+            width: 50%;
+
+            @include breakpoints-max-width(md) {
+                width: 100%;
+            }
         }
 
         &-purple-block {
             position: absolute;
             left: -4.6%;
             background-color: $purple;
-            width: 952px;
-            height: 860px;
+            width: 54.5%;
+            height: 960px;
             z-index: -1;
             overflow: hidden;
+
+            @include breakpoints-max-width(lg) {
+                height: 730px;
+            }
+
+            @include breakpoints-max-width(md) {
+                width: 120%;
+                height: 330px;
+            }
+
+            @include breakpoints-max-width(sm) {
+                left: -6%;
+                height: 198px;
+                z-index: -2;
+            }
+
+            @include breakpoints-max-width(xs) {
+                left: -7%;
+            }
         }
 
         &-circle-yellow {
             position: absolute;
-            top: 6.5%;
-            left: 5.5%;
+            top: 13%;
+            left: 11%;
             background-color: $yellow;
-            width: 139px;
-            height: 139px;
+            width: 1.39px;
+            height: 1.39px;
             border-radius: 50%;
+
+            @include breakpoints-max-width(lg) {
+                top: 10%;
+            }
+
+            @include breakpoints-max-width(md) {
+                top: 3%;
+                left: 90%;
+            }
+
+            @include breakpoints-max-width(sm) {
+                display: none;
+            }
         }
 
         &-title {
-            width: 50%;
-            margin: 357px 0 0 172px;
+            width: 63%;
+            padding-left: 7px;
+            margin: 357px auto 0;
             color: $whitePage;
             font-size: 56px;
+
+            @include breakpoints-max-width(lg) {
+                font-size: 38px;
+                margin: 250px auto 0;
+                width: 70%;
+            }
+
+            @include breakpoints-max-width(md) {
+                margin: 120px auto 0;
+                text-align: center;
+            }
+
+            @include breakpoints-max-width(sm) {
+                padding-left: 0;
+                font-size: 24px;
+                margin: 70px auto 0;
+                width: 90%;
+            }
+
+            @include breakpoints-max-width(xs) {
+                width: 100%;
+            }
         }
 
         &-svg {
             position: absolute;
-            top: -25%;
-            width: 1762px;
+            top: -49%;
+            left: -7%;
+            width: 200%;
+            max-width: 1762px;
             height: 1762px;
             opacity: 0.1;
             z-index: -1;
+
+            @include breakpoints-max-width(lg) {
+                max-width: 1200px;
+                height: 1200px;
+                top: -20%;
+                left: -8%;
+            }
+
+            @include breakpoints-max-width(sm) {
+                max-width: 500px;
+                height: 577px;
+                top: -86%;
+                left: -16%;
+            }
         }
 
         &-img {
             &-block {
+                margin: 123px auto;
+                width: 61%;
+                display: flex;
+
+                @include breakpoints-max-width(lg) {
+                    margin: 80px auto 0;
+                    width: 75%;
+                }
+
+                @include breakpoints-max-width(md) {
+                    position: absolute;
+                    top: 65%;
+                    width: 60%;
+                }
+
+                @include breakpoints-max-width(sm) {
+                    top: 55%;
+                    left: -6%;
+                }
             }
         }
     }
 
     &__right {
         &-block {
+            width: 50%;
+
+            @include breakpoints-max-width(lg) {
+                width: 100%;
+            }
         }
 
         &-items {
+            width: 86%;
+            margin: 212px auto 0;
             display: flex;
             flex-direction: column;
-            gap: 127px;
+            gap: 106px;
+
+            @include breakpoints-max-width(xl) {
+                margin: 160px auto 0;
+            }
+
+            @include breakpoints-max-width(lg) {
+                margin: 75px auto 0;
+                width: 90%;
+                gap: 80px;
+            }
+
+            @include breakpoints-max-width(md) {
+                margin-top: 170px;
+                width: 75%;
+            }
+
+            @include breakpoints-max-width(sm) {
+                margin: 105px auto 0;
+                width: 100%;
+                gap: 38px;
+            }
         }
 
         &-item {
             display: flex;
             align-items: center;
             gap: 90px;
+
+            @include breakpoints-max-width(lg) {
+                gap: 35px;
+            }
+
+            @include breakpoints-max-width(xl) {
+                justify-content: space-between;
+            }
         }
 
         &-svg {
             width: 103px;
-            height: 84px;
+            height: 94px;
+
+            @include breakpoints-max-width(lg) {
+                width: 83px;
+                height: 74px;
+            }
+
+            @include breakpoints-max-width(md) {
+                width: 56px;
+                height: 46px;
+            }
         }
 
         &-text {
             color: $textTitle;
+            width: 60%;
             font-size: 30px;
             font-family: $mainFont;
             font-weight: $medium;
+
+            @include breakpoints-max-width(xl) {
+                width: 70%;
+                font-size: 20px;
+            }
+
+            @include breakpoints-max-width(sm) {
+                font-size: 14px;
+                width: 100%;
+            }
         }
 
         &-img {
             &-block {
+                position: absolute;
+                width: 50%;
+                top: 68.5%;
+                left: 37.2%;
+                z-index: -1;
+
+                @include breakpoints-max-width(lg) {
+                    top: 70%;
+                    width: 60%;
+                }
+
+                @include breakpoints-max-width(md) {
+                    top: 84%;
+                    width: 70%;
+                }
+
+                @include breakpoints-max-width(sm) {
+                    width: 88%;
+                    top: 74%;
+                    left: 19%;
+                }
             }
         }
     }

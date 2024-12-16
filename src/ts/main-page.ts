@@ -14,4 +14,5 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
     } else {
         observerGeometry(getElement(".main-section__circle-yellow") as HTMLElement, 2500, 95);
     }
+    observerGeometry(getElement(".health-section__left-circle-yellow") as HTMLElement, 1800, 140);
 });
