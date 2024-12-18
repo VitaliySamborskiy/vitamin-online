@@ -23,6 +23,7 @@
 
         @include breakpoints-max-width(sm) {
             width: 100%;
+            row-gap: 40px;
         }
 
         @include breakpoints-max-width(xs) {
@@ -57,83 +58,9 @@
     }
 
     &__arc {
-        &-yellow,
-        &-lite-red,
-        &-white {
-            clip-path: polygon(
-                89.606% 0%,
-                89.606% 0%,
-                89.087% 12.884%,
-                87.587% 25.107%,
-                85.185% 36.504%,
-                81.964% 46.912%,
-                78.005% 56.167%,
-                73.391% 64.107%,
-                68.201% 70.567%,
-                62.518% 75.383%,
-                56.424% 78.393%,
-                50% 79.433%,
-                50% 79.433%,
-                43.576% 78.393%,
-                37.482% 75.383%,
-                31.799% 70.567%,
-                26.609% 64.107%,
-                21.995% 56.167%,
-                18.036% 46.912%,
-                14.815% 36.504%,
-                12.413% 25.107%,
-                10.913% 12.884%,
-                10.394% 0%
-            );
-            position: absolute;
-            transform-origin: 50% 2%;
-        }
-
-        &-yellow,
-        &-lite-red {
-            width: 354px;
-            height: 180px;
-            z-index: 1;
-            transition: scale 0.5s ease-in-out;
-
-            @include breakpoints-max-width(xl) {
-                width: 304px;
-                height: 150px;
-            }
-
-            @include breakpoints-max-width(lg) {
-                width: 172px;
-                height: 85px;
-                z-index: -1;
-            }
-        }
-
-        &-white {
-            width: 206px;
-            height: 106px;
-            top: -1px;
-            left: 74px;
-            background-color: $whitePage;
-            z-index: 0;
-
-            @include breakpoints-max-width(xl) {
-                width: 186px;
-                height: 95px;
-                left: 58px;
-            }
-
-            @include breakpoints-max-width(lg) {
-                width: 108px;
-                height: 56px;
-                left: 33px;
-            }
-        }
-
         &-yellow {
             top: -58%;
             left: 39%;
-            background: $yellow;
-            animation: rotate 8s linear infinite;
 
             @include breakpoints-max-width(lg) {
                 top: -53%;
@@ -157,15 +84,13 @@
         &-lite-red {
             top: 122%;
             left: 84%;
-            background: $redArc;
-            animation: rotate 6s linear infinite;
 
             @include breakpoints-max-width(xl) {
                 left: 80%;
             }
 
             @include breakpoints-max-width(lg) {
-                top: 102%;
+                top: 152%;
                 left: 10%;
             }
 
@@ -261,33 +186,6 @@
         }
     }
 
-    &__link {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-
-        &-text {
-            font-size: 20px;
-            font-family: $mainFont;
-            color: $orangeLink;
-
-            @include breakpoints-max-width(md) {
-                font-size: 14px;
-            }
-        }
-
-        &-svg {
-            fill: $orangeLink;
-            width: 10px;
-            height: 15px;
-
-            @include breakpoints-max-width(md) {
-                width: 10px;
-                height: 10px;
-            }
-        }
-    }
-
     &__img-block {
         position: relative;
         width: 50%;
@@ -296,30 +194,27 @@
             padding-left: 120px;
             margin: 0 auto;
             width: 85%;
-            height: 350px;
+            height: 1px;
+            padding-bottom: 55.25%;
         }
 
         @include breakpoints-max-width(md) {
+            padding-bottom: 56.25%;
             padding-left: 0;
             width: 85%;
-            height: 250px;
         }
 
         @include breakpoints-max-width(sm) {
-            height: 316px;
+            padding-bottom: 65%;
             width: 100%;
+        }
+
+        @include breakpoints-max-width(xs) {
+            padding-bottom: 75%;
         }
     }
 
     &__circle {
-        &-purple,
-        &-yellow {
-            border-radius: 100%;
-            position: absolute;
-            z-index: -1;
-            transition: scale 0.5s ease-in-out;
-        }
-
         &-purple {
             top: 52%;
             left: 59%;
@@ -335,7 +230,7 @@
             }
 
             @include breakpoints-max-width(lg) {
-                top: 55%;
+                top: 45%;
                 left: 48%;
                 width: 3.7px;
                 height: 3.7px;
@@ -367,19 +262,19 @@
             }
 
             @include breakpoints-max-width(md) {
-                top: 110%;
-                left: 84%;
+                top: 75%;
+                left: 70%;
                 width: 0.1px;
                 height: 0.1px;
             }
 
             @include breakpoints-max-width(sm) {
-                top: 92%;
+                top: 126%;
                 left: 84%;
             }
 
             @include breakpoints-max-width(xs) {
-                top: 92%;
+                top: 110%;
                 left: 74%;
             }
         }
@@ -390,37 +285,30 @@
         position: absolute;
         max-width: 824px;
         width: 115%;
-        min-width: 730px;
 
         @include breakpoints-max-width(xl) {
             margin: 60px 0 0 80px;
-            min-width: 605px;
         }
 
         @include breakpoints-max-width(lg) {
+            max-width: 94%;
             margin: 57px 0 0 0;
-            min-width: 540px;
+            min-width: 700px;
         }
 
         @include breakpoints-max-width(md) {
-            padding-top: 16px;
             margin: 0;
-            width: 139%;
+            max-width: 139%;
             min-width: 0;
         }
 
         @include breakpoints-max-width(sm) {
-            max-width: 560px;
+            min-width: 465px;
             z-index: -2;
         }
-    }
-}
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
+        @include breakpoints-max-width(xs) {
+            min-width: 394px;
+        }
     }
 }

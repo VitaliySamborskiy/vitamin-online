@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 
     const screenWidth = window.innerWidth;
 
-    if (screenWidth === 375) {
+    if (screenWidth <= 375) {
         observerGeometry(getElement(".main-section__circle-yellow") as HTMLElement, 2500, 59);
     } else {
         observerGeometry(getElement(".main-section__circle-yellow") as HTMLElement, 2500, 95);

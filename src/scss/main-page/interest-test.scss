@@ -1,0 +1,146 @@
+.interest {
+    &__content {
+        position: relative;
+        margin: 225px auto 0;
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+
+        @include breakpoints-max-width(xl) {
+            margin: 200px auto 0;
+            width: 55%;
+        }
+
+        @include breakpoints-max-width(lg) {
+            margin: 230px auto 0;
+        }
+
+        @include breakpoints-max-width(md) {
+            margin: 200px auto 0;
+            width: 80%;
+        }
+
+        @include breakpoints-max-width(sm) {
+            margin: 38px auto 0;
+            width: 100%;
+        }
+    }
+
+    &__arc-yellow {
+    }
+
+    &__arc-white {
+    }
+
+    &__svg {
+        margin: 0 auto;
+        width: 99px;
+        height: 99px;
+
+        @include breakpoints-max-width(lg) {
+            width: 75px;
+            height: 75px;
+        }
+
+        @include breakpoints-max-width(sm) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__title {
+        margin-top: 50px;
+        font-size: 56px;
+        text-align: center;
+
+        @include breakpoints-max-width(lg) {
+            margin-top: 30px;
+            font-size: 38px;
+        }
+
+        @include breakpoints-max-width(md) {
+            font-size: 24px;
+        }
+
+        @include breakpoints-max-width(sm) {
+            margin-top: 28px;
+        }
+    }
+
+    &__text {
+        margin-top: 32px;
+        font-size: 20px;
+        text-align: center;
+
+        @include breakpoints-max-width(lg) {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        @include breakpoints-max-width(sm) {
+            margin-top: 15px;
+        }
+    }
+
+    &__button {
+        margin: 53px auto 0;
+        text-align: center;
+        padding: 21px 0;
+        width: 260px;
+
+        @include breakpoints-max-width(lg) {
+            margin: 30px auto 0;
+            padding: 17px 0;
+        }
+
+        @include breakpoints-max-width(sm) {
+            margin: 28px auto 0;
+            padding: 15px 0;
+            width: 154px;
+        }
+    }
+
+    &__arc-yellow {
+        left: -51%;
+        top: 30%;
+
+        @include breakpoints-max-width(xl) {
+            left: -41%;
+        }
+
+        @include breakpoints-max-width(md) {
+            left: -30%;
+        }
+
+        @include breakpoints-max-width(sm) {
+            display: none;
+        }
+    }
+
+    &__circle-purple {
+        background: $purple;
+        width: 95px;
+        height: 95px;
+        left: 125%;
+        top: 1%;
+
+        @include breakpoints-max-width(xl) {
+            left: 115%;
+        }
+
+        @include breakpoints-max-width(md) {
+            left: 100%;
+        }
+
+        @include breakpoints-max-width(sm) {
+            left: 96%;
+            top: -12%;
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__hide {
+        display: none;
+    }
+}

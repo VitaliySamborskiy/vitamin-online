@@ -1,0 +1,99 @@
+.arc {
+    &__yellow,
+    &__lite-red,
+    &__white {
+        clip-path: polygon(
+            89.606% 0%,
+            89.606% 0%,
+            89.087% 12.884%,
+            87.587% 25.107%,
+            85.185% 36.504%,
+            81.964% 46.912%,
+            78.005% 56.167%,
+            73.391% 64.107%,
+            68.201% 70.567%,
+            62.518% 75.383%,
+            56.424% 78.393%,
+            50% 79.433%,
+            50% 79.433%,
+            43.576% 78.393%,
+            37.482% 75.383%,
+            31.799% 70.567%,
+            26.609% 64.107%,
+            21.995% 56.167%,
+            18.036% 46.912%,
+            14.815% 36.504%,
+            12.413% 25.107%,
+            10.913% 12.884%,
+            10.394% 0%
+        );
+        position: absolute;
+        transform-origin: 50% 2%;
+    }
+
+    &__yellow,
+    &__lite-red {
+        width: 354px;
+        height: 180px;
+        z-index: 1;
+        transition: scale 0.5s ease-in-out;
+
+        @include breakpoints-max-width(xl) {
+            width: 304px;
+            height: 150px;
+        }
+
+        @include breakpoints-max-width(lg) {
+            width: 172px;
+            height: 85px;
+            z-index: -1;
+        }
+    }
+
+    &__white {
+        width: 206px;
+        height: 106px;
+        top: -1px;
+        left: 74px;
+        background-color: $whitePage;
+        z-index: 0;
+
+        @include breakpoints-max-width(xl) {
+            width: 186px;
+            height: 95px;
+            left: 58px;
+        }
+
+        @include breakpoints-max-width(lg) {
+            width: 108px;
+            height: 56px;
+            left: 33px;
+        }
+    }
+
+    &__yellow {
+        background: $yellow;
+        animation: rotate 8s linear infinite;
+    }
+
+    &__lite-red {
+        background: $redArc;
+        animation: rotate 6s linear infinite;
+    }
+}
+
+.circle {
+    border-radius: 100px;
+    position: absolute;
+    z-index: -1;
+    transition: scale 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

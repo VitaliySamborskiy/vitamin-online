@@ -6,20 +6,22 @@
         justify-content: space-between;
 
         @include breakpoints-max-width(lg) {
-            margin-top: 242px;
+            margin-top: 140px;
         }
 
         @include breakpoints-max-width(md) {
+            margin-top: 100px;
             flex-direction: column;
-            padding-bottom: 300px;
+            padding-bottom: 75%;
         }
 
         @include breakpoints-max-width(sm) {
-            margin-top: 0;
+            margin-top: 84px;
+            padding-bottom: 65%;
         }
 
         @include breakpoints-max-width(xs) {
-            margin-top: 8px;
+            margin-top: 48px;
         }
     }
 
@@ -147,18 +149,18 @@
 
                 @include breakpoints-max-width(lg) {
                     margin: 80px auto 0;
-                    width: 75%;
+                    width: 100%;
                 }
 
                 @include breakpoints-max-width(md) {
                     position: absolute;
-                    top: 65%;
+                    top: 58%;
                     width: 60%;
                 }
 
                 @include breakpoints-max-width(sm) {
                     width: 68%;
-                    top: 55%;
+                    top: 54%;
                     left: -6%;
                 }
             }
@@ -265,13 +267,13 @@
                 }
 
                 @include breakpoints-max-width(md) {
-                    top: 84%;
+                    top: 75%;
                     width: 70%;
                 }
 
                 @include breakpoints-max-width(sm) {
                     width: 88%;
-                    top: 74%;
+                    top: 70%;
                     left: 19%;
                 }
 
