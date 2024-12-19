@@ -1,32 +1,38 @@
 import Swiper from "swiper";
-import "swiper/swiper.css";
-
-type SwiperOptions = {
-    swiperElement: HTMLElement;
-    sliderView?: number;
-    spaceBetween?: number;
-    loop?: boolean;
-};
+import "swiper/css";
 
 let swiperInstance: Swiper | null = null;
 
-export function swiperInit({ swiperElement, sliderView, spaceBetween, loop }: SwiperOptions): void {
-    swiperInstance = new Swiper(swiperElement, {
-        slidesPerView: sliderView,
-        spaceBetween: spaceBetween,
-        loop: loop,
-    });
+export function swiperInit(
+	swiperElement: HTMLElement,
+	sliderView: number,
+	spaceBetween: number | string,
+	loop: boolean
+): void {
+	swiperInstance = new Swiper(swiperElement, {
+		slidesPerView: sliderView,
+		spaceBetween: spaceBetween,
+		loop: loop,
+	});
 }
 
 export function swiperBreakpointsInit(
-    { swiperElement, sliderView, spaceBetween, loop }: SwiperOptions,
-    breakpoints: number,
+	swiperElement: HTMLElement,
+	sliderView: number,
+	spaceBetween: number | string,
+	loop: boolean,
+	breakpoints: number
 ): void {
-    window.addEventListener("resize", (): void => {
-        if (window.innerWidth < breakpoints) {
-            swiperInit({ swiperElement, sliderView, spaceBetween, loop });
-        } else {
-            swiperInstance?.destroy(true, true);
-        }
-    });
+	window.addEventListener("resize", (): void => {
+		if (window.innerWidth <= breakpoints) {
+			if (swiperInstance === null) {
+				swiperInit(swiperElement, sliderView, spaceBetween, loop);
+			}
+		} else {
+			if (swiperInstance instanceof Swiper) {
+				swiperInstance.destroy(true, true);
+				swiperInstance = null;
+			}
+		}
+	});
 }
