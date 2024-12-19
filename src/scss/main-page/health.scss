@@ -2,7 +2,6 @@
     &__content {
         margin-top: 272px;
         display: flex;
-        position: relative;
         justify-content: space-between;
 
         @include breakpoints-max-width(lg) {
@@ -12,12 +11,12 @@
         @include breakpoints-max-width(md) {
             margin-top: 100px;
             flex-direction: column;
-            padding-bottom: 75%;
+            padding-bottom: 63%;
         }
 
         @include breakpoints-max-width(sm) {
             margin-top: 84px;
-            padding-bottom: 65%;
+            padding-bottom: 75%;
         }
 
         @include breakpoints-max-width(xs) {
@@ -28,6 +27,11 @@
     &__left {
         &-block {
             width: 50%;
+            position: relative;
+
+            @include breakpoints-max-width(lg) {
+                width: 95%;
+            }
 
             @include breakpoints-max-width(md) {
                 width: 100%;
@@ -36,14 +40,16 @@
 
         &-purple-block {
             position: absolute;
-            left: -4.6%;
+            left: -10%;
             background-color: $purple;
-            width: 54.5%;
+            width: 110%;
             height: 960px;
             z-index: -1;
             overflow: hidden;
 
             @include breakpoints-max-width(lg) {
+                left: -5.4%;
+                width: 106%;
                 height: 730px;
             }
 
@@ -66,7 +72,7 @@
         &-circle-yellow {
             position: absolute;
             top: 13%;
-            left: 11%;
+            left: 22%;
             background-color: $yellow;
             width: 1.39px;
             height: 1.39px;
@@ -101,7 +107,9 @@
 
             @include breakpoints-max-width(md) {
                 margin: 120px auto 0;
+                padding-left: 0;
                 text-align: center;
+                width: 85%;
             }
 
             @include breakpoints-max-width(sm) {
@@ -143,7 +151,7 @@
 
         &-img {
             &-block {
-                margin: 123px auto;
+                margin: 123px auto 0;
                 width: 61%;
                 display: flex;
 
@@ -154,13 +162,13 @@
 
                 @include breakpoints-max-width(md) {
                     position: absolute;
-                    top: 58%;
+                    top: 298%;
                     width: 60%;
                 }
 
                 @include breakpoints-max-width(sm) {
-                    width: 68%;
-                    top: 54%;
+                    width: 60%;
+                    top: 320%;
                     left: -6%;
                 }
             }
@@ -170,6 +178,7 @@
     &__right {
         &-block {
             width: 50%;
+            position: relative;
 
             @include breakpoints-max-width(lg) {
                 width: 100%;
@@ -256,29 +265,31 @@
         &-img {
             &-block {
                 position: absolute;
-                width: 50%;
-                top: 68.5%;
-                left: 37.2%;
+                width: 92%;
+                top: 76%;
+                left: -25%;
                 z-index: -1;
 
                 @include breakpoints-max-width(lg) {
                     top: 70%;
-                    width: 60%;
+                    left: -15%;
+                    width: 110%;
                 }
 
                 @include breakpoints-max-width(md) {
-                    top: 75%;
+                    top: 133%;
+                    left: 35%;
                     width: 70%;
                 }
 
                 @include breakpoints-max-width(sm) {
                     width: 88%;
-                    top: 70%;
+                    top: 133%;
                     left: 19%;
                 }
 
                 @include breakpoints-max-width(xs) {
-                    top: 72%;
+                    top: 128%;
                     left: 15%;
                     width: 91%;
                 }

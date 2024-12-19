@@ -1,28 +1,40 @@
 .interest {
     &__content {
         position: relative;
-        margin: 225px auto 0;
         display: flex;
         flex-direction: column;
         width: 45%;
 
         @include breakpoints-max-width(xl) {
-            margin: 200px auto 0;
             width: 55%;
         }
 
-        @include breakpoints-max-width(lg) {
-            margin: 230px auto 0;
-        }
-
         @include breakpoints-max-width(md) {
-            margin: 200px auto 0;
             width: 80%;
         }
 
         @include breakpoints-max-width(sm) {
-            margin: 38px auto 0;
             width: 100%;
+        }
+    }
+
+    &__margin-first {
+        margin: 348px auto 0;
+
+        @include breakpoints-max-width(xl) {
+            margin: 120px auto 0;
+        }
+
+        @include breakpoints-max-width(lg) {
+            margin: 145px auto 0;
+        }
+
+        @include breakpoints-max-width(md) {
+            margin: 100px auto 0;
+        }
+
+        @include breakpoints-max-width(sm) {
+            margin: 88px auto 0;
         }
     }
 
@@ -94,15 +106,32 @@
         }
 
         @include breakpoints-max-width(sm) {
-            margin: 28px auto 0;
+            margin: 25px auto 0;
             padding: 15px 0;
             width: 154px;
         }
     }
 
-    &__arc-yellow {
+    &__arc-left {
         left: -51%;
         top: 30%;
+
+        @include breakpoints-max-width(xl) {
+            left: -41%;
+        }
+
+        @include breakpoints-max-width(md) {
+            left: -30%;
+        }
+
+        @include breakpoints-max-width(sm) {
+            display: none;
+        }
+    }
+
+    &__arc-right {
+        left: 150%;
+        top: 10%;
 
         @include breakpoints-max-width(xl) {
             left: -41%;
@@ -138,6 +167,14 @@
             width: 60px;
             height: 60px;
         }
+
+        @include breakpoints-max-width(xs) {
+            top: -4%;
+        }
+    }
+
+    &__link {
+        margin: 32px auto 0;
     }
 
     &__hide {

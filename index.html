@@ -19,12 +19,24 @@
                 <load src="src/components/main-page/health.html" />
                 <load
                     src="src/components/main-page/interest-test.html"
-                    class-arc="interest__arc-yellow"
+                    margin="interest__margin-first"
+                    class-arc="arc__yellow interest__arc-left"
                     svg-sprite="#compassion"
                     title="Tell us a little about yourself. We’re good listeners."
                     text="We'll help you create a health plan with vitamins, supplements, and more that help you feel your best today and support you long-term."
                     element="<div class='circle interest__circle-purple'></div>"
                     shop="interest__hide"
+                />
+                <load src="src/components/main-page/recommendations.html" />
+                <load
+                    src="src/components/main-page/interest-test.html"
+                    margin="interest__margin-first"
+                    class-arc="arc__lite-red interest__arc-left"
+                    svg-sprite="#help"
+                    title="Ready to get started?"
+                    text="We'll help you create a health plan with vitamins, supplements, and more that help you feel your best today and support you long-term."
+                    element="<div class='arc__yellow interest__arc-right'>
+                    <div class='arc__white'></div></div>"
                 />
             </main>
             <load src="src/components/base/footer.html" />

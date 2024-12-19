@@ -1,6 +1,6 @@
 <section class="interest__container">
-    <div class="interest__content">
-        <div class="arc__yellow {=$class-arc}">
+    <div class="interest__content {=$margin}">
+        <div class="{=$class-arc}">
             <div class="arc__white"></div>
         </div>
         <svg class="interest__svg">
@@ -9,9 +9,9 @@
         <h2 class="interest__title">{=$title}</h2>
         <p class="interest__text">{=$text}</p>
         <a class="interest__button button purple-button" href="#">Take the quiz</a>
-        <a class="link {=$shop}" href="#"
-            ><span class="link__text">Go to the shop</span
-            ><svg class="link__svg">
+        <a class="link interest__link {=$shop}" href="#"
+            ><span class="link__text link__text-orange">Go to the shop</span
+            ><svg class="link__svg link__svg-orange">
                 <use href="#arrow"></use></svg
         ></a>
         {=$element}
