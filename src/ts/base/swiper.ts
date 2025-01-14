@@ -1,19 +1,25 @@
 import Swiper from "swiper";
-// import "swiper/css";
+import "swiper/css";
+import { SwiperOptions } from "swiper/types";
 
-let swiperInstance: Swiper | null = null;
+let swiperInstanceMap = new Map<HTMLElement, Swiper>();
 
 export function swiperInit(
 	swiperElement: HTMLElement,
 	sliderView: number,
 	spaceBetween: number | string,
-	loop: boolean
+	loop: boolean,
+	breakpoints?: Record<string, SwiperOptions>
 ): void {
-	swiperInstance = new Swiper(swiperElement, {
-		slidesPerView: sliderView,
-		spaceBetween: spaceBetween,
-		loop: loop,
-	});
+	swiperInstanceMap.set(
+		swiperElement,
+		new Swiper(swiperElement, {
+			slidesPerView: sliderView,
+			spaceBetween: spaceBetween,
+			loop: loop,
+			breakpoints: breakpoints,
+		})
+	);
 }
 
 export function swiperBreakpointsInit(
@@ -21,17 +27,21 @@ export function swiperBreakpointsInit(
 	sliderView: number,
 	spaceBetween: number | string,
 	loop: boolean,
-	breakpoints: number
+	breakpoints: number,
+	swiperWrapperElement?: HTMLElement,
+	breakpointsOptions?: Record<string, SwiperOptions>
 ): void {
 	window.addEventListener("resize", (): void => {
 		if (window.innerWidth <= breakpoints) {
-			if (swiperInstance === null) {
-				swiperInit(swiperElement, sliderView, spaceBetween, loop);
-			}
+			swiperWrapperElement ? swiperWrapperElement.classList.add("swiper-wrapper") : null;
+			!swiperInstanceMap.has(swiperElement)
+				? swiperInit(swiperElement, sliderView, spaceBetween, loop, breakpointsOptions)
+				: null;
 		} else {
-			if (swiperInstance instanceof Swiper) {
-				swiperInstance.destroy(true, true);
-				swiperInstance = null;
+			swiperWrapperElement ? swiperWrapperElement.classList.remove("swiper-wrapper") : null;
+			if (swiperInstanceMap.has(swiperElement)) {
+				swiperInstanceMap.get(swiperElement)?.destroy(true, true);
+				swiperInstanceMap.delete(swiperElement);
 			}
 		}
 	});

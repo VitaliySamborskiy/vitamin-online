@@ -8,17 +8,15 @@
 			margin-top: 123px;
 			flex-direction: column-reverse;
 		}
-	}
 
-	//&__swiper-container {
-	//	@include breakpoints-max-width(sm) {
-	//		position: relative;
-	//		margin-left: 20px;
-	//		left: -5%;
-	//		width: 120%;
-	//		overflow: visible;
-	//	}
-	//}
+		@include breakpoints-max-width(sm) {
+			margin-top: 59px;
+		}
+
+		@include breakpoints-max-width(xs) {
+			margin-top: 56px;
+		}
+	}
 
 	&__product {
 		&-cards {
@@ -29,18 +27,26 @@
 			gap: 33px;
 
 			@include breakpoints-max-width(xl) {
-				gap: 15px;
+				width: 50%;
+				right: 50%;
+				gap: 10px;
 			}
 
 			@include breakpoints-max-width(lg) {
 				margin: 40px auto 0;
+				width: 710px;
 				position: relative;
-				right: 0;
+				right: auto;
+				left: auto;
 				top: 0;
 			}
 
+			@include breakpoints-max-width(md) {
+				width: 100%;
+			}
+
 			@include breakpoints-max-width(sm) {
-				gap: 10px;
+				gap: 0;
 			}
 		}
 
@@ -52,30 +58,31 @@
 			max-width: 400px;
 
 			@include breakpoints-max-width(xl) {
-				max-width: 370px;
+				max-width: 350px;
 			}
 
 			@include breakpoints-max-width(md) {
 				padding: 40px 30px 30px;
-				max-width: 100%;
+				max-width: 49%;
 			}
 
 			@include breakpoints-max-width(sm) {
 				padding: 30px 20px;
-				max-width: 300px;
+				max-width: 370px;
 				min-width: 280px;
 			}
 
-			&-vitamins {
-				background: $liteMint;
-			}
-
-			&-minerals {
-				background: $litePurple;
+			@include breakpoints-max-width(xs) {
+				padding: 30px 20px 25px;
 			}
 		}
 
 		&-img {
+			@include breakpoints-max-width(sm) {
+				margin: 0 auto;
+				width: 75%;
+			}
+
 			&-block {
 				margin: 0 auto 0;
 			}
@@ -92,6 +99,10 @@
 				margin-top: 25px;
 				font-size: 12px;
 				opacity: 0.7;
+			}
+
+			@include breakpoints-max-width(sm) {
+				margin-top: 30px;
 			}
 		}
 
@@ -118,6 +129,10 @@
 				margin-top: 15px;
 				opacity: 0.7;
 			}
+
+			@include breakpoints-max-width(sm) {
+				line-height: 143%;
+			}
 		}
 	}
 
@@ -138,15 +153,22 @@
 			padding-left: 36px;
 
 			@include breakpoints-max-width(xl) {
-				margin: 75px auto 0;
+				margin: 75px auto 0 180px;
 				width: 65%;
-			}
-
-			@include breakpoints-max-width(lg) {
 				padding-left: 0;
 			}
 
+			@include breakpoints-max-width(lg) {
+				margin: 75px auto 0;
+				width: 75%;
+			}
+
+			@include breakpoints-max-width(md) {
+				width: 85%;
+			}
+
 			@include breakpoints-max-width(sm) {
+				margin: 60px auto 0;
 				width: 100%;
 			}
 		}
@@ -166,7 +188,13 @@
 			}
 
 			@include breakpoints-max-width(sm) {
-				left: -5%;
+				left: -6%;
+				width: 113%;
+			}
+
+			@include breakpoints-max-width(xs) {
+				left: -7%;
+				width: 114%;
 			}
 		}
 
@@ -192,8 +220,8 @@
 				text-align: center;
 			}
 
-			@include breakpoints-max-width(md) {
-				//font-size: 24px;
+			@include breakpoints-max-width(sm) {
+				font-size: 24px;
 			}
 		}
 
@@ -208,6 +236,7 @@
 			}
 
 			@include breakpoints-max-width(md) {
+				margin: 14px auto 0;
 				font-size: 14px;
 			}
 		}
@@ -223,6 +252,7 @@
 			}
 
 			@include breakpoints-max-width(md) {
+				margin: 20px auto 0;
 				width: 108px;
 			}
 		}
@@ -235,6 +265,7 @@
 
 				@include breakpoints-max-width(xl) {
 					top: 112%;
+					left: 31%;
 				}
 
 				@include breakpoints-max-width(lg) {
