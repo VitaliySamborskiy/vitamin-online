@@ -52,6 +52,7 @@ a {
 ul,
 ol {
 	color: $textColor;
+	font-family: $supportFonts;
 }
 
 .wrapper {
@@ -70,10 +71,6 @@ ol {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 20px;
-
-	//@include breakpoints(sm) {
-	//    padding: 0 12px;
-	//}
 }
 
 .hide {

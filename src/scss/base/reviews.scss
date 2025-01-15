@@ -117,6 +117,10 @@
 		}
 
 		@include breakpoints-max-width(sm) {
+			margin-top: 33px;
+		}
+
+		@include breakpoints-max-width(xs) {
 			margin-top: 28px;
 		}
 	}

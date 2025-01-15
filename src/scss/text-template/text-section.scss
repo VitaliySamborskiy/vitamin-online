@@ -1,0 +1,114 @@
+.text-section {
+	&__content {
+		margin: 99px auto 0;
+		width: 680px;
+
+		@include breakpoints-max-width(md) {
+			margin: 70px auto 0;
+			width: 90%;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin: 55px auto 0;
+			width: 100%;
+		}
+
+		@include breakpoints-max-width(xs) {
+			width: 99.7%;
+		}
+	}
+
+	&__block {
+	}
+
+	&__main-title {
+		font-size: 40px;
+
+		@include breakpoints-max-width(sm) {
+			font-size: 24px;
+		}
+	}
+
+	&__text {
+		margin-top: 37px;
+		font-size: 18px;
+		line-height: 178%;
+
+		@include breakpoints-max-width(lg) {
+			font-size: 16px;
+			margin-top: 25px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 28px;
+			font-size: 14px;
+			line-height: 171%;
+		}
+	}
+
+	&__title {
+		margin-top: 63px;
+		font-size: 26px;
+
+		@include breakpoints-max-width(lg) {
+			font-size: 20px;
+		}
+
+		@include breakpoints-max-width(xs) {
+			margin-top: 65px;
+		}
+	}
+
+	&__items {
+		padding-left: 47px;
+		display: flex;
+		flex-direction: column;
+		margin-top: 39px;
+		gap: 15px;
+
+		@include breakpoints-max-width(lg) {
+			padding-left: 40px;
+			margin-top: 32px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			gap: 26px;
+		}
+
+		@include breakpoints-max-width(xs) {
+			margin-top: 30px;
+			gap: 26px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		font-size: 18px;
+		line-height: 178%;
+
+		@include breakpoints-max-width(lg) {
+			font-size: 16px;
+		}
+
+		@include breakpoints-max-width(md) {
+			font-size: 14px;
+			line-height: 171%;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 13px;
+			left: -50px;
+			background: $orange;
+			display: flex;
+			width: 30px;
+			height: 2px;
+
+			@include breakpoints-max-width(md) {
+				left: -40px;
+				width: 20px;
+			}
+		}
+	}
+}

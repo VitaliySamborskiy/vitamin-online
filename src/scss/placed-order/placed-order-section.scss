@@ -1,0 +1,131 @@
+.order-section {
+	&__content {
+		margin: 241px auto 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 508px;
+
+		@include breakpoints-max-width(xl) {
+			margin: 200px auto 0;
+		}
+
+		@include breakpoints-max-width(lg) {
+			margin: 150px auto 0;
+		}
+
+		@include breakpoints-max-width(md) {
+			width: 85%;
+		}
+
+		@include breakpoints-max-width(sm) {
+			width: 100%;
+			margin: 101px auto 0;
+		}
+
+		@include breakpoints-max-width(xs) {
+			margin: 22px auto 0;
+		}
+	}
+
+	&__svg {
+		width: 168px;
+		height: 200px;
+
+		@include breakpoints-max-width(lg) {
+			width: 118px;
+			height: 150px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			width: 84px;
+			height: 100px;
+		}
+	}
+
+	&__title {
+		margin-top: 80px;
+		font-size: 26px;
+		text-align: center;
+
+		@include breakpoints-max-width(lg) {
+			margin-top: 50px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 30px;
+			font-size: 24px;
+		}
+	}
+
+	&__text {
+		margin-top: 12px;
+		font-size: 16px;
+		line-height: 175%;
+		text-align: center;
+
+		@include breakpoints-max-width(md) {
+			margin-top: 13px;
+			font-size: 14px;
+			line-height: 150%;
+		}
+	}
+
+	&__button {
+		margin-top: 23px;
+		padding: 19px 91px;
+
+		@include breakpoints-max-width(md) {
+			padding: 17px 108px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 19px;
+		}
+
+		@include breakpoints-max-width(xs) {
+			padding: 17px 80px;
+		}
+	}
+
+	&__sub-text {
+		margin-top: 90px;
+		position: relative;
+		width: 95%;
+		font-size: 14px;
+		text-align: center;
+		line-height: 135%;
+		opacity: 0.5;
+
+		@include breakpoints-max-width(lg) {
+			margin-top: 70px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			width: 96%;
+		}
+
+		@include breakpoints-max-width(xs) {
+			width: 100%;
+		}
+
+		&:after {
+			content: "";
+			display: flex;
+			position: absolute;
+			top: -42px;
+			left: -1%;
+			background: #f2f2f2;
+			width: 508px;
+			height: 1px;
+
+			@include breakpoints-max-width(lg) {
+				top: -20px;
+			}
+
+			@include breakpoints-max-width(md) {
+				width: 102%;
+			}
+		}
+	}
+}

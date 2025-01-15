@@ -1,74 +1,74 @@
 .header {
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 25px;
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 25px;
 
-        @include breakpoints-max-width(md) {
-            align-items: center;
-            width: 98%;
-            margin: 9px auto 0;
-        }
-    }
+		@include breakpoints-max-width(md) {
+			align-items: center;
+			width: 98%;
+			margin: 9px auto 0;
+		}
+	}
 
-    &__logo {
-        padding: 5px;
+	&__logo {
+		padding: 5px;
 
-        &-svg {
-            width: 42px;
-            height: 50px;
+		&-svg {
+			width: 42px;
+			height: 50px;
 
-            @include breakpoints-max-width(md) {
-                width: 34px;
-                height: 40px;
-            }
-        }
-    }
+			@include breakpoints-max-width(md) {
+				width: 34px;
+				height: 40px;
+			}
+		}
+	}
 
-    &__items {
-        display: flex;
-        align-items: center;
-        gap: 35px;
+	&__items {
+		display: flex;
+		align-items: center;
+		gap: 35px;
 
-        @include breakpoints-max-width(md) {
-            gap: 0;
-        }
-    }
+		@include breakpoints-max-width(md) {
+			gap: 0;
+		}
+	}
 
-    &__link {
-        &:hover {
-            .header__svg {
-                fill: $orange;
-            }
-        }
-    }
+	&__link {
+		&:hover {
+			.header__svg {
+				fill: $orange;
+			}
+		}
+	}
 
-    &__item {
-        &:nth-child(1) {
-            @include breakpoints-max-width(md) {
-                display: none;
-            }
-        }
-    }
+	&__item {
+		&:nth-child(1) {
+			@include breakpoints-max-width(md) {
+				display: none;
+			}
+		}
+	}
 
-    &__svg {
-        fill: $textTitle;
-        width: 26px;
-        height: 26px;
-        transition: fill 0.5s ease-in-out;
+	&__svg {
+		fill: $textTitle;
+		width: 26px;
+		height: 26px;
+		transition: fill 0.5s ease-in-out;
 
-        @include breakpoints-max-width(md) {
-            width: 22px;
-        }
-    }
+		@include breakpoints-max-width(md) {
+			width: 22px;
+		}
+	}
 
-    &__button {
-        margin-bottom: 5px;
-        padding: 13px 28px;
-        font-size: 16px;
+	&__button {
+		margin-bottom: 5px;
+		padding: 13px 28px;
+		font-size: 16px;
 
-        @include breakpoints-max-width(md) {
-            display: none;
-        }
-    }
+		@include breakpoints-max-width(md) {
+			display: none;
+		}
+	}
 }
