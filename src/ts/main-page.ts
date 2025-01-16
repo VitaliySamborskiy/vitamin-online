@@ -2,7 +2,7 @@ import { burgerMenu, burgerSubMenu } from "./base/burger-menu.ts";
 import { observerGeometry } from "./base/observer-geometry.ts";
 import { getElement } from "./base/get-element.ts";
 // import { useFetch } from "./base/use-fetch.ts";
-import { swiperBreakpointsInit, swiperInit } from "./base/swiper.ts";
+import { swiperBreakpointsInit } from "./base/swiper.ts";
 import { renderRecomendationCard } from "./main-page/render-recomendation-card.ts";
 import { mobileSwiper } from "./main-page/mobile-swiper.ts";
 import { renderReviewCard } from "./main-page/render-reviews-card.ts";

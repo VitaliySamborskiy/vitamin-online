@@ -21,7 +21,7 @@
     "gh-pages": "^6.2.0",
     "sass": "^1.81.0",
     "scroll-lock": "^2.1.5",
-    "swiper": "^11.1.15",
+    "swiper": "^11.2.1",
     "vite-plugin-html-inject": "^1.1.2"
   }
 }
