@@ -15,6 +15,8 @@ export default defineConfig({
 				main: resolve(__dirname, "index.html"),
 				404: resolve(__dirname, "404.html"),
 				textTemplate: resolve(__dirname, "src/pages/text-template.html"),
+				placedOrder: resolve(__dirname, "src/pages/placed-order.html"),
+				signIn: resolve(__dirname, "src/pages/sign-in.html"),
 			},
 		},
 	},
