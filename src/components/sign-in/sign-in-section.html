@@ -1,0 +1,70 @@
+<section class="sing-in__background">
+	<div class="sing-in__container">
+		<div class="sing-in__content">
+			<div class="sing-in__header"></div>
+			<div class="sing-in__block">
+				<h1 class="sing-in__title">Sign in with email</h1>
+				<p class="sing-in__text">Please enter your e-mail and password:</p>
+				<form class="sing-in__form">
+					<div class="sing-in__input-block">
+						<label
+							class="sing-in__input-label"
+							for="email">
+							Email
+						</label>
+						<input
+							class="sing-in__input"
+							name="email"
+							id="email" />
+					</div>
+					<div class="sing-in__input-block">
+						<label
+							class="sing-in__input-label"
+							for="password">
+							Password
+						</label>
+						<span class="sing-in__input-label-right">Forgot password?</span>
+						<input
+							class="sing-in__input"
+							name="password"
+							id="password" />
+					</div>
+				</form>
+				<load
+					src="src/components/base/button.html"
+					class_button="button orange-button sing-in__button-main"
+					label="Sign in"
+					button_text="Sign in" />
+				<p class="sing-in__text-border">or sign in with...</p>
+				<div class="sing-in__button-block">
+					<load
+						src="src/components/base/button.html"
+						class_button="sing-in__button button ivory-button"
+						label="Google"
+						button_text="<svg class='sing-in__button-svg'><use href='#google'></use></svg>
+				<span class='sing-in__button-text'>Google</span>" />
+					<load
+						src="src/components/base/button.html"
+						class_button="sing-in__button button ivory-button"
+						label="Apple"
+						button_text="<svg class='sing-in__button-svg'><use href='#apple'></use></svg>
+				<span class='sing-in__button-text'>Apple</span>" />
+					<load
+						src="src/components/base/button.html"
+						class_button="sing-in__button button ivory-button"
+						label="Facebook"
+						button_text="<svg class='sing-in__button-svg'><use href='#facebook-logo'></use></svg>
+				<span class='sing-in__button-text'>Facebook</span>" />
+				</div>
+			</div>
+			<span class="sing-in__bottom-text">
+				Don't have an account?
+				<a
+					class="sing-in__link"
+					href="#">
+					Create one
+				</a>
+			</span>
+		</div>
+	</div>
+</section>

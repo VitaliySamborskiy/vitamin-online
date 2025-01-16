@@ -1,77 +1,82 @@
 .button {
-    font-size: 20px;
-    border-radius: 100px;
-    font-weight: $bold;
-    font-family: $mainFont;
-    text-align: center;
-    transition:
-        background-color 0.5s ease-in-out,
-        color 0.5s ease-in-out;
+	font-size: 20px;
+	border-radius: 100px;
+	font-weight: $bold;
+	font-family: $mainFont;
+	text-align: center;
+	transition:
+		background-color 0.5s ease-in-out,
+		color 0.5s ease-in-out;
 
-    @include breakpoints-max-width(sm) {
-        font-size: 16px;
-    }
+	@include breakpoints-max-width(sm) {
+		font-size: 16px;
+	}
 }
 
 .orange-button {
-    background-color: $orange;
-    color: $whitePage;
-    border: 2px solid $orange;
+	background-color: $orange;
+	color: $whitePage;
+	border: 2px solid $orange;
 
-    &:hover {
-        background-color: $whitePage;
-        color: $orange;
-    }
+	&:hover {
+		background-color: $whitePage;
+		color: $orange;
+	}
 }
 
 .purple-button {
-    background-color: $purple;
-    color: $whitePage;
-    border: 2px solid $purple;
+	background-color: $purple;
+	color: $whitePage;
+	border: 2px solid $purple;
 
-    &:hover {
-        background-color: $whitePage;
-        color: $purple;
-    }
+	&:hover {
+		background-color: $whitePage;
+		color: $purple;
+	}
+}
+
+.ivory-button {
+	background-color: $ivory;
+	color: $textTitle;
 }
 
 .link {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+	display: flex;
+	align-items: center;
+	gap: 7px;
 
-    &__text {
-        font-size: 20px;
-        font-family: $mainFont;
+	&__text {
+		font-size: 20px;
+		font-family: $mainFont;
 
-        @include breakpoints-max-width(md) {
-            font-size: 14px;
-        }
+		@include breakpoints-max-width(md) {
+			font-size: 14px;
+		}
 
-        &-orange {
-            color: $orangeLink;
-        }
+		&-orange {
+			color: $orangeLink;
+		}
 
-        &-white {
-            color: $whitePage;
-        }
-    }
+		&-white {
+			color: $whitePage;
+		}
+	}
 
-    &__svg {
-        width: 10px;
-        height: 15px;
+	&__svg {
+		width: 10px;
+		height: 15px;
 
-        @include breakpoints-max-width(md) {
-            width: 10px;
-            height: 10px;
-        }
+		@include breakpoints-max-width(md) {
+			width: 10px;
+			height: 10px;
+		}
 
-        &-orange {
-            fill: $orangeLink;
-        }
+		&-orange {
+			fill: $orangeLink;
+		}
 
-        &-white {
-            fill: $whitePage;
-        }
-    }
+		&-white {
+			fill: $whitePage;
+		}
+	}
 }

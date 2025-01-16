@@ -30,6 +30,13 @@ p {
 	line-height: 163%;
 }
 
+span,
+input,
+label {
+	color: $textTitle;
+	font-family: $mainFont;
+}
+
 h1,
 h2,
 h3,
