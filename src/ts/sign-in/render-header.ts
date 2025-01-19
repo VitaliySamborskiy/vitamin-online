@@ -5,21 +5,21 @@ export function renderHeader(element: HTMLElement) {
 		currentLayout = "mobile";
 
 		element.innerHTML = `<div class="sing-in__mobile">
-<a class="sing-in__mobile-link">
-<svg class="sing-in__mobile-svg"><use href="#arrow"></use></svg>
-</a>
-<span class="sing-in__mobile-title">Account</span>
-</div>`;
+														<a class="sing-in__mobile-link">
+															<svg class="sing-in__mobile-svg">
+																<use href="#arrow"></use>
+															</svg>
+														</a>
+														<span class="sing-in__mobile-title">Account</span>
+												</div>`;
 	} else if (window.innerWidth >= 767 && currentLayout !== "desktop") {
 		currentLayout = "desktop";
 
-		element.innerHTML = `<a
-class="sing-in__logo-link"
-href="#">
-<svg class="sing-in__logo-svg">
-<use href="#logo"></use>
-</svg>
-</a>`;
+		element.innerHTML = `<a class="sing-in__logo-link" href="#">
+														<svg class="sing-in__logo-svg">
+															<use href="#logo"></use>
+														</svg>
+													</a>`;
 	}
 }
 

@@ -1,0 +1,60 @@
+.sing-in__background {
+}
+
+.sing-up {
+	&__content {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__block {
+		margin-top: 24px;
+	}
+
+	&__tabs-buttons {
+		display: flex;
+		border: 1px solid $border;
+		padding: 13px;
+		border-radius: 12px;
+		width: 682px;
+		gap: 5px;
+	}
+
+	&__button-tab {
+		padding: 18px 49px;
+		width: 225px;
+		border-radius: 12px;
+	}
+}
+
+.sing-in__logo-link {
+}
+
+.sing-in__logo-svg {
+}
+
+.sing-up .sing-in__text-border {
+}
+
+.sing-in__button-block {
+}
+
+.sing-in__form {
+}
+
+.sing-in__input-block {
+}
+
+.sing-in__input-label {
+}
+
+.sing-in__input {
+}
+
+.sing-in__bottom-text {
+}
+
+.sing-in__link {
+}
