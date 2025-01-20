@@ -1,106 +1,108 @@
-<section class="sing-in__background">
+<section class="forms__background">
 	<div class="sing-up__container">
 		<div class="sing-up__content">
-			<div class="sing-up__header">
-				<a
-					class="sing-in__logo-link"
-					href="#">
-					<svg class="sing-in__logo-svg">
-						<use href="#logo"></use>
-					</svg>
-				</a>
-			</div>
-			<div class="sing-in__block sing-up__block">
+			<div class="sing-up__header"></div>
+			<div class="forms__block sing-up__block">
 				<div class="sing-up__tabs-buttons">
-					<load
-						src="src/components/base/button.html"
-						class_button="button orange-button sing-up__button-tab"
-						label="Regular customer"
-						button_text="Regular customer" />
-					<load
-						src="src/components/base/button.html"
-						class_button="button orange-button sing-up__button-tab"
-						label="Create my account"
-						button_text="Create my account" />
+					<button
+						class="button sing-up__button-tab sing-up__button-tab_active"
+						aria-label="Regular customer"
+						data-tab="regular">
+						Regular customer
+					</button>
+					<button
+						class="button sing-up__button-tab"
+						aria-label="Wholesale customer"
+						data-tab="wholesale">
+						Wholesale customer
+					</button>
 				</div>
-				<p class="sing-in__text-border">or sign in with...</p>
-				<div class="sing-in__button-block">
+				<p class="forms__text-border sing-up__text-border">Sign up with</p>
+				<div class="forms__button-block sing-up__button-block">
 					<load
 						src="src/components/base/button.html"
-						class_button="sing-in__button button ivory-button"
+						class_button="forms__button button ivory-button"
 						label="Google"
-						button_text="<svg class='sing-in__button-svg'><use href='#google'></use></svg>
-					<span class='sing-in__button-text'>Google</span>" />
+						button_text="<svg class='forms__button-svg'><use href='#google'></use></svg>
+					<span class='forms__button-text'>Google</span>" />
 					<load
 						src="src/components/base/button.html"
-						class_button="sing-in__button button ivory-button"
+						class_button="forms__button button ivory-button"
 						label="Apple"
-						button_text="<svg class='sing-in__button-svg'><use href='#apple'></use></svg>
-					<span class='sing-in__button-text'>Apple</span>" />
+						button_text="<svg class='forms__button-svg'><use href='#apple'></use></svg>
+					<span class='forms__button-text'>Apple</span>" />
 					<load
 						src="src/components/base/button.html"
-						class_button="sing-in__button button ivory-button"
+						class_button="forms__button button ivory-button"
 						label="Facebook"
-						button_text="<svg class='sing-in__button-svg'><use href='#facebook-logo'></use></svg>
-					<span class='sing-in__button-text'>Facebook</span>" />
+						button_text="<svg class='forms__button-svg'><use href='#facebook-logo'></use></svg>
+					<span class='forms__button-text'>Facebook</span>" />
 				</div>
-				<p class="sing-in__text-border">or sign up using your email address...</p>
-				<form class="sing-in__form">
-					<div class="sing-in__input-block">
-						<label
-							class="sing-in__input-label"
-							for="email">
-							Email
-						</label>
-						<input
-							class="sing-in__input"
-							name="email"
-							id="email" />
-					</div>
-					<div class="sing-in__input-block">
-						<label
-							class="sing-in__input-label"
-							for="first-name">
-							First Name
-						</label>
-						<input
-							class="sing-in__input"
-							name="first-name"
-							id="first-name" />
-					</div>
-					<div class="sing-in__input-block">
-						<label
-							class="sing-in__input-label"
-							for="last-name">
-							Last Name
-						</label>
-						<input
-							class="sing-in__input"
-							name="last-name"
-							id="last-name" />
-					</div>
-					<div class="sing-in__input-block">
-						<label
-							class="sing-in__input-label"
-							for="password">
-							Password
-						</label>
-						<input
-							class="sing-in__input"
-							name="password"
-							id="password" />
-					</div>
-				</form>
-				<load
-					src="src/components/base/button.html"
-					class_button="button orange-button sing-in__button-main"
-					label="Create my account"
-					button_text="Create my account" />
+				<p class="forms__text-border sing-up__text">or sign up using your email address...</p>
+				<div class="sing-up__form-render">
+					<form class="forms__form sing-up__form">
+						<div class="input-block">
+							<label
+								class="input-label"
+								for="email">
+								Email
+							</label>
+							<input
+								class="input sing-up__input"
+								name="email"
+								id="email"
+								type="email" />
+						</div>
+						<div class="input-block">
+							<label
+								class="input-label"
+								for="first-name">
+								First Name
+							</label>
+							<input
+								class="input sing-up__input"
+								name="first-name"
+								id="first-name"
+								type="text" />
+						</div>
+						<div class="input-block">
+							<!--							<label-->
+							<!--								class="input-label"-->
+							<!--								for="last-name">-->
+							<!--								Last Name-->
+							<!--							</label>-->
+							<input
+								class="input sing-up__input"
+								name="last-name"
+								id="last-name"
+								type="text"
+								placeholder="Last Name" />
+						</div>
+						<div class="input-block">
+							<!--							<label-->
+							<!--								class="input-label"-->
+							<!--								for="password">-->
+							<!--								Password-->
+							<!--							</label>-->
+							<input
+								class="input sing-up__input"
+								name="password"
+								id="password"
+								type="password"
+								placeholder="Password" />
+						</div>
+					</form>
+					<button
+						class="button orange-button sing-up__button-main"
+						aria-label="Create my account">
+						Create my account
+					</button>
+				</div>
 			</div>
-			<span class="sing-in__bottom-text">
+			<span class="forms__bottom-text sing-up__bottom-text">
 				Don't have an account?
 				<a
-					class="sing-in__link"
+					class="forms__link"
 					href="#">
 					Create one
 				</a>

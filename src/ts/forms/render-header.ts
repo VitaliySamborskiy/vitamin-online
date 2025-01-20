@@ -4,19 +4,19 @@ export function renderHeader(element: HTMLElement) {
 	if (window.innerWidth <= 767 && currentLayout !== "mobile") {
 		currentLayout = "mobile";
 
-		element.innerHTML = `<div class="sing-in__mobile">
-														<a class="sing-in__mobile-link">
-															<svg class="sing-in__mobile-svg">
+		element.innerHTML = `<div class="forms__mobile">
+														<a class="forms__mobile-link">
+															<svg class="forms__mobile-svg">
 																<use href="#arrow"></use>
 															</svg>
 														</a>
-														<span class="sing-in__mobile-title">Account</span>
+														<span class="forms__mobile-title">Account</span>
 												</div>`;
 	} else if (window.innerWidth >= 767 && currentLayout !== "desktop") {
 		currentLayout = "desktop";
 
-		element.innerHTML = `<a class="sing-in__logo-link" href="#">
-														<svg class="sing-in__logo-svg">
+		element.innerHTML = `<a class="forms__logo-link" href="#">
+														<svg class="forms__logo-svg">
 															<use href="#logo"></use>
 														</svg>
 													</a>`;

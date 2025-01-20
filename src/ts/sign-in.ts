@@ -1,4 +1,4 @@
-import { renderHeader, renderHeaderResize } from "./sign-in/render-header.ts";
+import { renderHeader, renderHeaderResize } from "./forms/render-header.ts";
 import { getElement } from "./base/get-element.ts";
 
 document.addEventListener("DOMContentLoaded", async function (): Promise<void> {

@@ -1,0 +1,51 @@
+.input {
+	padding: 15px 25px;
+	border-radius: 12px;
+	background: $ivory;
+
+	&::placeholder {
+		font-family: $supportFonts;
+		opacity: 0.5;
+		font-size: 18px;
+	}
+
+	&-block {
+		position: relative;
+	}
+
+	&-label,
+	&-label-right {
+		position: absolute;
+		font-family: $supportFonts;
+	}
+
+	&-label {
+		top: 30%;
+		left: 5.5%;
+		font-size: 18px;
+		opacity: 0.3;
+
+		@include breakpoints-max-width(sm) {
+			left: 7%;
+		}
+
+		@include breakpoints-max-width(xs) {
+			left: 8%;
+		}
+
+		&-right {
+			font-size: 14px;
+			top: 35%;
+			right: 5.5%;
+			opacity: 0.5;
+
+			@include breakpoints-max-width(sm) {
+				right: 7%;
+			}
+
+			@include breakpoints-max-width(xs) {
+				right: 8%;
+			}
+		}
+	}
+}

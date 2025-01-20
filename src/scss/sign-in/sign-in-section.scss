@@ -1,15 +1,4 @@
 .sing-in {
-	&__background {
-		position: absolute;
-		background: $ivory;
-		width: 100%;
-		//height: 100vh;
-
-		@include breakpoints-max-width(md) {
-			background: $whitePage;
-		}
-	}
-
 	&__content {
 		margin: 30px auto 0;
 		display: flex;
@@ -25,77 +14,8 @@
 		}
 	}
 
-	&__mobile {
-		display: flex;
-		align-items: center;
-
-		&:after {
-			content: "";
-			display: flex;
-			position: absolute;
-			top: 68px;
-			left: 0;
-			background: $line;
-			height: 2px;
-			width: 100%;
-		}
-
-		&-link {
-			position: absolute;
-			top: 23px;
-			right: 95%;
-
-			@include breakpoints-max-width(sm) {
-				right: 89%;
-			}
-
-			@include breakpoints-max-width(xs) {
-				right: 87%;
-			}
-		}
-
-		&-svg {
-			transform: rotate(180deg);
-			width: 11px;
-			height: 20px;
-		}
-
-		&-title {
-			font-size: 20px;
-			text-align: center;
-			font-weight: $medium;
-		}
-	}
-
-	&__logo {
-		&-link {
-		}
-
-		&-svg {
-			width: 42px;
-			height: 50px;
-		}
-	}
-
 	&__block {
-		display: flex;
-		width: 920px;
-		flex-direction: column;
-		align-items: center;
 		margin-top: 77px;
-		padding: 60px 119px;
-		background: $whitePage;
-
-		@include breakpoints-max-width(lg) {
-			width: 80%;
-			min-width: 680px;
-		}
-
-		@include breakpoints-max-width(md) {
-			width: 100%;
-			padding: 0;
-			min-width: 0;
-		}
 
 		@include breakpoints-max-width(sm) {
 			margin-top: 75px;
@@ -138,94 +58,26 @@
 
 	&__form {
 		margin-top: 23px;
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
 
 		@include breakpoints-max-width(md) {
 			margin-top: 19px;
 		}
-
-		@include breakpoints-max-width(sm) {
-			width: 100%;
-			gap: 10px;
-		}
 	}
 
 	&__input {
-		padding: 15px 25px;
 		width: 444px;
-		border-radius: 12px;
-		background: $ivory;
 		height: 56px;
 
 		@include breakpoints-max-width(sm) {
 			width: 100%;
 		}
-
-		&-block {
-			position: relative;
-		}
-
-		&-label,
-		&-label-right {
-			position: absolute;
-			font-family: $supportFonts;
-		}
-
-		&-label {
-			top: 30%;
-			left: 5.5%;
-			font-size: 18px;
-			opacity: 0.3;
-
-			@include breakpoints-max-width(sm) {
-				left: 7%;
-			}
-
-			@include breakpoints-max-width(xs) {
-				left: 8%;
-			}
-
-			&-right {
-				font-size: 14px;
-				top: 35%;
-				right: 5.5%;
-				opacity: 0.5;
-
-				@include breakpoints-max-width(sm) {
-					right: 7%;
-				}
-
-				@include breakpoints-max-width(xs) {
-					right: 8%;
-				}
-			}
-		}
 	}
 
 	&__text-border {
 		margin-top: 36px;
-		position: relative;
-		font-size: 20px;
-		font-weight: $medium;
-		text-align: center;
-		font-family: $mainFont;
-
-		@include breakpoints-max-width(md) {
-			font-size: 16px;
-		}
-
-		@include breakpoints-max-width(sm) {
-		}
 
 		&:after,
 		&:before {
-			content: "";
-			top: 17px;
-			display: flex;
-			position: absolute;
-			background: $line;
 			height: 1px;
 			width: 242px;
 
@@ -261,65 +113,8 @@
 	}
 
 	&__button {
-		display: flex;
-		padding: 19px 21px;
-		border-radius: 12px;
-		gap: 8px;
-
-		@include breakpoints-max-width(sm) {
-			justify-content: space-between;
-			padding: 17px 21px;
-			gap: 0;
-		}
-
 		&-block {
 			margin-top: 36px;
-			display: flex;
-			gap: 32px;
-
-			@include breakpoints-max-width(lg) {
-				gap: 20px;
-			}
-
-			@include breakpoints-max-width(md) {
-				width: 95%;
-				gap: 5px;
-				justify-content: space-between;
-			}
-
-			@include breakpoints-max-width(sm) {
-				flex-direction: column;
-				width: 100%;
-				margin-top: 37px;
-				gap: 9px;
-			}
-		}
-
-		&-svg {
-			width: 23px;
-			height: 23px;
-		}
-
-		&-text {
-			width: 142px;
-
-			@include breakpoints-max-width(lg) {
-				width: 100px;
-			}
-
-			@include breakpoints-max-width(sm) {
-				width: 100%;
-			}
-		}
-	}
-
-	&__bottom-text,
-	&__link {
-		font-size: 16px;
-		font-family: $supportFonts;
-
-		@include breakpoints-max-width(sm) {
-			font-size: 14px;
 		}
 	}
 
@@ -333,31 +128,6 @@
 		@include breakpoints-max-width(sm) {
 			padding: 90px 0 40px;
 			position: relative;
-
-			&:after {
-				content: "";
-				top: 48px;
-				right: -24%;
-				display: flex;
-				position: absolute;
-				background: $line;
-				height: 1px;
-				width: 148%;
-
-				@include breakpoints-max-width(xs) {
-					width: 120%;
-					right: -10%;
-				}
-			}
-		}
-	}
-
-	&__link {
-		color: $orange;
-		transition: color 0.5s ease-in-out;
-
-		&:hover {
-			color: $purpleLite;
 		}
 	}
 }
