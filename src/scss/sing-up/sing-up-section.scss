@@ -4,10 +4,22 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 23px;
+		}
 	}
 
 	&__block {
 		margin-top: 24px;
+
+		@include breakpoints-max-width(md) {
+			margin-top: 80px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 73px;
+		}
 	}
 
 	&__tabs-buttons {
@@ -16,13 +28,23 @@
 		padding: 12px 11px 11px;
 		border-radius: 15px;
 		width: 682px;
-		gap: 5px;
+		gap: 15px;
+
+		@include breakpoints-max-width(lg) {
+			width: 100%;
+			gap: 10px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			padding: 8px 9px;
+			gap: 5px;
+		}
 	}
 
 	&__button-tab {
 		color: $textTitle;
 		padding: 18px 0 19px;
-		width: 323px;
+		width: 326px;
 		border-radius: 12px;
 		border: 2px solid $whitePage;
 		transition:
@@ -31,6 +53,19 @@
 
 		&:hover {
 			border: 2px solid $orangeLink;
+
+			@include breakpoints-max-width(md) {
+				border: 2px solid $whitePage;
+			}
+		}
+
+		@include breakpoints-max-width(lg) {
+			width: 50%;
+		}
+
+		@include breakpoints-max-width(sm) {
+			padding: 14px 17px;
+			font-size: 16px;
 		}
 
 		&_active {
@@ -46,6 +81,12 @@
 				color: $orangeLink;
 				background: transparent;
 				border: 2px solid $orangeLink;
+
+				@include breakpoints-max-width(md) {
+					color: $whitePage;
+					background: $orangeLink;
+					border: 2px solid $orangeLink;
+				}
 			}
 		}
 	}
@@ -53,6 +94,11 @@
 	&__text-border {
 		margin-top: 55px;
 		font-size: 26px;
+
+		@include breakpoints-max-width(md) {
+			font-size: 24px;
+			margin-top: 35px;
+		}
 
 		&:after,
 		&:before {
@@ -64,30 +110,17 @@
 				width: 130%;
 			}
 
-			@include breakpoints-max-width(sm) {
-				top: 13px;
-				width: 73%;
-			}
-
-			@include breakpoints-max-width(xs) {
-				width: 50%;
+			@include breakpoints-max-width(md) {
+				display: none;
 			}
 		}
 
 		&:after {
 			left: 121%;
-
-			@include breakpoints-max-width(sm) {
-				left: 128%;
-			}
 		}
 
 		&:before {
 			right: 121%;
-
-			@include breakpoints-max-width(sm) {
-				right: 128%;
-			}
 		}
 	}
 
@@ -98,39 +131,55 @@
 		&:before {
 			height: 1px;
 			width: 149px;
+
+			@include breakpoints-max-width(lg) {
+				width: 26%;
+			}
+
+			@include breakpoints-max-width(md) {
+				display: none;
+			}
 		}
 
 		&:after {
 			left: 110%;
-
-			@include breakpoints-max-width(sm) {
-				left: 128%;
-			}
 		}
 
 		&:before {
 			right: 110%;
-
-			@include breakpoints-max-width(sm) {
-				right: 128%;
-			}
 		}
 	}
 
 	&__form {
 		margin-top: 36px;
+
+		@include breakpoints-max-width(sm) {
+			width: 100%;
+		}
 	}
 
 	&__form-render {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@include breakpoints-max-width(sm) {
+			width: 100%;
+		}
 	}
 
 	&__button-main {
-		margin-top: 20px;
+		margin-top: 5px;
 		width: 100%;
 		padding: 19px 0 18px;
+
+		@include breakpoints-max-width(md) {
+			padding: 16px 0 18px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 9px;
+		}
 
 		&_inactive {
 			background: $gray;
@@ -148,8 +197,16 @@
 	&__bottom-text {
 		padding: 40px 0 40px;
 
+		@include breakpoints-max-width(md) {
+			padding: 80px 0 40px;
+		}
+
 		@include breakpoints-max-width(sm) {
 			position: relative;
+
+			&:after {
+				top: 38px;
+			}
 		}
 	}
 
@@ -164,6 +221,10 @@
 
 	&__button-block {
 		margin-top: 36px;
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 24px;
+		}
 	}
 
 	&__upload {
@@ -177,6 +238,10 @@
 		white-space: nowrap;
 		overflow: hidden;
 		width: 67%;
+
+		@include breakpoints-max-width(sm) {
+			width: 58%;
+		}
 	}
 
 	&__button-upload {

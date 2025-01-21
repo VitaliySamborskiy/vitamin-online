@@ -101,13 +101,13 @@
 
 	&__button {
 		display: flex;
-		padding: 19px 21px;
+		padding: 17px 21px;
 		border-radius: 12px;
 		gap: 8px;
 
 		@include breakpoints-max-width(sm) {
 			justify-content: space-between;
-			padding: 17px 21px;
+			padding: 15px 21px;
 			gap: 0;
 		}
 
@@ -198,6 +198,10 @@
 
 		&:hover {
 			color: $purpleLite;
+
+			@include breakpoints-max-width(md) {
+				color: $orange;
+			}
 		}
 	}
 }

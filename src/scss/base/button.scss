@@ -21,6 +21,11 @@
 	&:hover {
 		background-color: $whitePage;
 		color: $orange;
+
+		@include breakpoints-max-width(md) {
+			background-color: $orange;
+			color: $whitePage;
+		}
 	}
 }
 
@@ -32,12 +37,26 @@
 	&:hover {
 		background-color: $whitePage;
 		color: $purple;
+
+		@include breakpoints-max-width(md) {
+			background-color: $purple;
+			color: $whitePage;
+		}
 	}
 }
 
 .ivory-button {
 	background-color: $ivory;
 	color: $textTitle;
+	border: 2px solid $ivory;
+
+	&:hover {
+		background-color: $whitePage;
+
+		@include breakpoints-max-width(md) {
+			background-color: $ivory;
+		}
+	}
 }
 
 .link {

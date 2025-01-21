@@ -44,10 +44,12 @@
 	}
 
 	&__button-main {
-		margin-top: 20px;
+		margin: 5px auto 0;
+		width: 270px;
 		padding: 19px 103px;
 
 		@include breakpoints-max-width(md) {
+			margin: 10px auto 0;
 			padding: 17px 103px;
 		}
 

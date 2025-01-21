@@ -2,11 +2,21 @@
 	padding: 15px 25px;
 	border-radius: 12px;
 	background: $ivory;
+	border: 1px solid $ivory;
 
 	&::placeholder {
 		font-family: $supportFonts;
 		opacity: 0.5;
 		font-size: 18px;
+	}
+
+	&-error {
+		border: 1px solid $orange;
+		color: $orange;
+
+		&::placeholder {
+			color: $orange;
+		}
 	}
 
 	&-block {
@@ -31,6 +41,21 @@
 
 		@include breakpoints-max-width(xs) {
 			left: 8%;
+		}
+
+		&-error {
+			position: absolute;
+			top: 96%;
+			left: 5.5%;
+			color: $orange;
+			font-size: 12px;
+			font-family: $supportFonts;
+
+			@include breakpoints-max-width(sm) {
+				top: 97%;
+				left: 10%;
+				font-size: 9px;
+			}
 		}
 
 		&-right {
