@@ -3,7 +3,7 @@
 		position: absolute;
 		background: $ivory;
 		width: 100%;
-		//height: 100vh;
+		//height: 100%;
 
 		@include breakpoints-max-width(md) {
 			background: $whitePage;

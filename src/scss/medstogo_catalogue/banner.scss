@@ -1,0 +1,92 @@
+.banner {
+	&__content {
+		margin: 37px auto;
+		width: 80%;
+		display: flex;
+		border-radius: 24px;
+		padding: 93px 70px;
+		overflow: hidden;
+	}
+
+	&__border {
+		position: relative;
+	}
+
+	&__text-block {
+		width: 50%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-size: 50px;
+	}
+
+	&__text {
+		margin-top: 18px;
+		width: 416px;
+		font-size: 18px;
+		line-height: 1.5;
+		opacity: 0.7;
+	}
+
+	&__button {
+		margin-top: 27px;
+		padding: 18px 0;
+		width: 253px;
+	}
+
+	&__picture-block {
+		position: relative;
+	}
+
+	&__circle {
+		width: 1.5px;
+		height: 1.5px;
+		top: 2%;
+		left: 59.3%;
+		background: $yellow;
+		z-index: 0;
+	}
+
+	&__arc {
+		&-yellow {
+			top: 135%;
+			left: 35%;
+		}
+
+		&-white {
+			background: $litePurple;
+			width: 254px;
+			height: 132px;
+			left: 50px;
+
+			//@include breakpoints-max-width(xl) {
+			//	width: 186px;
+			//	height: 95px;
+			//	left: 58px;
+			//}
+			//
+			//@include breakpoints-max-width(lg) {
+			//	width: 108px;
+			//	height: 56px;
+			//	left: 33px;
+			//}
+		}
+	}
+
+	&__svg {
+		position: absolute;
+		width: 1388px;
+		height: 1306px;
+	}
+
+	&__img {
+		&-block {
+			position: absolute;
+			top: -3%;
+			right: 10.8%;
+		}
+	}
+}

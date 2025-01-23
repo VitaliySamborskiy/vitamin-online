@@ -1,5 +1,4 @@
 import Swiper from "swiper";
-import "swiper/css";
 import { SwiperOptions } from "swiper/types";
 
 let swiperInstanceMap = new Map<HTMLElement, Swiper>();

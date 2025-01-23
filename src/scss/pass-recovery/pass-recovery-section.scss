@@ -1,0 +1,90 @@
+.pass-recovery {
+	&__content {
+		margin: 30px 0 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include breakpoints-max-width(sm) {
+			margin: 23px 0 0;
+		}
+	}
+
+	&__block {
+		margin-top: 203px;
+
+		@include breakpoints-max-width(md) {
+			margin-top: 100px;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 73px;
+		}
+	}
+
+	&__title {
+		font-size: 26px;
+
+		@include breakpoints-max-width(md) {
+			font-size: 24px;
+		}
+	}
+
+	&__text {
+		margin-top: 7px;
+		font-size: 16px;
+		line-height: 175%;
+
+		@include breakpoints-max-width(md) {
+			font-size: 14px;
+		}
+	}
+
+	&__form {
+		margin-top: 23px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include breakpoints-max-width(sm) {
+			margin-top: 19px;
+			align-items: normal;
+		}
+	}
+
+	&__input {
+		width: 444px;
+		height: 56px;
+
+		@include breakpoints-max-width(sm) {
+			width: 100%;
+		}
+	}
+
+	&__button {
+		width: 270px;
+		margin-top: 5px;
+		padding: 19px 0;
+
+		@include breakpoints-max-width(md) {
+			padding: 16px 0;
+		}
+
+		@include breakpoints-max-width(sm) {
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+
+	&__bottom-text {
+		padding: 225px 0 30px;
+
+		@include breakpoints-max-width(md) {
+			padding: 20px 0 0;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
