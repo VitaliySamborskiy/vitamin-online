@@ -34,8 +34,11 @@ export function updateQueryParameter(parameters: QueryParameterType[]): void {
 export function getQueryParameter(queryKey: string[]): Record<string, string> {
 	const queryParameters: URLSearchParams = new URLSearchParams(window.location.search);
 
-	return queryKey.reduce((result, key) => {
-		result[key] = queryParameters.get(key);
+	return queryKey.reduce((result: Record<string, string>, key) => {
+		const value = queryParameters.get(key);
+		if (value !== null) {
+			result[key] = value;
+		}
 		return result;
-	}, {}) as Record<string, string>;
+	}, {});
 }

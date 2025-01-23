@@ -147,7 +147,7 @@ function preRenderForm(
 }
 
 function renderForm(button: HTMLElement, element: HTMLElement): void {
-	updateQueryParameter([{ key: "form", value: button.getAttribute("data-tab") }]);
+	updateQueryParameter([{ key: "form", value: button.getAttribute("data-tab") as "string" }]);
 	if (button.getAttribute("data-tab") === "wholesale") {
 		element.innerHTML = htmlForm(htmlFile, "sing-up__button-main_inactive");
 		ubdateLabel(
