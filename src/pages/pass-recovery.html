@@ -5,34 +5,53 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Thanks for your order!</title>
+		<title>Pass recovery</title>
 		<link
 			rel="icon"
 			type="image/svg+xml"
 			href="/vitamin-online/assets/logo-DXDupW-P.svg" />
-		<link rel="stylesheet" crossorigin href="/vitamin-online/assets/placedOrder-BKAMuIM9.css">
+		<script type="module" crossorigin src="/vitamin-online/assets/passRecovery-CKTWfIm9.js"></script>
+		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/get-element-u0L3Yg2z.js">
+		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/validate-BK-s1qlK.js">
+		<link rel="stylesheet" crossorigin href="/vitamin-online/assets/passRecovery-DnOdDau9.css">
 	</head>
 	<body>
 		<div class="wrapper">
 			<main class="main">
-				<section class="order-section__container">
-	<div class="order-section__content">
-		<svg class="order-section__svg">
-			<use href="#logo"></use>
-		</svg>
-		<h1 class="order-section__title">Thanks for your order!</h1>
-		<p class="order-section__text">
-			Your order is now being processed, and will be despatched shortly.
-		</p>
-		<a
-			class="button orange-button order-section__button"
-			href="/vitamin-online/index.html">
-			Go to main page
-		</a>
-		<p class="order-section__sub-text">
-			If you have any problems with your order, please contact us by telephone on +44 (0)20 7424
-			2800 (Mon-Fri, 10am-6pm GMT).
-		</p>
+				<section class="forms__background">
+	<div class="pass-recovery__container">
+		<div class="pass-recovery__content">
+			<div class="pass-recovery__header"></div>
+			<div class="pass-recovery__block forms__block">
+				<h2 class="pass-recovery__title">Recover password</h2>
+				<p class="pass-recovery__text">Please enter your email:</p>
+				<form
+					class="pass-recovery__form forms__form"
+					id="recovery">
+					<div class="input-block">
+						<input
+							class="pass-recovery__input input"
+							name="email"
+							id="email"
+							placeholder="Email" />
+					</div>
+					<button
+						class="pass-recovery__button button orange-button"
+						aria-label="Recover"
+						type="submit">
+						Recover
+					</button>
+				</form>
+			</div>
+			<span class="forms__bottom-text pass-recovery__bottom-text">
+				Remember your password?
+				<a
+					class="forms__link"
+					href="/vitamin-online/src/pages/sign-in.html?form=regular">
+					Back to login
+				</a>
+			</span>
+		</div>
 	</div>
 </section>
 

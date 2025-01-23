@@ -1,0 +1,1 @@
+import{g as e}from"./get-element-u0L3Yg2z.js";import{b as o,a as t}from"./burger-menu--bPyO_da.js";import{o as n}from"./observer-geometry-CH56aslZ.js";document.addEventListener("DOMContentLoaded",async function(){const r=window.innerWidth;o(),t(),r<=575?n(e(".banner__circle"),2500,49):n(e(".banner__circle"),2500,50)});

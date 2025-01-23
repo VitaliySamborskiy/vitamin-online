@@ -1,0 +1,1 @@
+function m(e,t,o){new IntersectionObserver(n=>{n.forEach(r=>{r.isIntersecting&&f(e,t,o)})},{threshold:.1}).observe(e)}function f(e,t,o){const s=performance.now();function n(r){const c=r-s,a=Math.min(c/t,1),i=o*u(a);e.style.transform=`scale(${i})`,a<1&&requestAnimationFrame(n)}requestAnimationFrame(n)}function u(e){return e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2}export{m as o};

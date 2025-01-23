@@ -10,65 +10,68 @@
 			rel="icon"
 			type="image/svg+xml"
 			href="/vitamin-online/assets/logo-DXDupW-P.svg" />
-		<script type="module" crossorigin src="/vitamin-online/assets/signIn-B2Om99oi.js"></script>
+		<script type="module" crossorigin src="/vitamin-online/assets/signIn-Dmykr6Ev.js"></script>
 		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/get-element-u0L3Yg2z.js">
-		<link rel="stylesheet" crossorigin href="/vitamin-online/assets/signIn-DJ5h-C3Y.css">
+		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/validate-BK-s1qlK.js">
+		<link rel="stylesheet" crossorigin href="/vitamin-online/assets/signIn-B5Ol9TM-.css">
 	</head>
 	<body>
 		<div class="wrapper">
 			<main class="main">
-				<section class="sing-in__background">
+				<section class="forms__background">
 	<div class="sing-in__container">
 		<div class="sing-in__content">
 			<div class="sing-in__header"></div>
-			<div class="sing-in__block">
+			<div class="sing-in__block forms__block">
 				<h1 class="sing-in__title">Sign in with email</h1>
 				<p class="sing-in__text">Please enter your e-mail and password:</p>
-				<form class="sing-in__form">
-					<div class="sing-in__input-block">
-						<label
-							class="sing-in__input-label"
-							for="email">
-							Email
-						</label>
+				<form
+					class="sing-in__form forms__form"
+					id="singIn">
+					<div class="input-block">
 						<input
-							class="sing-in__input"
+							class="sing-in__input input"
 							name="email"
-							id="email" />
+							id="email"
+							placeholder="Email" />
 					</div>
-					<div class="sing-in__input-block">
-						<label
-							class="sing-in__input-label"
-							for="password">
-							Password
-						</label>
-						<span class="sing-in__input-label-right">Forgot password?</span>
+					<div class="input-block">
+						<a
+							class="sing-in__input-label-right input-label-right"
+							href="/vitamin-online/src/pages/pass-recovery.html">
+							Forgot password?
+						</a>
 						<input
-							class="sing-in__input"
+							class="sing-in__input input"
 							name="password"
-							id="password" />
+							id="password"
+							placeholder="Password" />
 					</div>
+					<button
+						type="submit"
+						aria-label="Sign in"
+						class="button orange-button sing-in__button-main">
+						Sign in
+					</button>
 				</form>
-				<button class="button orange-button sing-in__button-main" aria-label="Sign in">Sign in</button>
+				<p class="sing-in__text-border forms__text-border">or sign in with...</p>
+				<div class="sing-in__button-block forms__button-block">
+					<button class="forms__button button ivory-button" aria-label="Google"><svg class='forms__button-svg'><use href='#google'></use></svg>
+				<span class='forms__button-text'>Google</span></button>
 
-				<p class="sing-in__text-border">or sign in with...</p>
-				<div class="sing-in__button-block">
-					<button class="sing-in__button button ivory-button" aria-label="Google"><svg class='sing-in__button-svg'><use href='#google'></use></svg>
-				<span class='sing-in__button-text'>Google</span></button>
+					<button class="forms__button button ivory-button" aria-label="Apple"><svg class='forms__button-svg'><use href='#apple'></use></svg>
+				<span class='forms__button-text'>Apple</span></button>
 
-					<button class="sing-in__button button ivory-button" aria-label="Apple"><svg class='sing-in__button-svg'><use href='#apple'></use></svg>
-				<span class='sing-in__button-text'>Apple</span></button>
-
-					<button class="sing-in__button button ivory-button" aria-label="Facebook"><svg class='sing-in__button-svg'><use href='#facebook-logo'></use></svg>
-				<span class='sing-in__button-text'>Facebook</span></button>
+					<button class="forms__button button ivory-button" aria-label="Facebook"><svg class='forms__button-svg'><use href='#facebook-logo'></use></svg>
+				<span class='forms__button-text'>Facebook</span></button>
 
 				</div>
 			</div>
-			<span class="sing-in__bottom-text">
+			<span class="forms__bottom-text sing-in__bottom-text">
 				Don't have an account?
 				<a
-					class="sing-in__link"
-					href="#">
+					class="forms__link"
+					href="/vitamin-online/src/pages/sign-up.html?form=regular">
 					Create one
 				</a>
 			</span>

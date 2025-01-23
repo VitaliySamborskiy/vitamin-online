@@ -1,0 +1,1 @@
+import{g as e}from"./get-element-u0L3Yg2z.js";import{r,a,v as s}from"./validate-BK-s1qlK.js";document.addEventListener("DOMContentLoaded",async function(){r(e(".pass-recovery__header")),a(e(".pass-recovery__header")),s("#recovery",[{input:"#email",rules:[{rule:"required",errorMessage:"Email is required"},{rule:"email",errorMessage:"Invalid email format"}]}])});

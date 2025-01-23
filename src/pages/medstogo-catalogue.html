@@ -5,38 +5,375 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Thanks for your order!</title>
+		<title>Medstogo catalogue</title>
 		<link
 			rel="icon"
 			type="image/svg+xml"
 			href="/vitamin-online/assets/logo-DXDupW-P.svg" />
-		<link rel="stylesheet" crossorigin href="/vitamin-online/assets/placedOrder-BKAMuIM9.css">
+		<script type="module" crossorigin src="/vitamin-online/assets/medstogoCatalogue-CFxNOECg.js"></script>
+		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/get-element-u0L3Yg2z.js">
+		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/burger-menu--bPyO_da.js">
+		<link rel="modulepreload" crossorigin href="/vitamin-online/assets/observer-geometry-CH56aslZ.js">
+		<link rel="stylesheet" crossorigin href="/vitamin-online/assets/medstogoCatalogue-DgLYLwEE.css">
 	</head>
 	<body>
 		<div class="wrapper">
+			<header class="header__container">
+    <div class="header__content">
+        <nav class="burger">
+            <button class="burger__icon" aria-label="burger menu"><span class='burger__icon-item'></span><span class='burger__icon-item'></span><span class='burger__icon-item'></span></button>
+
+            <div class="burger__background">
+                <button class="burger__button burger__link-user"  aria-label="open burger menu" data-header-sub-menu="0">
+                    <svg class="burger__svg">
+                        <use href="#user"></use>
+                    </svg>
+                </button>
+                <nav class="burger-sub__menu" id="0">
+                    <div class="burger-sub__header">
+                        <button class="burger-sub__header-button" aria-label="close burger menu" data-header-sub-menu="0">
+                            <svg class='burger-sub__header-svg'>
+                                <use href='#arrow'></use>
+                            </svg>
+                        </button>
+                        <h3 class="burger-sub__header-title">Profile</h3>
+                    </div>
+                    <ul class="burger-sub__list">
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Subscriptions</a>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#"
+                            >Orders</a
+                            >
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Account Overview</a>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Payment methods</a>
+                        </li>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link" href="#">Change Password</a>
+                        </li>
+                        <li>
+                            <a class="burger-sub__list-link burger-sub__list-link-red" href="#">Sign Out</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="burger-sub__buttons">
+                    <button class="burger__button"  aria-label="open burger menu" data-header-sub-menu="1">
+                        <span class="burger__button-title">Shop</span>
+                        <svg class="burger__button-svg">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </button>
+                    <nav class="burger-sub__menu" id="1">
+                        <div class="burger-sub__header">
+                            <button class="burger-sub__header-button" aria-label="close burger menu" data-header-sub-menu="1">
+                                <svg class='burger-sub__header-svg'>
+                                    <use href='#arrow'></use>
+                                </svg>
+                            </button>
+                            <h3 class="burger-sub__header-title">Shop</h3>
+                        </div>
+                        <ul class="burger-sub__list">
+                            <li>
+                                <a class="burger-sub__list-link" href="#">All categories</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#"
+                                    >Vitamins & Dietary Supplements</a
+                                >
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Weight Loss</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Minerals</a>
+                            </li>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Antioxidants</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Probiotics</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Pain Relief</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Prenatal Vitamins</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link burger-sub__list-link-red" href="#">Sale&#37;</a>
+                            </li>
+                        </ul>
+                        <div class="burger-sub__text-block">
+                            <h3 class="burger-sub__title">Don’t know what vitamins your body needs?</h3>
+                            <p class="burger-sub__text">
+                                Answer a few simple questions and automaticallyget a personalazed list
+                                of vitamins in minutes
+                            </p>
+                            <button class="button orange-button burger-sub__button" aria-label="Take the quiz">Take the quiz</button>
+
+                        </div>
+                    </nav>
+                    <button class="burger__button" data-header-sub-menu="2">
+                        <span class="burger__button-title">Information</span>
+                        <svg class="burger__button-svg">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </button>
+                    <nav class="burger-sub__menu" id="2">
+                        <div class="burger-sub__header">
+                            <button class="burger-sub__header-button" aria-label="close burger menu" data-header-sub-menu="2">
+                                <svg class='burger-sub__header-svg'>
+                                    <use href='#arrow'></use>
+                                </svg>
+                            </button>
+                            <h3 class="burger-sub__header-title">Information</h3>
+                        </div>
+                        <ul class="burger-sub__list">
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Subscription Cycle & Billing</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#"
+                                >Terms & Conditions</a
+                                >
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Shipping & Delivery</a>
+                            </li>
+                            </li>
+                            <li>
+                                <a class="burger-sub__list-link" href="#">Return Policy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="burger__button-title burger-sub__link-quiz" href="#">Take the quiz</a>
+                </nav>
+                <a class="burger__support-link" href="#">support@medstogo.com</a>
+                <p class="burger__copyright">&copy; 2020 Vitamins.com / All rights reserved</p>
+            </div>
+        </nav>
+        <a class="header__logo" href="/vitamin-online/index.html">
+            <svg class="header__logo-svg">
+                <use href="#logo"></use>
+            </svg>
+        </a>
+        <ul class="header__items">
+            <li class="header__item">
+                <a class="header__link" href="/vitamin-online/src/pages/sign-up.html?form=regular">
+                    <svg class="header__svg">
+                        <use href="#user"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="header__item">
+                <a class="header__link" href="/vitamin-online/src/pages/medstogo_catalogue.html">
+                    <svg class="header__svg">
+                        <use href="#basket"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="header__item">
+                <button class="button orange-button header__button" aria-label="Take the quiz">Take the quiz</button>
+
+            </li>
+        </ul>
+    </div>
+</header>
+
 			<main class="main">
-				<section class="order-section__container">
-	<div class="order-section__content">
-		<svg class="order-section__svg">
-			<use href="#logo"></use>
-		</svg>
-		<h1 class="order-section__title">Thanks for your order!</h1>
-		<p class="order-section__text">
-			Your order is now being processed, and will be despatched shortly.
-		</p>
-		<a
-			class="button orange-button order-section__button"
-			href="/vitamin-online/index.html">
-			Go to main page
-		</a>
-		<p class="order-section__sub-text">
-			If you have any problems with your order, please contact us by telephone on +44 (0)20 7424
-			2800 (Mon-Fri, 10am-6pm GMT).
-		</p>
+				<article class="banner__container banner__border">
+	<div class="banner__circle circle"></div>
+	<picture class="banner__img-block">
+		<img
+			class="banner__img"
+			src="/vitamin-online/assets/image%2052-6vwz_16Y.png"
+			width="666"
+			height="456"
+			alt="beautiful image of two jars of medicine"
+			loading="lazy" />
+	</picture>
+	<div class="banner__content minerals">
+		<div class="banner__text-block">
+			<h2 class="banner__title">Don’t know what vitamins your body needs?</h2>
+			<p class="banner__text">
+				Answer a few simple questions and automatically get a personalazed list of vitamins in
+				minutes
+			</p>
+			<a
+				class="button ivory-button banner__button"
+				href="#">
+				Take the quiz
+			</a>
+			<div class="banner__arc-yellow arc__yellow">
+				<div class="banner__arc-white arc__white"></div>
+			</div>
+		</div>
+		<div class="banner__picture-block">
+			<svg class="banner__svg">
+				<use href="#logo-white"></use>
+			</svg>
+		</div>
 	</div>
-</section>
+</article>
 
 			</main>
+			<footer class="footer__container">
+	<div class="footer__content {=$footer_margin}">
+		<div class="footer__logo-block">
+			<a
+				class="footer__logo-link"
+				href="/vitamin-online/index.html">
+				<svg class="footer__logo">
+					<use href="#logo"></use>
+				</svg>
+			</a>
+			<p class="footer__copyright">© 2020 Vitamins.com / All rights reserved</p>
+		</div>
+		<div class="footer__nav-block">
+			<nav class="footer__nav-menu">
+				<h3 class="footer__nav-title">Shop</h3>
+				<div class="footer__shop">
+					<ul class="footer__nav-list">
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Vitamins & Dietary Supplements
+							</a>
+						</li>
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Weight Loss
+							</a>
+						</li>
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Minerals
+							</a>
+						</li>
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Antioxidants
+							</a>
+						</li>
+					</ul>
+					<ul class="footer__nav-list">
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Probiotics
+							</a>
+						</li>
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Pain Relief
+							</a>
+						</li>
+						<li>
+							<a
+								class="footer__nav-item"
+								href="#">
+								Prenatal Vitamins
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<nav class="footer__nav-menu">
+				<h3 class="footer__nav-title">Information</h3>
+				<ul class="footer__nav-list">
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							Terms & Conditions
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__nav-item"
+							href="/vitamin-online/src/pages/text-template.html">
+							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							Shipping & Delivery
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							Subscription Cycle & Billing
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							Return Policy
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="footer__nav-menu">
+				<h3 class="footer__nav-title">Contact</h3>
+				<ul class="footer__nav-list">
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							support@medstogo.com
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							<svg class="footer__nav-svg">
+								<use href="#facebook"></use>
+							</svg>
+							<span class="footer__nav-text">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a
+							class="footer__nav-item"
+							href="#">
+							<svg class="footer__nav-svg">
+								<use href="#instagram"></use>
+							</svg>
+							<span class="footer__nav-text">Instagram</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
+
 			<svg
 	style="position: absolute; width: 0; height: 0"
 	xmlns="http://www.w3.org/2000/svg">
