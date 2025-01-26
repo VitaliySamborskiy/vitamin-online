@@ -1,0 +1,215 @@
+.quiz {
+	&__content {
+		display: flex;
+	}
+
+	&__title-block,
+	&__forms-block {
+		position: relative;
+		height: 100vh;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__logo {
+		&-svg {
+			width: 42px;
+			height: 50px;
+		}
+	}
+
+	&__title {
+		margin: 30% auto 0;
+		width: 530px;
+		color: $whitePage;
+		font-size: 64px;
+
+		@include breakpoints-max-width(xl) {
+			margin: 50% auto 0;
+			width: 85%;
+		}
+
+		@include breakpoints-max-width(lg) {
+			margin: 65% auto 0;
+			width: 90%;
+			font-size: 38px;
+		}
+
+		&-block {
+			padding: 30px 0 30px 95px;
+
+			@include breakpoints-max-width(xl) {
+				padding: 30px 0 30px 40px;
+			}
+
+			@include breakpoints-max-width(lg) {
+				padding: 30px 0 30px 20px;
+				width: 40%;
+			}
+		}
+	}
+
+	&__back {
+		&-svg {
+			width: 15px;
+			height: 15px;
+			fill: $whitePage;
+			transform: rotate(180deg);
+		}
+
+		&-text {
+			color: $whitePage;
+			font-size: 16px;
+			font-weight: $semibold;
+		}
+
+		&-button {
+			width: 130px;
+			margin-top: auto;
+			display: flex;
+			align-items: center;
+			gap: 11px;
+		}
+	}
+
+	&__forms-block {
+		padding: 30px 95px 44px 0;
+
+		@include breakpoints-max-width(xl) {
+			padding: 30px 40px 30px 0;
+		}
+
+		@include breakpoints-max-width(lg) {
+			padding: 30px 20px 30px 0;
+			width: 60%;
+		}
+	}
+
+	&__pagination-status {
+		position: absolute;
+		top: 33px;
+		right: 95px;
+		color: $textTitle;
+		font-size: 30px;
+		font-family: $supportFonts;
+		font-weight: $medium;
+
+		@include breakpoints-max-width(xl) {
+			right: 30px;
+		}
+
+		@include breakpoints-max-width(lg) {
+			right: 20px;
+		}
+	}
+
+	&__circle {
+		background: $orangeLite;
+		top: 21%;
+		left: 12.7%;
+		width: 2px;
+		height: 2px;
+
+		@include breakpoints-max-width(xl) {
+			left: 25%;
+		}
+
+		@include breakpoints-max-width(lg) {
+			top: 13%;
+		}
+	}
+
+	&__arc {
+		margin-top: auto;
+		margin-left: auto;
+		position: relative;
+		height: 200px;
+		width: 350px;
+		display: flex;
+		z-index: -1;
+
+		//@include breakpoints-max-width(xl) {
+		//	height: 280px;
+		//}
+	}
+
+	&__arc-top,
+	&__arc-bottom {
+		position: absolute;
+		fill: transparent;
+		stroke: $yellow;
+		width: 255px;
+		height: 184px;
+	}
+
+	&__arc-top {
+		top: -55%;
+		right: -11%;
+	}
+
+	&__arc-bottom {
+		bottom: 7.3%;
+		left: -14%;
+		transform: rotate(180deg);
+
+		@include breakpoints-max-width(xl) {
+			bottom: 0;
+		}
+	}
+
+	&__form {
+		padding-left: 20px;
+		width: 496px;
+		margin: 36.5% auto 0;
+
+		@include breakpoints-max-width(xl) {
+			padding-left: 0;
+			margin: 57% auto 0;
+			width: 90%;
+		}
+
+		@include breakpoints-max-width(lg) {
+			margin: 47% auto 0;
+		}
+	}
+
+	&__label {
+		font-family: $supportFonts;
+		font-size: 18px;
+		opacity: 0.5;
+	}
+
+	&__input {
+		padding: 0 35px;
+		margin-top: 16px;
+		width: 100%;
+		height: 105px;
+
+		&-button {
+			position: absolute;
+			top: 39%;
+			right: 0;
+			height: 69px;
+			width: 69px;
+
+			@include breakpoints-max-width(xl) {
+				right: 16px;
+			}
+
+			&:hover {
+				background: $ivory;
+
+				.quiz__input-svg {
+					fill: $orange;
+				}
+			}
+		}
+
+		&-svg {
+			width: 15px;
+			height: 15px;
+			fill: $whitePage;
+		}
+	}
+}
