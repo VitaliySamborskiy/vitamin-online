@@ -1,6 +1,18 @@
 .quiz {
+	&__mobile-container {
+		@include breakpoints-max-width(md) {
+			padding: 15px 20px;
+			position: relative;
+			height: 100vh;
+		}
+	}
+
 	&__content {
 		display: flex;
+
+		@include breakpoints-max-width(md) {
+			flex-direction: column;
+		}
 	}
 
 	&__title-block,
@@ -10,12 +22,22 @@
 		width: 50%;
 		display: flex;
 		flex-direction: column;
+
+		@include breakpoints-max-width(md) {
+			height: auto;
+			position: static;
+		}
 	}
 
 	&__logo {
 		&-svg {
 			width: 42px;
 			height: 50px;
+
+			@include breakpoints-max-width(md) {
+				width: 33px;
+				height: 40px;
+			}
 		}
 	}
 
@@ -36,6 +58,17 @@
 			font-size: 38px;
 		}
 
+		@include breakpoints-max-width(md) {
+			font-size: 24px;
+			text-align: center;
+			color: $textTitle;
+			margin: 192px auto 0;
+		}
+
+		@include breakpoints-max-width(xs) {
+			margin: 122px auto 0;
+		}
+
 		&-block {
 			padding: 30px 0 30px 95px;
 
@@ -47,6 +80,12 @@
 				padding: 30px 0 30px 20px;
 				width: 40%;
 			}
+
+			@include breakpoints-max-width(md) {
+				background: $whitePage;
+				width: 100%;
+				padding: 0;
+			}
 		}
 	}
 
@@ -56,12 +95,20 @@
 			height: 15px;
 			fill: $whitePage;
 			transform: rotate(180deg);
+
+			@include breakpoints-max-width(md) {
+				fill: $hardPurple;
+			}
 		}
 
 		&-text {
 			color: $whitePage;
 			font-size: 16px;
 			font-weight: $semibold;
+
+			@include breakpoints-max-width(md) {
+				color: $textTitle;
+			}
 		}
 
 		&-button {
@@ -70,6 +117,11 @@
 			display: flex;
 			align-items: center;
 			gap: 11px;
+
+			@include breakpoints-max-width(md) {
+				position: absolute;
+				bottom: 20px;
+			}
 		}
 	}
 
@@ -83,6 +135,11 @@
 		@include breakpoints-max-width(lg) {
 			padding: 30px 20px 30px 0;
 			width: 60%;
+		}
+
+		@include breakpoints-max-width(md) {
+			width: 100%;
+			padding: 0;
 		}
 	}
 
@@ -102,6 +159,11 @@
 		@include breakpoints-max-width(lg) {
 			right: 20px;
 		}
+
+		@include breakpoints-max-width(md) {
+			top: 20px;
+			font-size: 20px;
+		}
 	}
 
 	&__circle {
@@ -118,6 +180,14 @@
 		@include breakpoints-max-width(lg) {
 			top: 13%;
 		}
+
+		@include breakpoints-max-width(md) {
+			z-index: 0;
+		}
+
+		@include breakpoints-max-width(sm) {
+			display: none;
+		}
 	}
 
 	&__arc {
@@ -129,9 +199,16 @@
 		display: flex;
 		z-index: -1;
 
-		//@include breakpoints-max-width(xl) {
-		//	height: 280px;
-		//}
+		@include breakpoints-max-width(md) {
+			height: 100px;
+			position: absolute;
+			bottom: 10%;
+			right: 5%;
+		}
+
+		@include breakpoints-max-width(sm) {
+			display: none;
+		}
 	}
 
 	&__arc-top,
@@ -144,12 +221,20 @@
 	}
 
 	&__arc-top {
-		top: -55%;
+		top: -66%;
 		right: -11%;
+
+		@include breakpoints-max-width(xl) {
+			top: -55%;
+		}
+
+		@include breakpoints-max-width(md) {
+			top: -210%;
+		}
 	}
 
 	&__arc-bottom {
-		bottom: 7.3%;
+		bottom: 11%;
 		left: -14%;
 		transform: rotate(180deg);
 
@@ -159,8 +244,8 @@
 	}
 
 	&__form {
-		padding-left: 20px;
-		width: 496px;
+		padding-left: 30px;
+		width: 525px;
 		margin: 36.5% auto 0;
 
 		@include breakpoints-max-width(xl) {
@@ -172,29 +257,50 @@
 		@include breakpoints-max-width(lg) {
 			margin: 47% auto 0;
 		}
+
+		@include breakpoints-max-width(md) {
+			margin: 48px auto 0;
+		}
+
+		@include breakpoints-max-width(sm) {
+			margin: 14px auto 0;
+			width: 100%;
+		}
 	}
 
 	&__label {
 		font-family: $supportFonts;
 		font-size: 18px;
 		opacity: 0.5;
+
+		@include breakpoints-max-width(md) {
+			display: none;
+		}
 	}
 
 	&__input {
-		padding: 0 35px;
+		padding: 0 95px 0 40px;
 		margin-top: 16px;
 		width: 100%;
 		height: 105px;
 
+		@include breakpoints-max-width(md) {
+			height: 56px;
+			padding: 0 55px 0 15px;
+		}
+
 		&-button {
 			position: absolute;
 			top: 39%;
-			right: 0;
+			right: 16px;
 			height: 69px;
 			width: 69px;
 
-			@include breakpoints-max-width(xl) {
-				right: 16px;
+			@include breakpoints-max-width(md) {
+				top: 38%;
+				right: 12px;
+				height: 32px;
+				width: 32px;
 			}
 
 			&:hover {
@@ -204,12 +310,32 @@
 					fill: $orange;
 				}
 			}
+
+			&_inactive {
+				background: $inactive;
+				border: 2px solid $inactive;
+				cursor: not-allowed;
+
+				&:hover {
+					background: $inactive;
+					border: 2px solid $inactive;
+
+					.quiz__input-svg {
+						fill: $whitePage;
+					}
+				}
+			}
 		}
 
 		&-svg {
 			width: 15px;
 			height: 15px;
 			fill: $whitePage;
+
+			@include breakpoints-max-width(md) {
+				width: 11px;
+				height: 11px;
+			}
 		}
 	}
 }
