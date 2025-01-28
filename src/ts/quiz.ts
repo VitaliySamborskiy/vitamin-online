@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 
 	renderLogo(getElement(".quiz__logo-svg") as SVGElement);
 	renderlogoResize(getElement(".quiz__logo-svg") as SVGElement);
-	activation(
-		getElement("#nameUser") as HTMLElement,
-		getElement(".quiz__input-button") as HTMLElement
-	);
+	// activation(
+	// 	getElement("#nameUser") as HTMLElement,
+	// 	getElement(".quiz__input-button") as HTMLElement
+	// );
 
 	if (screenWidth <= 575) {
 		observerGeometry(getElement(".quiz__circle") as HTMLElement, 3000, 49);

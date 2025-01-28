@@ -22,6 +22,7 @@
 		width: 50%;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 
 		@include breakpoints-max-width(md) {
 			height: auto;
@@ -42,7 +43,7 @@
 	}
 
 	&__title {
-		margin: 30% auto 0;
+		margin: 0 auto;
 		width: 530px;
 		color: $whitePage;
 		font-size: 64px;
@@ -113,12 +114,14 @@
 
 		&-button {
 			width: 130px;
-			margin-top: auto;
+			//margin-top: auto;
+			padding-top: 108px;
 			display: flex;
 			align-items: center;
 			gap: 11px;
 
 			@include breakpoints-max-width(md) {
+				padding-top: 0;
 				position: absolute;
 				bottom: 20px;
 			}
@@ -126,6 +129,7 @@
 	}
 
 	&__forms-block {
+		background: $cardWhite;
 		padding: 30px 95px 44px 0;
 
 		@include breakpoints-max-width(xl) {
@@ -144,7 +148,9 @@
 	}
 
 	&__pagination-status {
-		position: absolute;
+		//position: absolute;
+		margin-left: auto;
+		padding-bottom: 90px;
 		top: 33px;
 		right: 95px;
 		color: $textTitle;
@@ -172,6 +178,7 @@
 		left: 12.7%;
 		width: 2px;
 		height: 2px;
+		z-index: 0;
 
 		@include breakpoints-max-width(xl) {
 			left: 25%;
@@ -181,23 +188,19 @@
 			top: 13%;
 		}
 
-		@include breakpoints-max-width(md) {
-			z-index: 0;
-		}
-
 		@include breakpoints-max-width(sm) {
 			display: none;
 		}
 	}
 
 	&__arc {
-		margin-top: auto;
+		//margin-top: auto;
 		margin-left: auto;
 		position: relative;
 		height: 200px;
 		width: 350px;
 		display: flex;
-		z-index: -1;
+		z-index: 0;
 
 		@include breakpoints-max-width(md) {
 			height: 100px;
@@ -243,10 +246,16 @@
 		}
 	}
 
+	&__buttons-form {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
 	&__form {
 		padding-left: 30px;
 		width: 525px;
-		margin: 36.5% auto 0;
+		margin: 0 auto;
 
 		@include breakpoints-max-width(xl) {
 			padding-left: 0;
@@ -283,10 +292,27 @@
 		margin-top: 16px;
 		width: 100%;
 		height: 105px;
+		background: $whitePage;
 
 		@include breakpoints-max-width(md) {
 			height: 56px;
 			padding: 0 55px 0 15px;
+		}
+
+		&-value-button {
+			padding: 40px;
+			font-weight: $semibold;
+			text-align: start;
+			background: $whitePage;
+			width: 100%;
+			height: 103px;
+			border: 2px solid $whitePage;
+			border-radius: 16px;
+			transition: border 0.5s ease-in-out;
+
+			&:hover {
+				border: 2px solid $hardPurple;
+			}
 		}
 
 		&-button {
@@ -304,8 +330,6 @@
 			}
 
 			&:hover {
-				background: $ivory;
-
 				.quiz__input-svg {
 					fill: $orange;
 				}

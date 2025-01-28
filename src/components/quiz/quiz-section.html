@@ -4,7 +4,7 @@
 			<a class="quiz__logo">
 				<svg class="quiz__logo-svg"><use href="#logo-white"></use></svg>
 			</a>
-			<h2 class="quiz__title">What’s your first name?</h2>
+			<h2 class="quiz__title">Do you smoke?</h2>
 			<load
 				src="src/components/base/button.html"
 				class_button="quiz__back-button"
@@ -16,27 +16,43 @@
 		<div class="quiz__forms-block">
 			<p class="quiz__pagination-status">1/9</p>
 			<div class="quiz__circle circle"></div>
-			<form class="quiz__form">
-				<div class="input-block">
-					<label
-						class="quiz__label"
-						for="nameUser">
-						First Name
-					</label>
+			<form
+				class="quiz__form"
+				onsubmit="return false">
+				<fieldset class="quiz__buttons-form">
 					<input
-						class="quiz__input input"
-						type="text"
-						name="nameUser"
-						id="nameUser"
-						placeholder="enter your first name" />
-					<button
-						class="button orange-button quiz__input-button quiz__input-button_inactive"
-						type="submit"
-						aria-label="submit"
-						disabled>
-						<svg class="quiz__input-svg"><use href="#arrow"></use></svg>
-					</button>
-				</div>
+						class="quiz__input-value-button"
+						type="button"
+						name="quiz-option"
+						value="Yes"
+						aria-label="Yes" />
+					<input
+						class="quiz__input-value-button"
+						type="button"
+						name="quiz-option"
+						value="No"
+						aria-label="No" />
+				</fieldset>
+				<!--				<fieldset class="input-block">-->
+				<!--					<label-->
+				<!--						class="quiz__label"-->
+				<!--						for="nameUser">-->
+				<!--						First Name-->
+				<!--					</label>-->
+				<!--					<input-->
+				<!--						class="quiz__input input"-->
+				<!--						type="text"-->
+				<!--						name="nameUser"-->
+				<!--						id="nameUser"-->
+				<!--						placeholder="enter your first name" />-->
+				<!--					<button-->
+				<!--						class="button orange-button quiz__input-button quiz__input-button_inactive"-->
+				<!--						type="submit"-->
+				<!--						aria-label="submit"-->
+				<!--						disabled>-->
+				<!--						<svg class="quiz__input-svg"><use href="#arrow"></use></svg>-->
+				<!--					</button>-->
+				<!--				</fieldset>-->
 			</form>
 			<div class="quiz__arc">
 				<svg class="quiz__arc-top"><use href="#arc"></use></svg>
