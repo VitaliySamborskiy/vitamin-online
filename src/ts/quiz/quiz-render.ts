@@ -41,18 +41,32 @@ export function quizRenderNext(
 	form: HTMLElement,
 	pagination: HTMLElement
 ) {
-	const activePagination = pagination.textContent.split("/")[0];
-	const button = getElement(`.${arrQuiz[activePagination - 1].buttonClass}`) as HTMLElement;
-	button.addEventListener("click", () => {
+	const activePagination = Number(pagination.textContent.split("/")[0]);
+	const buttons = getElement(
+		`.${arrQuiz[activePagination - 1].buttonClass}`,
+		"all"
+	) as HTMLElement[];
+
+	const renderForm = (button: HTMLElement): void => {
 		if (activePagination >= 1 && activePagination <= 9) {
 			const nextQuiz: QuizType | unknown = arrQuiz.find(
 				item => item.pagination === activePagination + 1
 			);
+
+			buttons.forEach(btn => {
+				btn.removeEventListener("click", () => renderForm(btn));
+			});
+
 			title.textContent = nextQuiz.title;
 			pagination.textContent = `${nextQuiz.pagination}/9`;
 			form.innerHTML = nextQuiz.htmlForm;
+			quizRenderNext(arrQuiz, title, form, pagination);
 		}
+	};
+
+	buttons.forEach((button: HTMLElement): void => {
+		button.addEventListener("click", () => renderForm(button));
 	});
 }
 
-function renderForm(button: HTMLElement, element: HTMLElement): void {}
+// function renderForm(button: HTMLElement, element: HTMLElement): void {}
