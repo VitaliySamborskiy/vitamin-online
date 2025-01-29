@@ -72,6 +72,7 @@
 
 		&-block {
 			padding: 30px 0 30px 95px;
+			z-index: 1;
 
 			@include breakpoints-max-width(xl) {
 				padding: 30px 0 30px 40px;
@@ -86,6 +87,7 @@
 				background: $whitePage;
 				width: 100%;
 				padding: 0;
+				z-index: 0;
 			}
 		}
 	}
@@ -172,13 +174,23 @@
 		}
 	}
 
-	&__circle {
+	&__circle-yellow,
+	&__circle-orange {
+		z-index: 0;
+		width: 2px;
+		height: 2px;
+	}
+
+	&__circle-yellow {
+		background: $yellow;
+		top: 72.5%;
+		left: 78.5%;
+	}
+
+	&__circle-orange {
 		background: $orangeLite;
 		top: 21%;
 		left: 12.7%;
-		width: 2px;
-		height: 2px;
-		z-index: 0;
 
 		@include breakpoints-max-width(xl) {
 			left: 25%;
@@ -193,10 +205,10 @@
 		}
 	}
 
-	&__arc {
-		//margin-top: auto;
-		margin-left: auto;
-		position: relative;
+	&__arc-yellow {
+		position: absolute;
+		top: 75%;
+		right: 10%;
 		height: 200px;
 		width: 350px;
 		display: flex;
@@ -204,7 +216,6 @@
 
 		@include breakpoints-max-width(md) {
 			height: 100px;
-			position: absolute;
 			bottom: 10%;
 			right: 5%;
 		}
@@ -214,13 +225,37 @@
 		}
 	}
 
+	&__bottom-block {
+		height: 200px;
+		width: 100%;
+
+		@include breakpoints-max-width(md) {
+			height: 100px;
+		}
+	}
+
 	&__arc-top,
-	&__arc-bottom {
+	&__arc-bottom,
+	&__arc-orange {
 		position: absolute;
 		fill: transparent;
+	}
+
+	&__arc-top,
+	&__arc-bottom {
 		stroke: $yellow;
 		width: 255px;
 		height: 184px;
+	}
+
+	&__arc-orange {
+		stroke: $orange;
+		width: 145px;
+		height: 150px;
+		top: 11.3%;
+		right: 76%;
+		transform-origin: 10px 10px;
+		animation: rotate 6s linear infinite;
 	}
 
 	&__arc-top {
