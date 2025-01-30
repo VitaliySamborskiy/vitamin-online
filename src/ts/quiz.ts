@@ -1,7 +1,7 @@
 import { observerGeometry } from "./base/observer-geometry.ts";
 import { getElement } from "./base/get-element.ts";
 import { renderLogo, renderlogoResize } from "./quiz/logo-change.ts";
-import { quizRenderInit, quizRenderNext, QuizType } from "./quiz/quiz-render.ts";
+import { quizRenderBack, quizRenderInit, quizRenderNext, QuizType } from "./quiz/quiz-render.ts";
 import { activation } from "./quiz/activation.ts";
 
 document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\tonsubmit="return false">
 \t\t\t\t\t<fieldset class="quiz__buttons-form">
 \t\t\t\t\t\t<input
-\t\t\t\t\t\t\tclass="quiz__input-value-button"
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
 \t\t\t\t\t\t\tname="quiz-option"
 \t\t\t\t\t\t\tvalue="Yes"
 \t\t\t\t\t\t\taria-label="Yes" />
 \t\t\t\t\t\t<input
-\t\t\t\t\t\t\tclass="quiz__input-value-button"
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
 \t\t\t\t\t\t\tname="quiz-option"
 \t\t\t\t\t\t\tvalue="No"
@@ -76,24 +76,201 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 				() => observerGeometry(getElement(".quiz__circle-yellow") as HTMLElement, 2400, 39),
 			],
 		},
+		{
+			pagination: 3,
+			title: "What is your eating habits?",
+			htmlForm: `<div class="quiz__circle-orange-third-page circle"></div>
+\t\t\t\t<form
+\t\t\t\t\tclass="quiz__form"
+\t\t\t\t\tonsubmit="return false">
+\t\t\t\t\t<fieldset class="quiz__buttons-form">
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="Vegan diet"
+\t\t\t\t\t\t\taria-label="Vegan diet" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="Vegetarian diet"
+\t\t\t\t\t\t\taria-label="Vegetarian diet" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="My diet is generally healthy and includes animal protein, fish and veggies"
+\t\t\t\t\t\t\taria-label="My diet is generally healthy and includes animal protein, fish and veggies" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="My diet includes fast food and soft drinks"
+\t\t\t\t\t\t\taria-label="My diet includes fast food and soft drinks" />
+\t\t\t\t\t</fieldset>
+\t\t\t\t</form>
+\t\t\t\t<svg class="quiz__arc-yellow-big"><use href="#arc-big"></use></svg>`,
+			functions: [
+				() =>
+					observerGeometry(getElement(".quiz__circle-orange-third-page") as HTMLElement, 2800, 78),
+			],
+		},
+		{
+			pagination: 4,
+			title: "How frequently do you consume alcoholic beverages?",
+			htmlForm: `<div class="quiz__circle-yellow-fourth-page circle"></div>
+\t\t\t\t<form
+\t\t\t\t\tclass="quiz__form"
+\t\t\t\t\tonsubmit="return false">
+\t\t\t\t\t<fieldset class="quiz__buttons-form">
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="≤ 3 times per week"
+\t\t\t\t\t\t\taria-label="≤ 3 times per week" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="4 - 7 times per week"
+\t\t\t\t\t\t\taria-label="4 - 7 times per week" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="7+ times per week"
+\t\t\t\t\t\t\taria-label="7+ times per week" />
+\t\t\t\t\t</fieldset>
+\t\t\t\t</form>
+\t\t\t\t<svg class="quiz__arc-orange-big"><use href="#arc-big"></use></svg>`,
+			functions: [
+				() =>
+					observerGeometry(getElement(".quiz__circle-yellow-fourth-page") as HTMLElement, 2100, 89),
+			],
+		},
+		{
+			pagination: 5,
+			title: "How frequently do you have cold/flu symptoms?",
+			htmlForm: `<div class="quiz__circle-orange-five-page circle"></div>
+\t\t\t\t<form
+\t\t\t\t\tclass="quiz__form"
+\t\t\t\t\tonsubmit="return false">
+\t\t\t\t\t<fieldset class="quiz__buttons-form">
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="≤ 2 per year"
+\t\t\t\t\t\t\taria-label="≤ 2 per year" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="3 - 5 times per year"
+\t\t\t\t\t\t\taria-label="3 - 5 times per year" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="5+ times per week"
+\t\t\t\t\t\t\taria-label="5+ times per week" />
+\t\t\t\t\t</fieldset>
+\t\t\t\t</form>
+\t\t\t\t<svg class="quiz__arc-orange-min"><use href="#arc-medium"></use></svg>`,
+			functions: [
+				() =>
+					observerGeometry(getElement(".quiz__circle-orange-five-page") as HTMLElement, 3400, 154),
+			],
+		},
+		{
+			pagination: 6,
+			title: "Describe your stress level",
+			htmlForm: `<div class="quiz__circle-yellow-six-page circle"></div>
+\t\t\t\t<form
+\t\t\t\t\tclass="quiz__form"
+\t\t\t\t\tonsubmit="return false">
+\t\t\t\t\t<fieldset class="quiz__buttons-form">
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="I feel calm and relaxed most of the time"
+\t\t\t\t\t\t\taria-label="I feel calm and relaxed most of the time" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="I get nerevous from time to time"
+\t\t\t\t\t\t\taria-label="I get nerevous from time to time" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="I’m under a lot of stress most of the time"
+\t\t\t\t\t\t\taria-label="I’m under a lot of stress most of the time" />
+\t\t\t\t\t</fieldset>
+\t\t\t\t</form>
+\t\t\t\t<svg class="quiz__arc-orange-min-six"><use href="#arc-mini"></use></svg>`,
+			functions: [
+				() =>
+					observerGeometry(getElement(".quiz__circle-yellow-six-page") as HTMLElement, 2700, 77),
+			],
+		},
+		{
+			pagination: 7,
+			title: "Have you ever been diagnosted with high blood glucose level?",
+			htmlForm: `<div class="quiz__circle-orange-seven-page circle"></div>
+\t\t\t\t<form
+\t\t\t\t\tclass="quiz__form"
+\t\t\t\t\tonsubmit="return false">
+\t\t\t\t\t<fieldset class="quiz__buttons-form">
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="Yes"
+\t\t\t\t\t\t\taria-label="Yes" />
+\t\t\t\t\t\t<input
+\t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
+\t\t\t\t\t\t\ttype="button"
+\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tvalue="No"
+\t\t\t\t\t\t\taria-label="No" />
+\t\t\t\t\t</fieldset>
+\t\t\t\t</form>
+\t\t\t\t<svg class="quiz__arc-yellow-big-top"><use href="#arc-big"></use></svg>`,
+			functions: [
+				() =>
+					observerGeometry(getElement(".quiz__circle-orange-seven-page") as HTMLElement, 2600, 57),
+			],
+		},
 	];
 
 	renderLogo(getElement(".quiz__logo-svg") as SVGElement);
 	renderlogoResize(getElement(".quiz__logo-svg") as SVGElement);
+
 	quizRenderInit(
 		arrQuiz,
 		getElement(".quiz__title") as HTMLElement,
 		getElement(".quiz__render") as HTMLElement,
 		getElement(".quiz__pagination-status") as HTMLElement
 	);
-	setTimeout(
-		() =>
-			quizRenderNext(
+
+	setTimeout(() => {
+		quizRenderNext(
+			arrQuiz,
+			getElement(".quiz__title") as HTMLElement,
+			getElement(".quiz__render") as HTMLElement,
+			getElement(".quiz__pagination-status") as HTMLElement
+		),
+			quizRenderBack(
 				arrQuiz,
 				getElement(".quiz__title") as HTMLElement,
 				getElement(".quiz__render") as HTMLElement,
-				getElement(".quiz__pagination-status") as HTMLElement
-			),
-		0
-	);
+				getElement(".quiz__pagination-status") as HTMLElement,
+				getElement(".quiz__back-button") as HTMLElement
+			);
+	}, 0);
 });

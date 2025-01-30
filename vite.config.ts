@@ -20,6 +20,7 @@ export default defineConfig({
 				singUp: resolve(__dirname, "src/pages/sign-up.html"),
 				passRecovery: resolve(__dirname, "src/pages/pass-recovery.html"),
 				medstogoCatalogue: resolve(__dirname, "src/pages/medstogo-catalogue.html"),
+				quiz: resolve(__dirname, "/src/pages/quiz.html"),
 			},
 		},
 	},

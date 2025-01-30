@@ -5,6 +5,8 @@ export type QuizType = {
 	functions: unknown[];
 };
 
+type DirectionType = "next" | "prev";
+
 export function quizRenderInit(
 	arrQuiz: QuizType[],
 	title: HTMLElement,
@@ -28,15 +30,7 @@ export function quizRenderNext(
 		if (target.classList.contains("quiz__value-button")) {
 			const activePagination = Number(pagination.textContent.split("/")[0]);
 
-			if (activePagination >= 1 && activePagination <= 9) {
-				const nextQuiz: QuizType | unknown = arrQuiz.find(
-					item => item.pagination === activePagination + 1
-				);
-				title.textContent = nextQuiz.title;
-				pagination.textContent = `${nextQuiz.pagination}/9`;
-				form.innerHTML = nextQuiz.htmlForm;
-				nextQuiz.functions.forEach((func: unknown) => func());
-			}
+			renderLogic(activePagination, title, pagination, form, arrQuiz, "next");
 		}
 	});
 }
@@ -49,16 +43,28 @@ export function quizRenderBack(
 	button: HTMLElement
 ): void {
 	button.addEventListener("click", () => {
-		console.log("клік");
 		const activePagination = Number(pagination.textContent.split("/")[0]);
-		if (activePagination >= 1 && activePagination <= 9) {
-			console.log("точно клік");
-			const nextQuiz: QuizType | unknown = arrQuiz.find(
-				item => item.pagination === activePagination - 1
-			);
-			title.textContent = nextQuiz.title;
-			pagination.textContent = `${nextQuiz.pagination}/9`;
-			form.innerHTML = nextQuiz.htmlForm;
-		}
+
+		renderLogic(activePagination, title, pagination, form, arrQuiz, "prev");
 	});
+}
+
+function renderLogic(
+	activePagination: number,
+	title: HTMLElement,
+	pagination: HTMLElement,
+	form: HTMLElement,
+	arrQuiz: QuizType[],
+	direction: DirectionType
+): void {
+	if (activePagination >= 1 && activePagination <= 9) {
+		const objQuiz: QuizType | unknown = arrQuiz.find(
+			item => item.pagination === activePagination + (direction === "next" ? +1 : -1)
+		);
+
+		title.textContent = objQuiz.title;
+		pagination.textContent = `${objQuiz.pagination}/9`;
+		form.innerHTML = objQuiz.htmlForm;
+		objQuiz.functions.forEach((func: unknown) => func());
+	}
 }

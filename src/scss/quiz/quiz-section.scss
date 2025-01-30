@@ -175,20 +175,61 @@
 	}
 
 	&__circle-yellow,
-	&__circle-orange {
+	&__circle-orange,
+	&__circle-orange-third-page,
+	&__circle-yellow-fourth-page,
+	&__circle-orange-five-page,
+	&__circle-yellow-six-page,
+	&__circle-orange-seven-page {
 		z-index: 0;
 		width: 2px;
 		height: 2px;
 	}
 
-	&__circle-yellow {
+	&__circle-orange,
+	&__circle-orange-third-page,
+	&__circle-orange-five-page,
+	&__circle-orange-seven-page {
+		background: $orangeLite;
+	}
+
+	&__circle-yellow-fourth-page,
+	&__circle-yellow,
+	&__circle-yellow-six-page {
 		background: $yellow;
+	}
+
+	&__circle-yellow {
 		top: 72.5%;
 		left: 78.5%;
 	}
 
+	&__circle-orange-third-page {
+		top: 20.5%;
+		right: 28%;
+	}
+
+	&__circle-yellow-fourth-page {
+		top: 72%;
+		left: 20.5%;
+	}
+
+	&__circle-orange-five-page {
+		top: 62%;
+		right: 0%;
+	}
+
+	&__circle-yellow-six-page {
+		top: 26.5%;
+		right: 25.5%;
+	}
+
+	&__circle-orange-seven-page {
+		bottom: 22%;
+		right: 83%;
+	}
+
 	&__circle-orange {
-		background: $orangeLite;
 		top: 21%;
 		left: 12.7%;
 
@@ -236,26 +277,89 @@
 
 	&__arc-top,
 	&__arc-bottom,
-	&__arc-orange {
+	&__arc-orange,
+	&__arc-yellow-big,
+	&__arc-orange-big,
+	&__arc-orange-min,
+	&__arc-orange-min-six,
+	&__arc-yellow-big-top {
 		position: absolute;
 		fill: transparent;
 	}
 
 	&__arc-top,
-	&__arc-bottom {
+	&__arc-bottom,
+	&__arc-yellow-big,
+	&__arc-orange-min,
+	&__arc-yellow-big-top {
 		stroke: $yellow;
+	}
+
+	&__arc-orange,
+	&__arc-orange-big,
+	&__arc-orange-min-six {
+		stroke: $orange;
+	}
+
+	&__arc-orange-big,
+	&__arc-yellow-big,
+	&__arc-yellow-big-top {
+		width: 181px;
+		height: 360px;
+		transform-origin: 0 50%;
+		transform: rotate(180deg);
+		animation: rotate 6s linear infinite;
+	}
+
+	&__arc-top,
+	&__arc-bottom {
 		width: 255px;
 		height: 184px;
 	}
 
-	&__arc-orange {
-		stroke: $orange;
+	&__arc-yellow-big {
+		bottom: -6%;
+		right: 69%;
+	}
+
+	&__arc-orange-big {
+		top: -14%;
+		right: -1%;
+	}
+
+	&__arc-yellow-big-top {
+		top: -9.5%;
+		right: -13%;
+	}
+
+	&__arc-orange,
+	&__arc-orange-min,
+	&__arc-orange-min-six {
+		transform-origin: 0 0;
+		animation: rotate 6s linear infinite;
+	}
+
+	&__arc-orange-min,
+	&__arc-orange-min-six {
 		width: 145px;
 		height: 150px;
+	}
+
+	&__arc-orange-min-six {
+		bottom: 14%;
+		right: 61.5%;
+	}
+
+	&__arc-orange-min {
 		top: 11.3%;
 		right: 76%;
-		transform-origin: 10px 10px;
-		animation: rotate 6s linear infinite;
+	}
+
+	&__arc-orange-min {
+		top: 15%;
+		right: 71%;
+		width: 171px;
+		height: 171px;
 	}
 
 	&__arc-top {
@@ -335,7 +439,7 @@
 		}
 
 		&-value-button {
-			padding: 40px;
+			padding: 20px 140px 20px 20px;
 			font-weight: $semibold;
 			text-align: start;
 			background: $whitePage;
@@ -344,6 +448,8 @@
 			border: 2px solid $whitePage;
 			border-radius: 16px;
 			transition: border 0.5s ease-in-out;
+			white-space: normal;
+			z-index: 1;
 
 			&:hover {
 				border: 2px solid $hardPurple;
