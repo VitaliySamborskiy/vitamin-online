@@ -1,5 +1,3 @@
-import { renderHeaderResize } from "../forms/render-header.ts";
-
 let currentLayout: "mobile" | "desktop" | null = null;
 
 export function renderLogo(element: SVGElement): void {
