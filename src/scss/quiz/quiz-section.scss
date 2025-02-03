@@ -1,9 +1,11 @@
 .quiz {
 	&__mobile-container {
 		@include breakpoints-max-width(md) {
+			background: $ivory;
 			padding: 15px 20px;
 			position: relative;
 			height: 100vh;
+			z-index: 0;
 		}
 	}
 
@@ -44,17 +46,15 @@
 
 	&__title {
 		margin: 0 auto;
-		width: 530px;
+		width: 521px;
 		color: $whitePage;
 		font-size: 64px;
 
 		@include breakpoints-max-width(xl) {
-			margin: 50% auto 0;
 			width: 85%;
 		}
 
 		@include breakpoints-max-width(lg) {
-			margin: 65% auto 0;
 			width: 90%;
 			font-size: 38px;
 		}
@@ -64,10 +64,81 @@
 			text-align: center;
 			color: $textTitle;
 			margin: 192px auto 0;
+			width: 100%;
 		}
 
 		@include breakpoints-max-width(xs) {
 			margin: 122px auto 0;
+		}
+
+		&-two {
+			@include breakpoints-max-width(md) {
+				margin: 168px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 98px auto 0;
+			}
+		}
+
+		&-third {
+			@include breakpoints-max-width(md) {
+				margin: 50px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 30px auto 0;
+			}
+		}
+
+		&-fourth {
+			@include breakpoints-max-width(md) {
+				margin: 105px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 20px auto 0;
+			}
+		}
+
+		&-five {
+			@include breakpoints-max-width(md) {
+				margin: 105px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 35px auto 0;
+			}
+		}
+
+		&-six {
+			@include breakpoints-max-width(md) {
+				margin: 98px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 15px auto 0;
+			}
+		}
+
+		&-seven {
+			@include breakpoints-max-width(md) {
+				margin: 155px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 68px auto 0;
+			}
+		}
+
+		&-eight {
+			@include breakpoints-max-width(md) {
+				margin: 40px auto 0;
+			}
+
+			@include breakpoints-max-width(xs) {
+				margin: 30px auto 0;
+			}
 		}
 
 		&-block {
@@ -84,10 +155,10 @@
 			}
 
 			@include breakpoints-max-width(md) {
-				background: $whitePage;
+				background: transparent;
 				width: 100%;
 				padding: 0;
-				z-index: 0;
+				z-index: 2;
 			}
 		}
 	}
@@ -116,7 +187,6 @@
 
 		&-button {
 			width: 130px;
-			//margin-top: auto;
 			padding-top: 108px;
 			display: flex;
 			align-items: center;
@@ -144,17 +214,15 @@
 		}
 
 		@include breakpoints-max-width(md) {
+			background: $ivory;
 			width: 100%;
 			padding: 0;
 		}
 	}
 
 	&__pagination-status {
-		//position: absolute;
 		margin-left: auto;
 		padding-bottom: 90px;
-		top: 33px;
-		right: 95px;
 		color: $textTitle;
 		font-size: 30px;
 		font-family: $supportFonts;
@@ -169,100 +237,9 @@
 		}
 
 		@include breakpoints-max-width(md) {
+			position: absolute;
 			top: 20px;
 			font-size: 20px;
-		}
-	}
-
-	&__circle-yellow,
-	&__circle-orange,
-	&__circle-orange-third-page,
-	&__circle-yellow-fourth-page,
-	&__circle-orange-five-page,
-	&__circle-yellow-six-page,
-	&__circle-orange-seven-page {
-		z-index: 0;
-		width: 2px;
-		height: 2px;
-	}
-
-	&__circle-orange,
-	&__circle-orange-third-page,
-	&__circle-orange-five-page,
-	&__circle-orange-seven-page {
-		background: $orangeLite;
-	}
-
-	&__circle-yellow-fourth-page,
-	&__circle-yellow,
-	&__circle-yellow-six-page {
-		background: $yellow;
-	}
-
-	&__circle-yellow {
-		top: 72.5%;
-		left: 78.5%;
-	}
-
-	&__circle-orange-third-page {
-		top: 20.5%;
-		right: 28%;
-	}
-
-	&__circle-yellow-fourth-page {
-		top: 72%;
-		left: 20.5%;
-	}
-
-	&__circle-orange-five-page {
-		top: 62%;
-		right: 0%;
-	}
-
-	&__circle-yellow-six-page {
-		top: 26.5%;
-		right: 25.5%;
-	}
-
-	&__circle-orange-seven-page {
-		bottom: 22%;
-		right: 83%;
-	}
-
-	&__circle-orange {
-		top: 21%;
-		left: 12.7%;
-
-		@include breakpoints-max-width(xl) {
-			left: 25%;
-		}
-
-		@include breakpoints-max-width(lg) {
-			top: 13%;
-		}
-
-		@include breakpoints-max-width(sm) {
-			display: none;
-		}
-	}
-
-	&__arc-yellow {
-		position: absolute;
-		top: 75%;
-		right: 10%;
-		height: 200px;
-		width: 350px;
-		display: flex;
-		z-index: 0;
-
-		@include breakpoints-max-width(md) {
-			height: 100px;
-			bottom: 10%;
-			right: 5%;
-		}
-
-		@include breakpoints-max-width(sm) {
-			display: none;
 		}
 	}
 
@@ -273,115 +250,9 @@
 		@include breakpoints-max-width(md) {
 			height: 100px;
 		}
-	}
 
-	&__arc-top,
-	&__arc-bottom,
-	&__arc-orange,
-	&__arc-yellow-big,
-	&__arc-orange-big,
-	&__arc-orange-min,
-	&__arc-orange-min-six,
-	&__arc-yellow-big-top {
-		position: absolute;
-		fill: transparent;
-	}
-
-	&__arc-top,
-	&__arc-bottom,
-	&__arc-yellow-big,
-	&__arc-orange-min,
-	&__arc-yellow-big-top {
-		stroke: $yellow;
-	}
-
-	&__arc-orange,
-	&__arc-orange-big,
-	&__arc-orange-min-six {
-		stroke: $orange;
-	}
-
-	&__arc-orange-big,
-	&__arc-yellow-big,
-	&__arc-yellow-big-top {
-		width: 181px;
-		height: 360px;
-		transform-origin: 0 50%;
-		transform: rotate(180deg);
-		animation: rotate 6s linear infinite;
-	}
-
-	&__arc-top,
-	&__arc-bottom {
-		width: 255px;
-		height: 184px;
-	}
-
-	&__arc-yellow-big {
-		bottom: -6%;
-		right: 69%;
-	}
-
-	&__arc-orange-big {
-		top: -14%;
-		right: -1%;
-	}
-
-	&__arc-yellow-big-top {
-		top: -9.5%;
-		right: -13%;
-	}
-
-	&__arc-orange,
-	&__arc-orange-min,
-	&__arc-orange-min-six {
-		transform-origin: 0 0;
-		animation: rotate 6s linear infinite;
-	}
-
-	&__arc-orange-min,
-	&__arc-orange-min-six {
-		width: 145px;
-		height: 150px;
-	}
-
-	&__arc-orange-min-six {
-		bottom: 14%;
-		right: 61.5%;
-	}
-
-	&__arc-orange-min {
-		top: 11.3%;
-		right: 76%;
-	}
-
-	&__arc-orange-min {
-		top: 15%;
-		right: 71%;
-		width: 171px;
-		height: 171px;
-	}
-
-	&__arc-top {
-		top: -66%;
-		right: -11%;
-
-		@include breakpoints-max-width(xl) {
-			top: -55%;
-		}
-
-		@include breakpoints-max-width(md) {
-			top: -210%;
-		}
-	}
-
-	&__arc-bottom {
-		bottom: 11%;
-		left: -14%;
-		transform: rotate(180deg);
-
-		@include breakpoints-max-width(xl) {
-			bottom: 0;
+		@include breakpoints-max-width(sm) {
+			display: none;
 		}
 	}
 
@@ -389,6 +260,28 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+
+		@include breakpoints-max-width(md) {
+			gap: 14px;
+			margin-top: 30px;
+		}
+
+		&-boolean {
+			@include breakpoints-max-width(md) {
+				flex-direction: row;
+			}
+		}
+
+		&-grid {
+			display: grid;
+			gap: 26px;
+			grid-template-columns: 1fr 1fr;
+
+			@include breakpoints-max-width(sm) {
+				row-gap: 10px;
+				column-gap: 15px;
+			}
+		}
 	}
 
 	&__form {
@@ -398,21 +291,38 @@
 
 		@include breakpoints-max-width(xl) {
 			padding-left: 0;
-			margin: 57% auto 0;
 			width: 90%;
-		}
-
-		@include breakpoints-max-width(lg) {
-			margin: 47% auto 0;
 		}
 
 		@include breakpoints-max-width(md) {
 			margin: 48px auto 0;
+			position: sticky;
+			z-index: 2;
 		}
 
 		@include breakpoints-max-width(sm) {
-			margin: 14px auto 0;
+			margin: 0 auto;
 			width: 100%;
+		}
+
+		&-grid {
+			padding-left: 35px;
+			margin: 0 auto;
+			width: 83%;
+
+			@include breakpoints-max-width(xl) {
+				padding-left: 0;
+				width: 90%;
+			}
+
+			@include breakpoints-max-width(md) {
+				margin: 25px auto;
+			}
+
+			@include breakpoints-max-width(sm) {
+				width: 100%;
+				margin: 30px auto;
+			}
 		}
 	}
 
@@ -434,16 +344,21 @@
 		background: $whitePage;
 
 		@include breakpoints-max-width(md) {
+			margin-top: 29px;
 			height: 56px;
 			padding: 0 55px 0 15px;
 		}
 
 		&-value-button {
-			padding: 20px 140px 20px 20px;
+			padding: 25px 80px 25px 40px;
+			font-size: 18px;
+			font-family: $supportFonts;
 			font-weight: $semibold;
 			text-align: start;
 			background: $whitePage;
 			width: 100%;
+			line-height: 1.5;
+			letter-spacing: -0.3px;
 			height: 103px;
 			border: 2px solid $whitePage;
 			border-radius: 16px;
@@ -451,8 +366,41 @@
 			white-space: normal;
 			z-index: 1;
 
+			@include breakpoints-max-width(md) {
+				height: 100%;
+				font-size: 16px;
+				text-align: center;
+				padding: 16px 33px;
+				line-height: 1.3;
+			}
+
+			@include breakpoints-max-width(xs) {
+				padding: 16px 27px;
+			}
+
 			&:hover {
 				border: 2px solid $hardPurple;
+			}
+
+			&-boolean {
+				@include breakpoints-max-width(md) {
+					padding: 38px 40px;
+				}
+
+				@include breakpoints-max-width(sm) {
+					padding: 40px;
+				}
+			}
+
+			&-grid {
+				@include breakpoints-max-width(md) {
+					height: 104px;
+					padding: 5px 20px;
+				}
+
+				@include breakpoints-max-width(xs) {
+					padding: 5px 10px;
+				}
 			}
 		}
 
@@ -464,7 +412,7 @@
 			width: 69px;
 
 			@include breakpoints-max-width(md) {
-				top: 38%;
+				top: 49%;
 				right: 12px;
 				height: 32px;
 				width: 32px;
@@ -473,6 +421,10 @@
 			&:hover {
 				.quiz__input-svg {
 					fill: $orange;
+
+					@include breakpoints-max-width(md) {
+						fill: $whitePage;
+					}
 				}
 			}
 

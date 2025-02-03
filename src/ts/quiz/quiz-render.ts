@@ -1,6 +1,7 @@
 export type QuizType = {
 	pagination: number;
 	title: string;
+	titlePageClass: string;
 	htmlForm: string;
 	functions: (() => void)[];
 };
@@ -68,6 +69,7 @@ function renderLogic(
 
 		if (objQuiz) {
 			title.textContent = objQuiz.title;
+			title.className = objQuiz.titlePageClass;
 			pagination.textContent = `${objQuiz.pagination}/9`;
 			form.innerHTML = objQuiz.htmlForm;
 			objQuiz.functions.forEach((func: () => void) => func());

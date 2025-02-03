@@ -1,0 +1,236 @@
+.quiz {
+	&__circle-yellow,
+	&__circle-orange,
+	&__circle-orange-third-page,
+	&__circle-yellow-fourth-page,
+	&__circle-orange-five-page,
+	&__circle-yellow-six-page,
+	&__circle-orange-seven-page,
+	&__circle-yellow-eight-page {
+		z-index: 0;
+		width: 2px;
+		height: 2px;
+
+		@include breakpoints-max-width(sm) {
+			display: none;
+		}
+	}
+
+	&__circle-orange,
+	&__circle-orange-third-page,
+	&__circle-orange-five-page,
+	&__circle-orange-seven-page {
+		background: $orangeLite;
+	}
+
+	&__circle-yellow-fourth-page,
+	&__circle-yellow,
+	&__circle-yellow-six-page,
+	&__circle-yellow-eight-page {
+		background: $yellow;
+	}
+
+	&__circle-yellow {
+		top: 73.2%;
+		left: 79%;
+
+		@include breakpoints-max-width(md) {
+			top: 67%;
+		}
+	}
+
+	&__circle-orange-third-page {
+		top: 20%;
+		right: 28%;
+	}
+
+	&__circle-yellow-fourth-page {
+		top: 71%;
+		left: 19.8%;
+	}
+
+	&__circle-orange-five-page {
+		top: 60.5%;
+		right: 2%;
+	}
+
+	&__circle-yellow-six-page {
+		top: 25.8%;
+		right: 26%;
+	}
+
+	&__circle-orange-seven-page {
+		bottom: 22.5%;
+		right: 83.3%;
+	}
+
+	&__circle-yellow-eight-page {
+		bottom: 21%;
+		right: 20%;
+	}
+
+	&__circle-orange {
+		top: 21%;
+		left: 12.7%;
+
+		@include breakpoints-max-width(xl) {
+			left: 25%;
+		}
+
+		@include breakpoints-max-width(lg) {
+			top: 13%;
+		}
+	}
+
+	&__arc-yellow {
+		position: absolute;
+		bottom: 4.8%;
+		right: 10%;
+		height: 200px;
+		width: 350px;
+		display: flex;
+		z-index: 0;
+
+		@include breakpoints-max-width(md) {
+			height: 100px;
+			bottom: 5%;
+			right: 5%;
+		}
+
+		@include breakpoints-max-width(sm) {
+			display: none;
+		}
+	}
+
+	&__arc-top,
+	&__arc-bottom,
+	&__arc-orange,
+	&__arc-yellow-big,
+	&__arc-orange-big,
+	&__arc-orange-min,
+	&__arc-orange-min-six,
+	&__arc-yellow-big-top,
+	&__arc-orange-eight {
+		position: absolute;
+		fill: transparent;
+
+		@include breakpoints-max-width(sm) {
+			display: none;
+		}
+	}
+
+	&__arc-top,
+	&__arc-bottom,
+	&__arc-yellow-big,
+	&__arc-orange-min,
+	&__arc-yellow-big-top {
+		stroke: $yellow;
+	}
+
+	&__arc-orange,
+	&__arc-orange-big,
+	&__arc-orange-min-six,
+	&__arc-orange-eight {
+		stroke: $orange;
+	}
+
+	&__arc-orange-big,
+	&__arc-yellow-big,
+	&__arc-yellow-big-top {
+		width: 197px;
+		height: 388px;
+		transform-origin: 0 50%;
+		transform: rotate(180deg);
+		animation: rotate 8s linear infinite;
+	}
+
+	&__arc-orange-min,
+	&__arc-orange-min-six,
+	&__arc-orange-eight {
+		transform-origin: 0 0;
+		animation: rotate 6s linear infinite;
+	}
+
+	&__arc-orange,
+	&__arc-orange-eight {
+		width: 161px;
+		height: 161px;
+	}
+
+	&__arc-top,
+	&__arc-bottom {
+		width: 255px;
+		height: 184px;
+	}
+
+	&__arc-yellow-big {
+		bottom: -6%;
+		right: 69%;
+	}
+
+	&__arc-orange-big {
+		top: -13%;
+		right: -1%;
+	}
+
+	&__arc-yellow-big-top {
+		top: -8.5%;
+		right: -13%;
+	}
+
+	&__arc-orange {
+		transform-origin: 5px 5px;
+		animation: rotate 4s linear infinite;
+	}
+
+	&__arc-orange {
+		top: 12%;
+		right: 76%;
+
+		@include breakpoints-max-width(md) {
+			top: 30%;
+		}
+	}
+
+	&__arc-orange-eight {
+		top: 16.6%;
+		right: 78%;
+	}
+
+	&__arc-orange-min-six {
+		width: 155px;
+		height: 160px;
+		bottom: 14%;
+		right: 62%;
+	}
+
+	&__arc-orange-min {
+		top: 14.5%;
+		right: 71.8%;
+		width: 195px;
+		height: 195px;
+	}
+
+	&__arc-top {
+		top: -66%;
+		right: -11%;
+
+		@include breakpoints-max-width(xl) {
+			top: -55%;
+		}
+
+		@include breakpoints-max-width(md) {
+			top: -210%;
+		}
+	}
+
+	&__arc-bottom {
+		bottom: 11%;
+		left: -14%;
+		transform: rotate(180deg);
+
+		@include breakpoints-max-width(xl) {
+			bottom: 0;
+		}
+	}
+}
