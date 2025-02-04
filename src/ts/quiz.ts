@@ -3,6 +3,7 @@ import { getElement } from "./base/get-element.ts";
 import { renderLogo, renderlogoResize } from "./quiz/logo-change.ts";
 import { quizRenderBack, quizRenderInit, quizRenderNext, QuizType } from "./quiz/quiz-render.ts";
 import { activation } from "./quiz/activation.ts";
+import { getQuizData } from "./quiz/get-quiz-data.ts";
 
 document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 	const arrQuiz: QuizType[] = [
@@ -61,13 +62,13 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-boolean"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="smoke"
 \t\t\t\t\t\t\tvalue="Yes"
 \t\t\t\t\t\t\taria-label="Yes" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-boolean"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="smoke"
 \t\t\t\t\t\t\tvalue="No"
 \t\t\t\t\t\t\taria-label="No" />
 \t\t\t\t\t</fieldset>
@@ -90,25 +91,25 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="eatingHabits"
 \t\t\t\t\t\t\tvalue="Vegan diet"
 \t\t\t\t\t\t\taria-label="Vegan diet" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="eatingHabits"
 \t\t\t\t\t\t\tvalue="Vegetarian diet"
 \t\t\t\t\t\t\taria-label="Vegetarian diet" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="eatingHabits"
 \t\t\t\t\t\t\tvalue="My diet is generally healthy and includes animal protein, fish and veggies"
 \t\t\t\t\t\t\taria-label="My diet is generally healthy and includes animal protein, fish and veggies" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="eatingHabits"
 \t\t\t\t\t\t\tvalue="My diet includes fast food and soft drinks"
 \t\t\t\t\t\t\taria-label="My diet includes fast food and soft drinks" />
 \t\t\t\t\t</fieldset>
@@ -132,19 +133,19 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="AlcoholicBeveragesFrequency"
 \t\t\t\t\t\t\tvalue="≤ 3 times per week"
 \t\t\t\t\t\t\taria-label="≤ 3 times per week" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="AlcoholicBeveragesFrequency"
 \t\t\t\t\t\t\tvalue="4 - 7 times per week"
 \t\t\t\t\t\t\taria-label="4 - 7 times per week" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="AlcoholicBeveragesFrequency"
 \t\t\t\t\t\t\tvalue="7+ times per week"
 \t\t\t\t\t\t\taria-label="7+ times per week" />
 \t\t\t\t\t</fieldset>
@@ -168,19 +169,19 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="coldFluFrequency"
 \t\t\t\t\t\t\tvalue="≤ 2 per year"
 \t\t\t\t\t\t\taria-label="≤ 2 per year" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="coldFluFrequency"
 \t\t\t\t\t\t\tvalue="3 - 5 times per year"
 \t\t\t\t\t\t\taria-label="3 - 5 times per year" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="coldFluFrequency"
 \t\t\t\t\t\t\tvalue="5+ times per week"
 \t\t\t\t\t\t\taria-label="5+ times per week" />
 \t\t\t\t\t</fieldset>
@@ -204,19 +205,19 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="stressLevel"
 \t\t\t\t\t\t\tvalue="I feel calm and relaxed most of the time"
 \t\t\t\t\t\t\taria-label="I feel calm and relaxed most of the time" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="stressLevel"
 \t\t\t\t\t\t\tvalue="I get nerevous from time to time"
 \t\t\t\t\t\t\taria-label="I get nerevous from time to time" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="stressLevel"
 \t\t\t\t\t\t\tvalue="I’m under a lot of stress most of the time"
 \t\t\t\t\t\t\taria-label="I’m under a lot of stress most of the time" />
 \t\t\t\t\t</fieldset>
@@ -240,13 +241,13 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-boolean"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="diabetes"
 \t\t\t\t\t\t\tvalue="Yes"
 \t\t\t\t\t\t\taria-label="Yes" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-boolean"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="diabetes"
 \t\t\t\t\t\t\tvalue="No"
 \t\t\t\t\t\t\taria-label="No" />
 \t\t\t\t\t</fieldset>
@@ -270,37 +271,37 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-grid"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="concentration"
 \t\t\t\t\t\t\tvalue="Weight managment"
 \t\t\t\t\t\t\taria-label="Weight managment" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-grid"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="concentration"
 \t\t\t\t\t\t\tvalue="Stress relief"
 \t\t\t\t\t\t\taria-label="Stress relief" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-grid"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="concentration"
 \t\t\t\t\t\t\tvalue="Immune boost"
 \t\t\t\t\t\t\taria-label="Immune boost" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-grid"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="concentration"
 \t\t\t\t\t\t\tvalue="Need to solve a sprcific problem"
 \t\t\t\t\t\t\taria-label="Need to solve a sprcific problem" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-grid"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="concentration"
 \t\t\t\t\t\t\tvalue="I need a bassic kit for a daily intake"
 \t\t\t\t\t\t\taria-label="I need a bassic kit for a daily intake" />
 \t\t\t\t\t\t<input
 \t\t\t\t\t\t\tclass="quiz__input-value-button quiz__value-button quiz__input-value-button-grid"
 \t\t\t\t\t\t\ttype="button"
-\t\t\t\t\t\t\tname="quiz-option"
+\t\t\t\t\t\t\tname="concentration"
 \t\t\t\t\t\t\tvalue="All in one"
 \t\t\t\t\t\t\taria-label="All in one" />
 \t\t\t\t\t</fieldset>
@@ -366,18 +367,19 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 	);
 
 	setTimeout(() => {
+		getQuizData(getElement(".quiz__render") as HTMLElement);
 		quizRenderNext(
 			arrQuiz,
 			getElement(".quiz__title") as HTMLElement,
 			getElement(".quiz__render") as HTMLElement,
 			getElement(".quiz__pagination-status") as HTMLElement
-		),
-			quizRenderBack(
-				arrQuiz,
-				getElement(".quiz__title") as HTMLElement,
-				getElement(".quiz__render") as HTMLElement,
-				getElement(".quiz__pagination-status") as HTMLElement,
-				getElement(".quiz__back-button") as HTMLElement
-			);
+		);
+		quizRenderBack(
+			arrQuiz,
+			getElement(".quiz__title") as HTMLElement,
+			getElement(".quiz__render") as HTMLElement,
+			getElement(".quiz__pagination-status") as HTMLElement,
+			getElement(".quiz__back-button") as HTMLElement
+		);
 	}, 0);
 });

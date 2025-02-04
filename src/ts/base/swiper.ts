@@ -8,7 +8,10 @@ export function swiperInit(
 	sliderView: number,
 	spaceBetween: number | string,
 	loop: boolean,
-	breakpoints?: Record<string, SwiperOptions>
+	breakpoints?: Record<string, SwiperOptions>,
+	nextButtonElement?: HTMLElement,
+	prevButtonElement?: HTMLElement,
+	paginationElement?: HTMLElement
 ): void {
 	swiperInstanceMap.set(
 		swiperElement,
@@ -17,6 +20,15 @@ export function swiperInit(
 			spaceBetween: spaceBetween,
 			loop: loop,
 			breakpoints: breakpoints,
+
+			pagination: {
+				el: paginationElement,
+			},
+
+			navigation: {
+				nextEl: nextButtonElement,
+				prevEl: prevButtonElement,
+			},
 		})
 	);
 }
