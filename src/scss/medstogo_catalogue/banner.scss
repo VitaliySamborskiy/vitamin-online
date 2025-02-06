@@ -1,11 +1,25 @@
 .banner {
 	&__content {
-		margin: 37px auto;
-		width: 80%;
+		width: 100%;
+		height: 472px;
 		display: flex;
+		flex-direction: column;
 		border-radius: 24px;
-		padding: 93px 70px;
+		padding: 75px 70px 93px;
 		overflow: hidden;
+
+		@include breakpoints-max-width(xl) {
+			height: 492px;
+		}
+
+		@include breakpoints-max-width(lg) {
+			padding: 60px 70px 73px;
+			height: 472px;
+		}
+
+		@include breakpoints-max-width(md) {
+			padding: 30px 70px;
+		}
 	}
 
 	&__border {
@@ -13,14 +27,59 @@
 	}
 
 	&__text-block {
-		width: 50%;
+		width: 575px;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+
+		@include breakpoints-max-width(xl) {
+			width: 60%;
+		}
+
+		@include breakpoints-max-width(md) {
+			margin-top: auto;
+			width: 100%;
+			align-items: center;
+		}
 	}
 
 	&__title {
+		margin-top: 16px;
 		font-size: 50px;
+
+		@include breakpoints-max-width(lg) {
+			font-size: 40px;
+		}
+
+		@include breakpoints-max-width(md) {
+			margin-top: 10px;
+			font-size: 24px;
+		}
+	}
+
+	&__sub-title,
+	&__title,
+	&__text {
+		color: $whitePage;
+
+		@include breakpoints-max-width(md) {
+			text-align: center;
+		}
+	}
+
+	&__text,
+	&__sub-title {
+		opacity: 0.7;
+		font-weight: $normal;
+		font-family: $mainFont;
+	}
+
+	&__sub-title {
+		font-size: 20px;
+
+		@include breakpoints-max-width(md) {
+			font-size: 16px;
+		}
 	}
 
 	&__text {
@@ -28,13 +87,31 @@
 		width: 416px;
 		font-size: 18px;
 		line-height: 1.5;
-		opacity: 0.7;
+
+		@include breakpoints-max-width(xl) {
+			width: 80%;
+		}
+
+		@include breakpoints-max-width(md) {
+			margin-top: 10px;
+			font-size: 14px;
+		}
 	}
 
 	&__button {
 		margin-top: 27px;
 		padding: 18px 0;
 		width: 253px;
+
+		@include breakpoints-max-width(lg) {
+			font-size: 18px;
+		}
+
+		@include breakpoints-max-width(md) {
+			margin-top: 10px;
+			padding: 10px 0;
+			width: 154px;
+		}
 	}
 
 	&__picture-block {
@@ -45,9 +122,12 @@
 		width: 1.5px;
 		height: 1.5px;
 		top: 2%;
-		left: 59.3%;
-		background: $yellow;
+		left: 61.9%;
 		z-index: 0;
+
+		@include breakpoints-max-width(md) {
+			top: 5%;
+		}
 	}
 
 	&__arc {
@@ -56,37 +136,50 @@
 			left: 35%;
 		}
 
-		&-white {
-			background: $litePurple;
+		&-mini {
 			width: 254px;
 			height: 132px;
 			left: 50px;
 
-			//@include breakpoints-max-width(xl) {
-			//	width: 186px;
-			//	height: 95px;
-			//	left: 58px;
-			//}
-			//
-			//@include breakpoints-max-width(lg) {
-			//	width: 108px;
-			//	height: 56px;
-			//	left: 33px;
-			//}
+			@include breakpoints-max-width(xl) {
+				width: 214px;
+				height: 107px;
+				left: 45px;
+			}
 		}
 	}
 
 	&__svg {
 		position: absolute;
-		width: 1388px;
-		height: 1306px;
+		display: none;
+		//top: 10%;
+		left: 50%;
+		width: 188px;
+		height: 188px;
 	}
 
 	&__img {
 		&-block {
 			position: absolute;
-			top: -3%;
-			right: 10.8%;
+			bottom: 5%;
+			right: 0;
+
+			@include breakpoints-max-width(xl) {
+				right: -7%;
+			}
+
+			@include breakpoints-max-width(lg) {
+				width: 60%;
+				top: 17%;
+			}
+
+			@include breakpoints-max-width(md) {
+				top: 40px;
+				left: 0;
+				margin: 0 auto;
+				padding-right: 35px;
+				min-width: 375px;
+			}
 		}
 	}
 }

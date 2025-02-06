@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import { SwiperOptions } from "swiper/types";
+import { Navigation, Pagination } from "swiper/modules";
 
 let swiperInstanceMap = new Map<HTMLElement, Swiper>();
 
@@ -16,6 +17,7 @@ export function swiperInit(
 	swiperInstanceMap.set(
 		swiperElement,
 		new Swiper(swiperElement, {
+			modules: [Navigation, Pagination],
 			slidesPerView: sliderView,
 			spaceBetween: spaceBetween,
 			loop: loop,
