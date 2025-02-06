@@ -15,7 +15,7 @@ export function getQuizData(target: HTMLElement): void {
 
 function callback(): void {
 	getDataService.setUserAnswers(
-		getElement(".quiz__value-button", "all") as HTMLElement[],
+		getElement(".quiz__value-button", "all") as NodeList,
 		getElement(".quiz__input") as HTMLElement
 	);
 	console.log(getDataService.getUsersAnswers());
@@ -24,8 +24,8 @@ function callback(): void {
 function getData() {
 	let userAnswers: UserAnswerType = {};
 
-	function setUserAnswers(buttons: HTMLElement[], input?: HTMLElement): void {
-		buttons.forEach((button: HTMLElement) => {
+	function setUserAnswers(buttons: NodeList, input?: HTMLElement): void {
+		buttons.forEach((button: Node): void => {
 			button.addEventListener("click", event => {
 				event.target instanceof HTMLInputElement
 					? (userAnswers[event.target.name] = event.target.value)

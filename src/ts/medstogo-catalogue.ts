@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 			imgHeight: 456,
 			imgAlt: "beautiful image of two jars of medicine",
 			colorClass: "hard-purple",
-			circleColor: 'antioxidants',
+			circleColor: "antioxidants",
 		},
 		{
 			title: "Vitamins & Dietary Supplements",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 			imgHeight: 406,
 			imgAlt: "beautiful image of two jars of medicine",
 			colorClass: "hard-blue",
-			circleColor: 'vitamins',
+			circleColor: "vitamins",
 		},
 		{
 			title: "Pain Relief Products",
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 			imgHeight: 406,
 			imgAlt: "beautiful image of two jars of medicine",
 			colorClass: "minerals",
-			circleColor: 'probiotics',
+			circleColor: "probiotics",
 		},
 	];
 
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 			320: {
 				slidesPerView: 1,
 				spaceBetween: 0,
-			}
+			},
 		},
 		getElement(".banners-swiper__button-next") as HTMLElement,
 		getElement(".banners-swiper__button-prev") as HTMLElement
@@ -83,11 +83,11 @@ document.addEventListener("DOMContentLoaded", async function (): Promise<void> {
 	const bannerCircle: NodeList = getElement(".banner__circle", "all") as NodeList;
 
 	if (screenWidth <= 575) {
-		for (let item: HTMLElement of bannerCircle) {
+		for (let item of bannerCircle) {
 			observerGeometry(item as HTMLElement, 2500, 49);
 		}
 	} else {
-		for (let item: HTMLElement of bannerCircle) {
+		for (let item of bannerCircle) {
 			observerGeometry(item as HTMLElement, 2500, 50);
 		}
 	}
