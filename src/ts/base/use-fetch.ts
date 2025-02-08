@@ -1,3 +1,9 @@
+export enum URLlink {
+	register = "https://www.mku-journal.online/auth/register",
+	login = "https://www.mku-journal.online/auth/login",
+	resetPassword = "https://www.mku-journal.online/auth/reset-password",
+}
+
 export async function useFetch<T>(
 	url: string,
 	method: string = "GET",

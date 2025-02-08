@@ -5,7 +5,14 @@ export type ValidateFiled = {
 	rules: FieldRuleInterface[];
 };
 
-export function validateInput(form: string, fields: ValidateFiled[]): void {
+type AwaitStatus = "await" | "synchronous";
+
+export function validateInput(
+	form: string,
+	fields: ValidateFiled[],
+	onSuccessFunk?: () => void | Promise<void>,
+	onSuccessFunkStatus: AwaitStatus = "synchronous"
+): void {
 	const validator = new JustValidate(form, {
 		errorFieldCssClass: "input-error",
 		errorLabelCssClass: "input-label-error",
@@ -16,8 +23,11 @@ export function validateInput(form: string, fields: ValidateFiled[]): void {
 	});
 
 	validator
-		.onSuccess(() => {
-			console.log("Validation complete");
+		.onSuccess(async () => {
+			if (onSuccessFunk) {
+				const result = onSuccessFunkStatus === "await" ? await onSuccessFunk() : onSuccessFunk();
+				console.log(result);
+			}
 		})
 		.onFail(() => {
 			console.log("Validation fail");

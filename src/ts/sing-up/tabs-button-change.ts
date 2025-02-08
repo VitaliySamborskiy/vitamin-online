@@ -2,6 +2,7 @@ import { ubdateLabel } from "./ubdate-label.ts";
 import { getElement } from "../base/get-element.ts";
 import { getQueryParameter, updateQueryParameter } from "../base/qwery-parameter.ts";
 import { ValidateFiled, validateInput } from "../base/validate.ts";
+import { registrationUser } from "./registration.ts";
 
 type InputType = string | null;
 
@@ -155,13 +156,23 @@ function renderForm(button: HTMLElement, element: HTMLElement): void {
 			getElement(".sing-up__label-upload") as HTMLElement,
 			getElement(".sing-up__button-main") as HTMLElement
 		);
-		setTimeout(() => {
-			validateInput("#registration", validationRules);
-		}, 0);
+		setTimeout(async () => {
+			validateInput(
+				"#registration",
+				validationRules,
+				() => registrationUser(getElement("#registration", "id") as HTMLFormElement),
+				"await"
+			);
+		}, 4);
 	} else {
 		element.innerHTML = htmlForm();
 		setTimeout(() => {
-			validateInput("#registration", validationRules);
-		}, 0);
+			validateInput(
+				"#registration",
+				validationRules,
+				() => registrationUser(getElement("registration", "id") as HTMLFormElement),
+				"await"
+			);
+		}, 4);
 	}
 }
