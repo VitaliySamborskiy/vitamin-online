@@ -80,7 +80,7 @@ const validationRules = [
 ] as ValidateFiled[];
 
 const htmlForm = (fileInput?: InputType, buttonInactiveClass?: InputType): string => {
-	return `<form class="forms__form sing-up__form" id="registration" name="registration">
+	return `<form class="forms__form sing-up__form" id="registration" name="registration" data-type="${fileInput && buttonInactiveClass ? "whosale" : "regular"}">
 								<div class="input-block">
 										<input class="input sing-up__input"
 												name="email"
@@ -160,7 +160,7 @@ function renderForm(button: HTMLElement, element: HTMLElement): void {
 			validateInput(
 				"#registration",
 				validationRules,
-				() => registrationUser(getElement("#registration", "id") as HTMLFormElement),
+				() => registrationUser(getElement("#registration", "id") as HTMLElement),
 				"await"
 			);
 		}, 4);
@@ -170,7 +170,7 @@ function renderForm(button: HTMLElement, element: HTMLElement): void {
 			validateInput(
 				"#registration",
 				validationRules,
-				() => registrationUser(getElement("registration", "id") as HTMLFormElement),
+				() => registrationUser(getElement("registration", "id") as HTMLElement),
 				"await"
 			);
 		}, 4);

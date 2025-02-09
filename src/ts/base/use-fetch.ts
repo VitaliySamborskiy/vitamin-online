@@ -1,15 +1,16 @@
 export enum URLlink {
-	register = "https://www.mku-journal.online/auth/register",
-	login = "https://www.mku-journal.online/auth/login",
-	resetPassword = "https://www.mku-journal.online/auth/reset-password",
+	register = "/auth/register",
+	login = "/auth/login",
+	refreshTokenUser = "/auth/refresh-token",
+	resetPassword = "/auth/reset-password",
 }
 
 export async function useFetch<T>(
 	url: string,
 	method: string = "GET",
-	body?: BodyInit,
+	body: T,
 	headers?: Record<string, string>
-): Promise<T> {
+): Promise<Response> {
 	const requestInit: RequestInit = {
 		method,
 		headers: {
@@ -22,6 +23,8 @@ export async function useFetch<T>(
 		requestInit.body = typeof body === "string" ? body : JSON.stringify(body);
 	}
 
-	const response = await fetch(url, method !== "GET" ? requestInit : undefined);
-	return response.json();
+	return await fetch(
+		`https://www.mku-journal.online${url}`,
+		method !== "GET" ? requestInit : undefined
+	);
 }

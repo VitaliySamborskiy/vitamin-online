@@ -1,4 +1,5 @@
 import JustValidate, { FieldRuleInterface } from "just-validate";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 export type ValidateFiled = {
 	input: string;
@@ -6,11 +7,12 @@ export type ValidateFiled = {
 };
 
 type AwaitStatus = "await" | "synchronous";
+type ResponseType = void | Promise<Response> | Promise<void>;
 
 export function validateInput(
 	form: string,
 	fields: ValidateFiled[],
-	onSuccessFunk?: () => void | Promise<void>,
+	onSuccessFunk?: () => ResponseType,
 	onSuccessFunkStatus: AwaitStatus = "synchronous"
 ): void {
 	const validator = new JustValidate(form, {
@@ -25,11 +27,10 @@ export function validateInput(
 	validator
 		.onSuccess(async () => {
 			if (onSuccessFunk) {
-				const result = onSuccessFunkStatus === "await" ? await onSuccessFunk() : onSuccessFunk();
-				console.log(result);
+				onSuccessFunkStatus === "await" ? await onSuccessFunk() : onSuccessFunk();
 			}
 		})
 		.onFail(() => {
-			console.log("Validation fail");
+			Notify.warning("You made a validation error");
 		});
 }
